@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackLink | GrowAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="home-wrapper">
+      <div class="home" id="home" data-theme="dark">
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+          <div class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </div>
+          <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+          <nav class="header__nav" id="headerNav">
+            <a href="#sistema" class="header__nav-link header__nav-link--sistema">Sistema</a>
+            <a href="#investimento" class="header__nav-link header__nav-link--investimento">Investimento</a>
+            <a href="#sobre" class="header__nav-link header__nav-link--sobre">Sobre nós</a>
+            <a href="#bibliografia" class="header__nav-link header__nav-link--bibliografia">Bibliografia</a>
+            <a href="#game" class="header__nav-link header__nav-link--game">Game</a>
+          </nav>
+        </header>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+          <div class="hero__bg">
+            <img alt="" src="assets/images/hero-background.png" />
+          </div>
+          <div class="hero__header-bg">
+            <img alt="" src="assets/icons/header-bg.svg" />
+          </div>
+
+          <div class="hero__content">
+            <div class="hero__info">
+              <div class="hero__heading-block">
+                <p class="hero__title">
+                  Horta horizontal semi-hidropônica com
+                  <span class="hero__title-highlight">IA integrada</span> para maximizar
+                  princípios ativos em plantas medicinais.
+                </p>
+                <p class="hero__subtitle">Cultive saúde, tecnologia e natureza em harmonia.</p>
+
+                <div class="hero__actions">
+                  <button type="button" class="hero__btn hero__btn--primary">
+                    Conheça o produto
+                    <span class="hero__btn-icon">
+                      <img alt="" src="assets/icons/icon-arrow-right.svg" />
+                    </span>
+                  </button>
+                  <button type="button" class="hero__btn hero__btn--secondary">
+                    Ver demonstração
+                  </button>
+                </div>
+              </div>
+
+              <div class="hero__badges">
+                <div class="badge badge--1">
+                  <span class="badge__icon"><img alt="" src="assets/icons/icon-potted-plant.svg" /></span>
+                  <span class="badge__label">Autonômia inteligente</span>
+                </div>
+                <div class="badge badge--2">
+                  <span class="badge__icon"><img alt="" src="assets/icons/icon-recycle-water.svg" /></span>
+                  <span class="badge__label">98% Reuso hídrico</span>
+                </div>
+                <div class="badge badge--3">
+                  <span class="badge__icon badge__icon--seedling">
+                    <span class="seedling-frag" style="inset: 53.55% 9.8% 9.9% 9.89%">
+                      <span class="seedling-frag" style="inset: -8.55% -3.89%">
+                        <img alt="" src="assets/icons/icon-seedling-1.svg" />
+                      </span>
+                    </span>
+                    <span class="seedling-frag" style="inset: 75.51% 46.33% 24.49% 35.41%">
+                      <span class="seedling-frag" style="inset: -1px 0">
+                        <img alt="" src="assets/icons/icon-seedling-2.svg" />
+                      </span>
+                    </span>
+                    <span class="seedling-frag" style="top: 9.9%; left: 24.49%; right: 50%; bottom: 71.89%">
+                      <span class="seedling-frag" style="inset: -17.15% -12.25%">
+                        <img alt="" src="assets/icons/icon-seedling-3.svg" />
+                      </span>
+                    </span>
+                    <span class="seedling-frag" style="top: 13.56%; left: 50%; right: 24.49%; bottom: 68.22%">
+                      <span class="seedling-frag" style="inset: -17.15% -12.25%">
+                        <img alt="" src="assets/icons/icon-seedling-4.svg" />
+                      </span>
+                    </span>
+                    <span class="seedling-frag" style="top: 28.11%; left: 50%; right: 50%; bottom: 57.3%">
+                      <span class="seedling-frag" style="inset: 0 -1px">
+                        <img alt="" src="assets/icons/icon-seedling-5.svg" />
+                      </span>
+                    </span>
+                    <span class="seedling-frag" style="inset: 42.76% 31.78% 34.95% 32.05%">
+                      <span class="seedling-frag" style="inset: -14.02% -8.64% -3.33% -8.51%">
+                        <img alt="" src="assets/icons/icon-seedling-6.svg" />
+                      </span>
+                    </span>
+                  </span>
+                  <span class="badge__label">Maior concentração</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="utility-bar">
+            <button type="button" aria-label="Alternar tema claro/escuro" class="theme-toggle" id="themeToggle">
+              <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+            </button>
+            <button type="button" aria-label="Voltar ao topo" class="scroll-top" id="scrollTop">
+              <img alt="" src="assets/icons/icon-scroll-top.svg" />
+            </button>
+          </div>
+        </section>
+
+        <!-- ===== SECTION 2: WHY CHOOSE ===== -->
+        <section class="why">
+          <div class="why__intro">
+            <p class="why__title">
+              Porque escolher nossa <span class="why__title-accent">Tecnologia?</span>
+            </p>
+            <p class="why__eyebrow">
+              Inovação que une ciência, sustentabilidade e resultados extraordinários
+            </p>
+          </div>
+          <div class="why__cards">
+            <div class="why-card">
+              <div class="why-card__content">
+                <div class="why-card__icon-wrap">
+                  <div class="why-card__icon-bg"></div>
+                  <div class="why-card__icon"><img alt="" src="assets/icons/icon-ai-brain.svg" /></div>
+                </div>
+                <div class="why-card__image"></div>
+                <p class="why-card__title">Controle Inteligente:</p>
+                <p class="why-card__desc">Sistema de IA monitora e ajusta automaticamente nutrientes, pH, luz e temperatura para otimizar princípios ativos.</p>
+              </div>
+            </div>
+            <div class="why-card why-card--accent why-card--rotate-icon">
+              <div class="why-card__content">
+                <div class="why-card__icon-wrap">
+                  <div class="why-card__icon-bg"></div>
+                  <div class="why-card__icon"><img alt="" src="assets/icons/icon-pharmacy.svg" /></div>
+                </div>
+                <div class="why-card__image"></div>
+                <p class="why-card__title">Máxima Concentração:</p>
+                <p class="why-card__desc">Até 300% mais principios ativos comprado ao cultivo tradicional atráves de estresse controlado.</p>
+              </div>
+            </div>
+            <div class="why-card">
+              <div class="why-card__content">
+                <div class="why-card__icon-wrap">
+                  <div class="why-card__icon-bg"></div>
+                  <div class="why-card__icon"><img alt="" src="assets/icons/icon-image-saturation.svg" /></div>
+                </div>
+                <div class="why-card__image"></div>
+                <p class="why-card__title">Sistema Hidropônico:</p>
+                <p class="why-card__desc">Economia de 90% de água com recirculação inteligente e zero desperdício de nutrientes.</p>
+              </div>
+            </div>
+            <div class="why-card why-card--accent">
+              <div class="why-card__content">
+                <div class="why-card__icon-wrap">
+                  <div class="why-card__icon-bg"></div>
+                  <div class="why-card__icon"><img alt="" src="assets/icons/icon-sprout.svg" /></div>
+                </div>
+                <div class="why-card__image"></div>
+                <p class="why-card__title">Cultivo Vertical:</p>
+                <p class="why-card__desc">Design compacto que otimiza espaço, permitindo cultivo de múltiplas espécies simultaneamente.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== SECTION 3: HOW IT WORKS ===== -->
+        <section class="how">
+          <div class="how__group">
+            <div class="how__intro">
+              <h2 class="how__title">Como <span class="how__title-accent">funciona</span></h2>
+              <div class="how__carousel">
+                <button type="button" aria-label="Anterior" class="how__carousel-btn how__carousel-btn--prev">&lt;</button>
+                <button type="button" aria-label="Próximo" class="how__carousel-btn how__carousel-btn--next">&gt;</button>
+              </div>
+              <div class="how__step">
+                <p class="how__step-title">Configuração inicial</p>
+                <p class="how__step-desc">
+                  Selecione as plantas medicinais desejadas para o cultivo e, a partir dessa
+                  escolha, o sistema realizará automaticamente a calibração dos parâmetros ideais,
+                  ajustando fatores como irrigação, luminosidade e nutrientes de acordo com as
+                  necessidades específicas de cada espécie, garantindo assim um desenvolvimento
+                  saudável e eficiente desde o início.
+                </p>
+              </div>
+            </div>
+
+            <div class="how__topics">
+              <div class="how-topic how-topic--0">
+                <div class="how-topic__box"></div>
+                <div class="how-topic__text">
+                  <p class="how-topic__title">Monitoramento Contínuo</p>
+                  <p class="how-topic__desc">Sensores IoT coletam dados em tempo real: pH, temperatura, umidade, luminosidade e nutrientes.</p>
+                </div>
+              </div>
+              <div class="how-topic how-topic--1">
+                <div class="how-topic__box"></div>
+                <div class="how-topic__text">
+                  <p class="how-topic__title">IA em Ação</p>
+                  <p class="how-topic__desc">Algoritmos de machine learning ajustam condições para maximizar a concentração de princípios ativos.</p>
+                </div>
+              </div>
+              <div class="how-topic how-topic--2">
+                <div class="how-topic__box"></div>
+                <div class="how-topic__text">
+                  <p class="how-topic__title">Colheita Otimizada</p>
+                  <p class="how-topic__desc">Notificações indicam o momento perfeito de colheita para máxima eficácia medicinal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== SECTION 4: DIFFERENTIALS ===== -->
+        <section class="differentials">
+          <div class="differentials__bg">
+            <img alt="" src="assets/icons/section4-bg.svg" />
+          </div>
+          <div class="differentials__content">
+            <div class="differentials__titles">
+              <p class="differentials__title">
+                <span class="differentials__title-accent">Diferenciais</span> Tecnológicos do
+                <span class="differentials__title-accent">GrowAI</span>
+              </p>
+              <p class="differentials__subtitle">
+                Hardware e software de última geração para resultados extraordinários
+              </p>
+            </div>
+            <div class="differentials__cards">
+              <div class="differentials__row">
+                <div class="feature-card">
+                  <div class="feature-card__icon"><img alt="" src="assets/icons/icon-wifi.svg" /></div>
+                  <div class="feature-card__image"></div>
+                  <p class="feature-card__title">IoT &amp; Conectividade</p>
+                  <p class="feature-card__desc">Sensores inteligentes conectados 24/7 monitorando cada aspecto do cultivo</p>
+                  <ul class="feature-card__tags">
+                    <li>WiFi/Bluetooth</li>
+                    <li>Integração Cloud</li>
+                    <li>API Aberta</li>
+                  </ul>
+                </div>
+                <div class="feature-card feature-card--tinted">
+                  <div class="feature-card__icon"><img alt="" src="assets/icons/icon-notification.svg" /></div>
+                  <div class="feature-card__image"></div>
+                  <p class="feature-card__title">App de Controle</p>
+                  <p class="feature-card__desc">Gerencie tudo pelo smartphone: ajustes, notificações e histórico completo</p>
+                  <ul class="feature-card__tags">
+                    <li>iOS &amp; Android</li>
+                    <li>Dashboard em Tempo Real</li>
+                    <li>Alertas Personalizados</li>
+                  </ul>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-card__icon"><img alt="" src="assets/icons/icon-graph.svg" /></div>
+                  <div class="feature-card__image"></div>
+                  <p class="feature-card__title">Análise Avançada</p>
+                  <p class="feature-card__desc">Machine Learning prevê e otimiza concentração de princípios ativos</p>
+                  <ul class="feature-card__tags">
+                    <li>Predição de Colheita</li>
+                    <li>Otimização Automática</li>
+                    <li>Relatórios Detalhados</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="differentials__row">
+                <div class="feature-card feature-card--tinted">
+                  <div class="feature-card__icon"><img alt="" src="assets/icons/icon-ai-technology.svg" /></div>
+                  <div class="feature-card__image"></div>
+                  <p class="feature-card__title">Eficiência Energética</p>
+                  <p class="feature-card__desc">LED full spectrum programável com baixíssimo consumo de energia</p>
+                  <ul class="feature-card__tags">
+                    <li>Economia até 70%</li>
+                    <li>Espectro Ajustável</li>
+                    <li>Timer Inteligente</li>
+                  </ul>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-card__icon"><img alt="" src="assets/icons/icon-ai-cloud.svg" /></div>
+                  <div class="feature-card__image"></div>
+                  <p class="feature-card__title">Armazenamento em Nuvem</p>
+                  <p class="feature-card__desc">Todos os dados salvos com segurança para análise histórica e comparativa</p>
+                  <ul class="feature-card__tags">
+                    <li>Backup Automático</li>
+                    <li>Acesso Multiplataforma</li>
+                    <li>Exportação de Dados</li>
+                  </ul>
+                </div>
+                <div class="feature-card feature-card--tinted">
+                  <div class="feature-card__icon"><img alt="" src="assets/icons/icon-shield.svg" /></div>
+                  <div class="feature-card__image"></div>
+                  <p class="feature-card__title">Segurança &amp; Certificações</p>
+                  <p class="feature-card__desc">Construído com materiais atóxicos e certificado para uso alimentício/medicinal</p>
+                  <ul class="feature-card__tags">
+                    <li>Food Grade</li>
+                    <li>ISO Certified</li>
+                    <li>Garantia Estendida</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== SECTION 5: PLANTS + CTA ===== -->
+        <section class="plants">
+          <div class="plants__group">
+            <div class="plants__cards">
+              <div class="plant-card plant-card--offset-l">
+                <div class="plant-card__tag">
+                  <span class="plant-card__tag-icon"><img alt="" src="assets/icons/icon-adaptogenos.svg" /></span>
+                  <p class="plant-card__tag-title">Adaptógenos</p>
+                </div>
+                <div class="plant-card__body">
+                  <div class="plant-card__image"><img alt="" src="assets/images/img-adaptogenos.png" /></div>
+                  <p class="plant-card__desc">Registro de compostos reguladores, como saponinas, associados à adaptação ao estresse, com maior concentração em condições adversas controladas, refletindo mecanismos de resistência fisiológica.</p>
+                  <ul class="plant-card__list">
+                    <li>Ginseng</li><li>Ashwagandha</li><li>Maca</li><li>Rhodiola</li><li>Schisandra</li><li>Eleutero</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="plant-card plant-card--flip">
+                <div class="plant-card__tag">
+                  <span class="plant-card__tag-icon"><img alt="" src="assets/icons/icon-digestivos.svg" /></span>
+                  <p class="plant-card__tag-title">Digestivos</p>
+                </div>
+                <div class="plant-card__body">
+                  <div class="plant-card__image"><img alt="" src="assets/images/img-digestivos.png" /></div>
+                  <p class="plant-card__desc">Registro de compostos que auxiliam a digestão e reduzem desconfortos gastrointestinais. Em sistema semidropônico, são favorecidos por luz adequada e manejo equilibrado, com possível aumento sob leve estresse controlado.</p>
+                  <ul class="plant-card__list">
+                    <li>Hortelã</li><li>Erva-doce</li><li>Boldo</li><li>Gengibre</li><li>Camomila</li><li>Carqueja</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="plant-card plant-card--offset-l">
+                <div class="plant-card__tag">
+                  <span class="plant-card__tag-icon"><img alt="" src="assets/icons/icon-anti-inflamatorios.svg" /></span>
+                  <p class="plant-card__tag-title">Anti-Inflamatórios</p>
+                </div>
+                <div class="plant-card__body">
+                  <div class="plant-card__image"><img alt="" src="assets/images/img-anti-inflamatorios.png" /></div>
+                  <p class="plant-card__desc">Registro de compostos com ação anti-inflamatória, associados a flavonoides e terpenos, com aumento observado sob alta incidência luminosa e estresse hídrico controlado, indicando estímulo de respostas defensivas.</p>
+                  <ul class="plant-card__list">
+                    <li>Cúrcuma</li><li>Gengibre</li><li>Alecrim</li><li>Calêndula</li><li>Arnica</li><li>Babosa</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="plant-card plant-card--flip">
+                <div class="plant-card__tag">
+                  <span class="plant-card__tag-icon"><img alt="" src="assets/icons/icon-calmantes.svg" /></span>
+                  <p class="plant-card__tag-title">Calmantes</p>
+                </div>
+                <div class="plant-card__body">
+                  <div class="plant-card__image"><img alt="" src="assets/images/img-calmantes.png" /></div>
+                  <p class="plant-card__desc">Registro de compostos com efeito depressor leve do sistema nervoso, relacionados a flavonoides e óleos essenciais, favorecidos em condições de cultivo estáveis, com adequada disponibilidade hídrica e nutricional.</p>
+                  <ul class="plant-card__list">
+                    <li>Camomila</li><li>Lavanda</li><li>Erva-cidreira</li><li>Passiflora</li><li>Valeriana</li><li>Capim-limão</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="plants__heading">
+              <p class="plants__title">Plantas <span class="plants__title-accent">Medicinais</span> registradas</p>
+              <p class="plants__eyebrow">Cultive as principais plantas medicinais com concentração máxima de princípios ativos</p>
+            </div>
+          </div>
+
+          <div class="cta-banner">
+            <div class="cta-banner__content">
+              <p class="cta-banner__title">Potencialize ao máximo cada planta</p>
+              <p class="cta-banner__desc">
+                Tecnologia que ajusta automaticamente cultivo e ambiente para extrair o melhor em
+                compostos bioativos, com precisão e consistência.
+              </p>
+            </div>
+            <button type="button" class="cta-banner__btn">Conhecer Plataforma</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (HOME - Mobile / HOME - Mobile Darkmode, own artboard) ===== -->
+    <div class="home-wrapper--mobile">
+      <div class="mobile-canvas" id="mobileHome" data-theme="dark">
+        <header class="m-header">
+          <div class="m-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </div>
+          <button type="button" class="m-header__menu-toggle" id="mMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <img alt="" src="assets/icons/icon-hamburger-dark.svg" />
+          </button>
+          <nav class="m-header__nav" id="mHeaderNav">
+            <a href="#sistema">Sistema</a>
+            <a href="#investimento">Investimento</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#bibliografia">Bibliografia</a>
+            <a href="#game">Game</a>
+          </nav>
+        </header>
+
+        <section class="m-hero">
+          <div class="m-hero__bg"><img alt="" src="assets/images/img-mobile-hero-dark.png" /></div>
+          <div class="m-hero__title-graphic"><img alt="" src="assets/icons/icon-mobile-title-dark.svg" /></div>
+
+          <p class="m-hero__text">
+            Horta horizontal semi-hidropônica com
+            <span class="m-hero__text-highlight">IA integrada</span> para maximizar princípios
+            ativos em plantas medicinais.
+          </p>
+          <p class="m-hero__subtitle">Cultive saúde, tecnologia e natureza em harmonia.</p>
+
+          <div class="m-hero__actions">
+            <button type="button" class="m-hero__btn m-hero__btn--primary">
+              Conheça o produto
+              <img alt="" src="assets/icons/icon-arrow-right.svg" />
+            </button>
+            <button type="button" class="m-hero__btn m-hero__btn--secondary">Ver demonstração</button>
+          </div>
+
+          <div class="m-badges">
+            <div class="m-badge m-badge--1">
+              <span class="m-badge__icon"><img alt="" src="assets/icons/icon-potted-plant.svg" /></span>
+              <span class="m-badge__label">Autonomia inteligente</span>
+            </div>
+            <div class="m-badge m-badge--2">
+              <span class="m-badge__icon"><img alt="" src="assets/icons/icon-recycle-water.svg" /></span>
+              <span class="m-badge__label">98% Reuso hídrico</span>
+            </div>
+            <div class="m-badge m-badge--3">
+              <span class="m-badge__icon m-badge__icon--seedling">
+                <span class="seedling-frag" style="inset: 53.55% 9.8% 9.9% 9.89%">
+                  <span class="seedling-frag" style="inset: -8.55% -3.89%"><img alt="" src="assets/icons/icon-seedling-1.svg" /></span>
+                </span>
+                <span class="seedling-frag" style="inset: 75.51% 46.33% 24.49% 35.41%">
+                  <span class="seedling-frag" style="inset: -1px 0"><img alt="" src="assets/icons/icon-seedling-2.svg" /></span>
+                </span>
+                <span class="seedling-frag" style="top: 9.9%; left: 24.49%; right: 50%; bottom: 71.89%">
+                  <span class="seedling-frag" style="inset: -17.15% -12.25%"><img alt="" src="assets/icons/icon-seedling-3.svg" /></span>
+                </span>
+                <span class="seedling-frag" style="top: 13.56%; left: 50%; right: 24.49%; bottom: 68.22%">
+                  <span class="seedling-frag" style="inset: -17.15% -12.25%"><img alt="" src="assets/icons/icon-seedling-4.svg" /></span>
+                </span>
+                <span class="seedling-frag" style="top: 28.11%; left: 50%; right: 50%; bottom: 57.3%">
+                  <span class="seedling-frag" style="inset: 0 -1px"><img alt="" src="assets/icons/icon-seedling-5.svg" /></span>
+                </span>
+                <span class="seedling-frag" style="inset: 42.76% 31.78% 34.95% 32.05%">
+                  <span class="seedling-frag" style="inset: -14.02% -8.64% -3.33% -8.51%"><img alt="" src="assets/icons/icon-seedling-6.svg" /></span>
+                </span>
+              </span>
+              <span class="m-badge__label">Maior concentração</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="m-why">
+          <p class="m-why__title">Porque escolher nossa <span class="m-why__title-accent">Tecnologia?</span></p>
+          <p class="m-why__subtitle">Inovação que une ciência, sustentabilidade e resultados extraordinários</p>
+          <div class="m-why__cards">
+            <div class="m-why-card">
+              <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-ai-brain.svg" /></div>
+              <p class="m-why-card__title">Controle Inteligente:</p>
+              <p class="m-why-card__desc">Sistema de IA monitora e ajusta automaticamente nutrientes, pH, luz e temperatura para otimizar princípios ativos.</p>
+              <div class="m-why-card__image"></div>
+            </div>
+            <div class="m-why-card m-why-card--accent">
+              <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-pharmacy.svg" /></div>
+              <p class="m-why-card__title">Máxima Concentração:</p>
+              <p class="m-why-card__desc">Até 300% mais principios ativos comparado ao cultivo tradicional atráves de estresse controlado.</p>
+              <div class="m-why-card__image"></div>
+            </div>
+            <div class="m-why-card">
+              <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-image-saturation.svg" /></div>
+              <p class="m-why-card__title">Sistema Hidropônico:</p>
+              <p class="m-why-card__desc">Economia de 90% de água com recirculação inteligente e zero desperdício de nutrientes.</p>
+              <div class="m-why-card__image"></div>
+            </div>
+            <div class="m-why-card m-why-card--accent">
+              <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-sprout.svg" /></div>
+              <p class="m-why-card__title">Cultivo Vertical:</p>
+              <p class="m-why-card__desc">Design compacto que otimiza espaço, permitindo cultivo de múltiplas espécies simultaneamente.</p>
+              <div class="m-why-card__image"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="m-how">
+          <h2 class="m-how__title">Como <span class="m-how__title-accent">funciona</span></h2>
+          <div class="m-how__carousel">
+            <button type="button" aria-label="Anterior" class="m-how__carousel-btn m-how__carousel-btn--prev">&lt;</button>
+            <button type="button" aria-label="Próximo" class="m-how__carousel-btn m-how__carousel-btn--next">&gt;</button>
+          </div>
+          <div class="m-how__step">
+            <p class="m-how__step-title">Configuração inicial</p>
+            <p class="m-how__step-desc">
+              Selecione as plantas medicinais desejadas para o cultivo e, a partir dessa escolha, o
+              sistema realizará automaticamente a calibração dos parâmetros ideais, ajustando
+              fatores como irrigação, luminosidade e nutrientes de acordo com as necessidades
+              específicas de cada espécie, garantindo assim um desenvolvimento saudável e eficiente
+              desde o início.
+            </p>
+          </div>
+          <div class="m-how__topics">
+            <div class="m-how-topic">
+              <div class="m-how-topic__box"></div>
+              <div>
+                <p class="m-how-topic__title">Monitoramento Contínuo</p>
+                <p class="m-how-topic__desc">Sensores IoT coletam dados em tempo real: pH, temperatura, umidade, luminosidade e nutrientes.</p>
+              </div>
+            </div>
+            <div class="m-how-topic">
+              <div class="m-how-topic__box"></div>
+              <div>
+                <p class="m-how-topic__title">IA em Ação</p>
+                <p class="m-how-topic__desc">Algoritmos de machine learning ajustam condições para maximizar a concentração de princípios ativos.</p>
+              </div>
+            </div>
+            <div class="m-how-topic">
+              <div class="m-how-topic__box"></div>
+              <div>
+                <p class="m-how-topic__title">Colheita Otimizada</p>
+                <p class="m-how-topic__desc">Notificações indicam o momento perfeito de colheita para máxima eficácia medicinal.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="m-differentials">
+          <div class="m-differentials__bg"><img alt="" src="assets/icons/icon-mobile-subtract-dark.svg" /></div>
+          <p class="m-differentials__title">
+            <span class="m-differentials__title-accent">Diferenciais</span> Tecnológicos do
+            <span class="m-differentials__title-accent">GrowAI</span>
+          </p>
+          <p class="m-differentials__subtitle">Hardware e software de última geração para resultados extraordinários</p>
+          <div class="m-feature-grid">
+            <div class="m-feature-card">
+              <div class="m-feature-card__icon"><img alt="" src="assets/icons/icon-wifi.svg" /></div>
+              <p class="m-feature-card__title">IoT &amp; Conectividade</p>
+              <p class="m-feature-card__desc">Sensores inteligentes conectados 24/7 monitorando cada aspecto do cultivo</p>
+              <ul class="m-feature-card__tags"><li>WiFi/Bluetooth</li><li>Integração Cloud</li><li>API Aberta</li></ul>
+              <div class="m-feature-card__image"><img alt="" src="assets/icons/icon-wifi-card-graphic-dark.svg" style="width:100%;height:100%" /></div>
+            </div>
+            <div class="m-feature-card m-feature-card--tinted">
+              <div class="m-feature-card__icon"><img alt="" src="assets/icons/icon-notification.svg" /></div>
+              <p class="m-feature-card__title">App de Controle</p>
+              <p class="m-feature-card__desc">Gerencie tudo pelo smartphone: ajustes, notificações e histórico completo</p>
+              <ul class="m-feature-card__tags"><li>iOS &amp; Android</li><li>Dashboard em Tempo Real</li><li>Alertas Personalizados</li></ul>
+              <div class="m-feature-card__image"></div>
+            </div>
+            <div class="m-feature-card">
+              <div class="m-feature-card__icon"><img alt="" src="assets/icons/icon-graph.svg" /></div>
+              <p class="m-feature-card__title">Análise Avançada</p>
+              <p class="m-feature-card__desc">Machine Learning prevê e otimiza concentração de princípios ativos</p>
+              <ul class="m-feature-card__tags"><li>Predição de Colheita</li><li>Otimização Automática</li><li>Relatórios Detalhados</li></ul>
+              <div class="m-feature-card__image"></div>
+            </div>
+            <div class="m-feature-card m-feature-card--tinted">
+              <div class="m-feature-card__icon"><img alt="" src="assets/icons/icon-ai-technology.svg" /></div>
+              <p class="m-feature-card__title">Eficiência Energética</p>
+              <p class="m-feature-card__desc">LED full spectrum programável com baixíssimo consumo de energia</p>
+              <ul class="m-feature-card__tags"><li>Economia até 70%</li><li>Espectro Ajustável</li><li>Timer Inteligente</li></ul>
+              <div class="m-feature-card__image"></div>
+            </div>
+            <div class="m-feature-card">
+              <div class="m-feature-card__icon"><img alt="" src="assets/icons/icon-ai-cloud.svg" /></div>
+              <p class="m-feature-card__title">Armazenamento em Nuvem</p>
+              <p class="m-feature-card__desc">Todos os dados salvos com segurança para análise histórica e comparativa</p>
+              <ul class="m-feature-card__tags"><li>Backup Automático</li><li>Acesso Multiplataforma</li><li>Exportação de Dados</li></ul>
+              <div class="m-feature-card__image"></div>
+            </div>
+            <div class="m-feature-card m-feature-card--tinted">
+              <div class="m-feature-card__icon"><img alt="" src="assets/icons/icon-shield.svg" /></div>
+              <p class="m-feature-card__title">Segurança &amp; Certificações</p>
+              <p class="m-feature-card__desc">Construído com materiais atóxicos e certificado para uso alimentício/medicinal</p>
+              <ul class="m-feature-card__tags"><li>Food Grade</li><li>ISO Certified</li><li>Garantia Estendida</li></ul>
+              <div class="m-feature-card__image"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="m-plants">
+          <p class="m-plants__title">Plantas <span class="m-plants__title-accent">Medicinais</span> registradas</p>
+          <p class="m-plants__eyebrow">Cultive as principais plantas medicinais com concentração máxima de princípios ativos</p>
+          <div class="m-plant-cards">
+            <div class="m-plant-card">
+              <div class="m-plant-card__top">
+                <div class="m-plant-card__tag">
+                  <span class="m-plant-card__tag-icon"><img alt="" src="assets/icons/icon-adaptogenos.svg" /></span>
+                  <p class="m-plant-card__tag-title">Adaptógenos</p>
+                </div>
+                <div class="m-plant-card__image"><img alt="" src="assets/images/img-mobile-adaptogenos-dark.png" /></div>
+              </div>
+              <div class="m-plant-card__bottom">
+                <p class="m-plant-card__desc">Registro de compostos reguladores, como saponinas, associados à adaptação ao estresse, com maior concentração em condições adversas controladas, refletindo mecanismos de resistência fisiológica.</p>
+                <ul class="m-plant-card__list"><li>Ginseng</li><li>Ashwagandha</li><li>Maca</li><li>Rhodiola</li><li>Schisandra</li><li>Eleutero</li></ul>
+              </div>
+            </div>
+            <div class="m-plant-card m-plant-card--accent">
+              <div class="m-plant-card__top">
+                <div class="m-plant-card__tag">
+                  <span class="m-plant-card__tag-icon"><img alt="" src="assets/icons/icon-digestivos.svg" /></span>
+                  <p class="m-plant-card__tag-title">Digestivos</p>
+                </div>
+                <div class="m-plant-card__image"><img alt="" src="assets/images/img-mobile-digestivos-dark.png" /></div>
+              </div>
+              <div class="m-plant-card__bottom">
+                <p class="m-plant-card__desc">Registro de compostos que auxiliam a digestão e reduzem desconfortos gastrointestinais. Em sistema semidropônico, são favorecidos por luz adequada e manejo equilibrado, com possível aumento sob leve estresse controlado.</p>
+                <ul class="m-plant-card__list"><li>Hortelã</li><li>Erva-doce</li><li>Boldo</li><li>Gengibre</li><li>Camomila</li><li>Carqueja</li></ul>
+              </div>
+            </div>
+            <div class="m-plant-card">
+              <div class="m-plant-card__top">
+                <div class="m-plant-card__tag">
+                  <span class="m-plant-card__tag-icon"><img alt="" src="assets/icons/icon-anti-inflamatorios.svg" /></span>
+                  <p class="m-plant-card__tag-title">Anti-Inflamatórios</p>
+                </div>
+                <div class="m-plant-card__image"><img alt="" src="assets/images/img-mobile-anti-inflamatorios-dark.png" /></div>
+              </div>
+              <div class="m-plant-card__bottom">
+                <p class="m-plant-card__desc">Registro de compostos com ação anti-inflamatória, associados a flavonoides e terpenos, com aumento observado sob alta incidência luminosa e estresse hídrico controlado, indicando estímulo de respostas defensivas.</p>
+                <ul class="m-plant-card__list"><li>Cúrcuma</li><li>Gengibre</li><li>Alecrim</li><li>Calêndula</li><li>Arnica</li><li>Babosa</li></ul>
+              </div>
+            </div>
+            <div class="m-plant-card m-plant-card--accent">
+              <div class="m-plant-card__top">
+                <div class="m-plant-card__tag">
+                  <span class="m-plant-card__tag-icon"><img alt="" src="assets/icons/icon-calmantes.svg" /></span>
+                  <p class="m-plant-card__tag-title">Calmantes</p>
+                </div>
+                <div class="m-plant-card__image"><img alt="" src="assets/images/img-mobile-calmantes-dark.png" /></div>
+              </div>
+              <div class="m-plant-card__bottom">
+                <p class="m-plant-card__desc">Registro de compostos com efeito depressor leve do sistema nervoso, relacionados a flavonoides e óleos essenciais, favorecidos em condições de cultivo estáveis, com adequada disponibilidade hídrica e nutricional.</p>
+                <ul class="m-plant-card__list"><li>Camomila</li><li>Lavanda</li><li>Erva-cidreira</li><li>Passiflora</li><li>Valeriana</li><li>Capim-limão</li></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-cta-banner">
+            <p class="m-cta-banner__title">Potencialize ao máximo cada planta</p>
+            <p class="m-cta-banner__desc">Tecnologia que ajusta automaticamente cultivo e ambiente para extrair o melhor em compostos bioativos, com precisão e consistência.</p>
+            <button type="button" class="m-cta-banner__btn">Conhecer Plataforma</button>
+          </div>
+        </section>
+
+        <div class="m-utility-bar">
+          <button type="button" aria-label="Alternar tema claro/escuro" class="m-theme-toggle" id="mThemeToggle">
+            <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+          </button>
+          <button type="button" aria-label="Voltar ao topo" class="m-scroll-top" id="mScrollTop">
+            <img alt="" src="assets/icons/icon-scroll-top.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/components.js"></script>
+  </body>
+</html>

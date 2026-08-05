@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_figma_figma__get_metadata",
+      "mcp__plugin_figma_figma__get_design_context",
+      "Bash(bash \"/c/Users/Sophia/AppData/Local/Temp/claude/C--Users-Sophia-Documents-Escola-tcc/f0434ea9-2da3-4daa-a098-479adcbe2009/scratchpad/download-assets.sh\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(nohup npm run dev -- --port 5173)",
+      "Bash(disown)",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p assets css js)",
+      "Bash(mv src/assets/*.png src/assets/*.svg assets/)",
+      "Bash(mv src/components/HomeDarkmode.css css/style.css)",
+      "Bash(rmdir public *)",
+      "Bash(rm -rf src)",
+      "Bash(curl -sL -f -o \"/c/Users/Sophia/Documents/Escola/tcc/assets/icon-theme-toggle-light.svg\" \"https://www.figma.com/api/mcp/asset/e28a7106-e583-4695-8277-afc9f4686813.svg\")",
+      "Bash(node -e ' *)",
+      "Bash(node \"/c/Users/Sophia/AppData/Local/Temp/claude/C--Users-Sophia-Documents-Escola-tcc/f0434ea9-2da3-4daa-a098-479adcbe2009/scratchpad/px-to-rem.js\" css/style.css css/style.rem.css)",
+      "Bash(sed -n '1,38p' style.rem.css)",
+      "Bash(sed -n '40,61p' style.rem.css)",
+      "Bash(sed -n '63,183p' style.rem.css)",
+      "Bash(sed -n '185,394p' style.rem.css)",
+      "Bash(sed -n '396,973p' style.rem.css)",
+      "Bash(sed -n '1,173p' /tmp/part_hero_utility.css)",
+      "Bash(cat /tmp/hero_only.css /tmp/part_home_sections.css)",
+      "Bash(rm -f css/style.css css/style.rem.css)",
+      "Bash(mkdir -p assets/images assets/icons assets/fonts)",
+      "Bash(mv assets/*.png assets/images/)",
+      "Bash(mv assets/*.svg assets/icons/)",
+      "Bash(sed -i -E 's#assets/\\(img-[a-z0-9-]+\\\\.png|hero-background\\\\.png\\)#assets/images/\\\\1#g' index.html)",
+      "Bash(sed -i -E 's#assets/\\(\\(icon|logo\\)-[a-z0-9-]+\\\\.svg|section4-bg\\\\.svg|header-bg\\\\.svg\\)#assets/icons/\\\\1#g' index.html)",
+      "Bash(bash \"/c/Users/Sophia/AppData/Local/Temp/claude/C--Users-Sophia-Documents-Escola-tcc/f0434ea9-2da3-4daa-a098-479adcbe2009/scratchpad/download-mobile-assets.sh\")",
+      "Bash(awk '$1>1')"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+/*
+  Design tokens extracted from the Figma file "TrackLink".
+  Base palette comes from the Figma "Foundation" styles; the
+  --dm-* tokens are the ones that actually change between the
+  dark screen (HOME - DARKMODE, the default here) and light
+  screen (HOME).
+*/
+
+:root {
+  --color-violet-light: #fcfcfd;
+  --color-violet-light-hover: #fafafb;
+  --color-violet-light-active: #f5f5f7;
+  --color-grey-light: #fdfdfd;
+  --color-grey-normal: #e3e5de;
+  --color-grey-dark: #b1b3ad;
+  --color-grey-border: #bdbeb8;
+
+  --color-green-normal: #5da578;
+  --color-green-normal-hover: #5b9c93;
+  --color-green-normal-active: #6da9a6;
+  --color-green-dark: #90ad76;
+  --color-green-dark-active: #566847;
+  --color-green-darker: #233d39;
+  --color-green-light: #d4e4e1;
+  --color-green-light-hover: #edf8f8;
+  --color-green-light-active: #cde3d5;
+
+  --color-teal: #669e9b;
+  --color-teal-active: #7abeba;
+
+  --font-body: "Lexend", sans-serif;
+
+  /* Theme tokens - default values are the HOME - DARKMODE screen */
+  --dm-bg: #152623;
+  --dm-surface: #2d4e49;
+  --dm-surface-alt: #3d5f5d;
+  --dm-border: #669e9b;
+  --dm-border-alt: #65ada3;
+  --dm-text: #fcfcfd;
+  --dm-text-soft: #fafafb;
+  --dm-accent: #aff4f1;
+  --dm-accent-green: #467c5a;
+  --dm-cta-text: #c0e79d;
+  --dm-tag-text: #566847;
+  --dm-tag-text-alt: #3d5f5d;
+}
+
+/* Light theme tokens - HOME screen */
+.home[data-theme="light"] {
+  --dm-bg: #fcfcfd;
+  --dm-surface: #f5f5f7;
+  --dm-surface-alt: #f5f5f7;
+  --dm-border: #bdbeb8;
+  --dm-border-alt: #bdbeb8;
+  --dm-text: #2d4e49;
+  --dm-text-soft: #2d4e49;
+  --dm-accent: #65ada3;
+  --dm-accent-green: #5da578;
+  --dm-cta-text: #5da578;
+  --dm-tag-text: #90ad76;
+  --dm-tag-text-alt: #669e9b;
+}
+

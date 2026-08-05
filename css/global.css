@@ -1,0 +1,30 @@
+/* rem base: 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--dm-bg);
+}
+
+/* ============ PAGE SHELL ============ */
+.home-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--dm-bg);
+  transition: background-color 0.2s ease;
+}
+.home {
+  position: relative;
+  width: 144rem;
+  min-height: 630rem;
+  flex-shrink: 0;
+  background: var(--dm-bg);
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  transform-origin: top center;
+}
