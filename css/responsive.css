@@ -89,6 +89,7 @@
     top: 1.5rem;
     width: 33.9rem;
     height: 5.5995rem;
+    z-index: 20;
   }
   .m-header__logo {
     position: absolute;
@@ -97,6 +98,11 @@
     width: 4.3rem;
     height: 4.3rem;
     overflow: hidden;
+    display: block;
+    text-decoration: none;
+  }
+  .m-header__logo > div {
+    position: absolute;
   }
   .m-header__logo img {
     position: absolute;
@@ -146,6 +152,9 @@
     color: var(--color-green-normal);
     font: 700 1.4rem var(--font-body);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .m-header__nav a.is-active {
+    color: #88d3cf;
   }
 
   .m-hero__text {
@@ -719,10 +728,18 @@
   .m-theme-toggle .icon-light {
     display: none;
   }
-  .mobile-canvas[data-theme="light"] .m-theme-toggle .icon-dark {
+  .mobile-canvas[data-theme="light"] .m-theme-toggle .icon-dark,
+  .m-sistema[data-theme="light"] .m-theme-toggle .icon-dark,
+  .m-investimento[data-theme="light"] .m-theme-toggle .icon-dark,
+  .m-bibliografia[data-theme="light"] .m-theme-toggle .icon-dark,
+  .m-game[data-theme="light"] .m-theme-toggle .icon-dark {
     display: none;
   }
-  .mobile-canvas[data-theme="light"] .m-theme-toggle .icon-light {
+  .mobile-canvas[data-theme="light"] .m-theme-toggle .icon-light,
+  .m-sistema[data-theme="light"] .m-theme-toggle .icon-light,
+  .m-investimento[data-theme="light"] .m-theme-toggle .icon-light,
+  .m-bibliografia[data-theme="light"] .m-theme-toggle .icon-light,
+  .m-game[data-theme="light"] .m-theme-toggle .icon-light {
     display: block;
   }
 }

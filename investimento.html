@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investimento | TrackLink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/investimento.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="investimento-wrapper">
+      <div class="investimento" id="investimentoPage" data-theme="dark">
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+          <nav class="header__nav" id="headerNav">
+            <a href="sistema.html" class="header__nav-link header__nav-link--sistema">Sistema</a>
+            <a href="investimento.html" class="header__nav-link header__nav-link--investimento header__nav-link--active">Investimento</a>
+            <a href="index.html#sobre" class="header__nav-link header__nav-link--sobre">Sobre nós</a>
+            <a href="bibliografia.html" class="header__nav-link header__nav-link--bibliografia">Bibliografia</a>
+            <a href="game.html" class="header__nav-link header__nav-link--game">Game</a>
+          </nav>
+        </header>
+
+        <p class="invest-title">
+          <span class="invest-title-accent">Materiais</span> e <span class="invest-title-accent">Custos</span> do Projeto
+        </p>
+        <p class="invest-subtitle">Lista completa dos componentes necessários para construir o GrowAI</p>
+
+        <!-- ===== PRODUCT CARDS ===== -->
+        <div class="invest-cards">
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-esp32.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">ESP 32</p>
+              <p class="invest-card__desc">ESP32 é um microcontrolador com Wi-Fi e Bluetooth integrados. <span class="invest-card__price">R$49,90</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-esp32-cam.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">ESP 32 CAM</p>
+              <p class="invest-card__desc">ESP32-CAM é um módulo com câmera integrado ao ESP32, capaz de capturar imagens e enviar via Wi-Fi. <span class="invest-card__price">R$78,98</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-sensor-ph.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Sensor pH (PH4502C)</p>
+              <p class="invest-card__desc">Sensor pH (PH4502C) mede o pH de líquidos. <span class="invest-card__price">R$56,55</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-temp-ds18b20.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Temp. DS18B20</p>
+              <p class="invest-card__desc">DS18B20 é um sensor digital que mede temperatura. <span class="invest-card__price">R$31,90</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-umidade-capacitivo.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Umidade Capacitivo</p>
+              <p class="invest-card__desc">Sensor de umidade capacitivo mede a umidade do solo por variação elétrica. <span class="invest-card__price">R$23,90</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-modulo-rele.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Módulo Relé 4 Canais</p>
+              <p class="invest-card__desc">Módulo relé 4 canais controla até quatro dispositivos elétricos com sinais digitais. <span class="invest-card__price">R$25,90</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-mini-bomba-agua.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Mini Bomba Água</p>
+              <p class="invest-card__desc">Mini bomba de água é um dispositivo que move água em pequenos sistemas. <span class="invest-card__price">R$21,99</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-fita-led.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Fita LED Full Spectrum</p>
+              <p class="invest-card__desc">Fita LED full spectrum emite luz de amplo espectro para auxiliar no crescimento de plantas. <span class="invest-card__price">R$58,37</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-led-uva.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">LED UV-A (395nm)</p>
+              <p class="invest-card__desc">LED UV-A emite luz ultravioleta próxima para aplicações como detecção e estímulo biológico. <span class="invest-card__price">R$21,89</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-micro-ventilador.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Micro-ventilador 12V</p>
+              <p class="invest-card__desc">Micro-ventilador 12V é um pequeno ventilador elétrico usado para circulação de ar. <span class="invest-card__price">R$18,40</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-fonte-12v.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Fonte 12V 5A</p>
+              <p class="invest-card__desc">Fonte fornece energia estável de 12 volts com até 5 amperes para dispositivos eletrônicos. <span class="invest-card__price">R$19,29</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-conversor-stepdown.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Conversor step-down</p>
+              <p class="invest-card__desc">Conversor step-down reduz a tensão elétrica para níveis menores. <span class="invest-card__price">R$51,80</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-protoboard.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Protoboard 830P</p>
+              <p class="invest-card__desc">Protoboard 830P é uma placa para montar circuitos eletrônicos sem solda. <span class="invest-card__price">R$ 31,40</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-ldr.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">LDR</p>
+              <p class="invest-card__desc">LDR é um sensor que varia a resistência conforme a luz. <span class="invest-card__price">R$ 15,74</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-tubos-pvc.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Tubos de PVC</p>
+              <p class="invest-card__desc">Tubos de PVC são usados para conduzir líquidos e estruturar sistemas. <span class="invest-card__price">+/- R$ 200,00</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-conexoes-pvc.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Conexões PVC</p>
+              <p class="invest-card__desc">Conexões de PVC (tees e joelhos) unem e direcionam tubos em sistemas hidráulicos. <span class="invest-card__price">+/- R$ 50,00</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-placa-policarbonato.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Placa Chapa Policarbona.</p>
+              <p class="invest-card__desc">Placa de policarbonato é um material resistente usado para cobertura e proteção de estruturas. <span class="invest-card__price">R$ 58,00</span></p>
+            </div>
+          </div>
+          <div class="invest-card">
+            <div class="invest-card__image"><img alt="" src="assets/images/investimento/img-fio-jumper.png" /></div>
+            <button type="button" class="invest-card__link" aria-label="Ver produto">
+              <img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" />
+            </button>
+            <div class="invest-card__body">
+              <p class="invest-card__title">Fio Jumper Fdg</p>
+              <p class="invest-card__desc">Fio jumper é um cabo usado para fazer conexões em circuitos eletrônicos. <span class="invest-card__price">R$ 56,99</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== VALOR TOTAL ===== -->
+        <div class="invest-total">
+          <div class="invest-total__bg">
+            <img class="icon-dark" alt="" src="assets/icons/icon-fundo-valor-projeto-dark.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-fundo-valor-projeto-light.svg" />
+          </div>
+          <p class="invest-total__title">Valor <span class="invest-total__title-accent">total</span> do projeto</p>
+          <p class="invest-total__value">+ ou - <span class="invest-total__value-accent">R$ 1274,11</span></p>
+        </div>
+
+        <div class="utility-bar">
+          <button type="button" aria-label="Alternar tema claro/escuro" class="theme-toggle" id="themeToggle">
+            <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+          </button>
+          <button type="button" aria-label="Voltar ao topo" class="scroll-top" id="scrollTop">
+            <img alt="" src="assets/icons/icon-scroll-top.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (INVESTIMENTOS - MOBILE, own artboard) ===== -->
+    <div class="m-investimento-wrapper">
+      <div class="m-investimento" id="mInvestimentoPage" data-theme="dark">
+        <header class="m-header">
+          <a href="index.html" class="m-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <button type="button" class="m-header__menu-toggle" id="mMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <img alt="" src="assets/icons/icon-hamburger-dark.svg" />
+          </button>
+          <nav class="m-header__nav" id="mHeaderNav">
+            <a href="sistema.html">Sistema</a>
+            <a href="investimento.html" class="is-active">Investimento</a>
+            <a href="index.html#sobre">Sobre nós</a>
+            <a href="bibliografia.html">Bibliografia</a>
+            <a href="game.html">Game</a>
+          </nav>
+        </header>
+
+        <p class="m-invest-title">
+          <span class="m-invest-title-accent">Materiais</span> e <span class="m-invest-title-accent">Custos</span> do Projeto
+        </p>
+        <p class="m-invest-subtitle">Lista completa dos componentes necessários para construir o GrowAI</p>
+
+        <div class="m-invest-list">
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-esp32.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">ESP 32</p>
+              <p class="m-invest-card__desc">ESP32 é um microcontrolador com Wi-Fi e Bluetooth integrados. <span class="m-invest-card__price">R$49,90</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-esp32-cam.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">ESP 32 CAM</p>
+              <p class="m-invest-card__desc">ESP32-CAM é um módulo com câmera integrado ao ESP32, capaz de capturar imagens e enviar via Wi-Fi. <span class="m-invest-card__price">R$78,98</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-sensor-ph.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Sensor pH (PH4502C)</p>
+              <p class="m-invest-card__desc">Sensor pH (PH4502C) mede o pH de líquidos. <span class="m-invest-card__price">R$56,55</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-temp-ds18b20.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Temp. DS18B20</p>
+              <p class="m-invest-card__desc">DS18B20 é um sensor digital que mede temperatura. <span class="m-invest-card__price">R$31,90</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-umidade-capacitivo.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Umidade Capacitivo</p>
+              <p class="m-invest-card__desc">Sensor de umidade capacitivo mede a umidade do solo por variação elétrica. <span class="m-invest-card__price">R$23,90</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-modulo-rele.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Módulo Relé 4 Canais</p>
+              <p class="m-invest-card__desc">Módulo relé 4 canais controla até quatro dispositivos elétricos com sinais digitais. <span class="m-invest-card__price">R$25,90</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-mini-bomba-agua.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Mini Bomba Água</p>
+              <p class="m-invest-card__desc">Mini bomba de água é um dispositivo que move água em pequenos sistemas. <span class="m-invest-card__price">R$21,99</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-fita-led.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Fita LED Full Spectrum</p>
+              <p class="m-invest-card__desc">Fita LED full spectrum emite luz de amplo espectro para auxiliar no crescimento de plantas. <span class="m-invest-card__price">R$58,37</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-led-uva.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">LED UV-A (395nm)</p>
+              <p class="m-invest-card__desc">LED UV-A emite luz ultravioleta próxima para aplicações como detecção e estímulo biológico. <span class="m-invest-card__price">R$21,89</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-micro-ventilador.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Micro-ventilador 12V</p>
+              <p class="m-invest-card__desc">Micro-ventilador 12V é um pequeno ventilador elétrico usado para circulação de ar. <span class="m-invest-card__price">R$ 18,40</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-fonte-12v.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Fonte 12V 5A</p>
+              <p class="m-invest-card__desc">Fonte fornece energia estável de 12 volts com até 5 amperes para dispositivos eletrônicos. <span class="m-invest-card__price">R$ 19,29</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-conversor-stepdown.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Conversor step-down</p>
+              <p class="m-invest-card__desc">Conversor step-down reduz a tensão elétrica para níveis menores. <span class="m-invest-card__price">R$ 51,80</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-protoboard.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Protoboard 830P</p>
+              <p class="m-invest-card__desc">Protoboard 830P é uma placa para montar circuitos eletrônicos sem solda. <span class="m-invest-card__price">R$ 31,40</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-ldr.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">LDR</p>
+              <p class="m-invest-card__desc">LDR é um sensor que varia a resistência conforme a luz. <span class="m-invest-card__price">R$ 15,74</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-tubos-pvc.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Tubos de PVC</p>
+              <p class="m-invest-card__desc">Tubos de PVC são usados para conduzir líquidos e estruturar sistemas. <span class="m-invest-card__price">+/- R$ 200,00</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-conexoes-pvc.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Conexões PVC</p>
+              <p class="m-invest-card__desc">Conexões de PVC (tees e joelhos) unem e direcionam tubos em sistemas hidráulicos. <span class="m-invest-card__price">+/- R$ 50,00</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-placa-policarbonato.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Placa Chapa Policar...</p>
+              <p class="m-invest-card__desc">Placa de policarbonato é um material resistente usado para cobertura e proteção de estruturas. <span class="m-invest-card__price">R$ 58,00</span></p>
+            </div>
+          </div>
+          <div class="m-invest-card m-invest-card--right">
+            <div class="m-invest-card__image"><img alt="" src="assets/images/investimento/img-fio-jumper.png" /></div>
+            <div class="m-invest-card__body">
+              <button type="button" class="m-invest-card__link" aria-label="Ver produto"><img class="icon-dark" alt="" src="assets/icons/icon-link-dark.svg" /><img class="icon-light" alt="" src="assets/icons/icon-link-light.svg" /></button>
+              <p class="m-invest-card__title">Fio Jumper Fdg</p>
+              <p class="m-invest-card__desc">Fio jumper é um cabo usado para fazer conexões em circuitos eletrônicos. <span class="m-invest-card__price">R$ 56,99</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="m-invest-total">
+          <p class="m-invest-total__title">Valor <span class="m-invest-total__title-accent">total</span> do projeto</p>
+          <p class="m-invest-total__value">+ ou - <span class="m-invest-total__value-accent">R$ 1274,11</span></p>
+        </div>
+
+        <div class="m-utility-bar">
+          <button type="button" aria-label="Alternar tema claro/escuro" class="m-theme-toggle" id="mThemeToggle">
+            <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+          </button>
+          <button type="button" aria-label="Voltar ao topo" class="m-scroll-top" id="mScrollTop">
+            <img alt="" src="assets/icons/icon-scroll-top.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/investimento.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>

@@ -13,6 +13,7 @@
   top: 0;
   width: 24.1rem;
   height: 8rem;
+  text-decoration: none;
 }
 .header__brand-text {
   position: absolute;
@@ -33,6 +34,9 @@
   height: 8rem;
   overflow: hidden;
 }
+.header__logo > div {
+  position: absolute;
+}
 .header__logo img {
   position: absolute;
   display: block;
@@ -48,6 +52,7 @@
 .header__nav {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   font: 700 2.4rem/4rem var(--font-body);
   color: var(--color-green-normal);
   letter-spacing: 0.24px;
@@ -60,12 +65,14 @@
   display: flex;
   align-items: center;
   color: inherit;
+  pointer-events: auto;
 }
 .header__nav-link--sistema { left: 44.71%; }
 .header__nav-link--sobre { left: 69.15%; }
 .header__nav-link--bibliografia { left: 80.61%; }
 .header__nav-link--game { left: 94.15%; }
 .header__nav-link--investimento { left: 54.25%; }
+.header__nav-link--active { color: #88d3cf; }
 
 .header__menu-toggle {
   display: none;

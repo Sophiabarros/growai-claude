@@ -1,0 +1,558 @@
+/* SISTEMA page (desktop) - "SISTEMA" (1:3) / "SISTEMA - DARKMODE" (271:228) frames */
+
+.sistema-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--dm-bg);
+  transition: background-color 0.2s ease;
+}
+.sistema {
+  position: relative;
+  width: 144rem;
+  min-height: 296rem;
+  flex-shrink: 0;
+  background: var(--dm-bg);
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  transform-origin: top center;
+}
+
+/* ============ VIDEO BLOCK (shared by section 1) ============ */
+.sistema-video {
+  position: absolute;
+  left: 65.4rem;
+  top: 22.8rem;
+  width: 70.4rem;
+  height: 45.4rem;
+  border-radius: 2rem;
+  background: var(--dm-accent-green);
+}
+
+/* ============ SECTION 1: COMO UTILIZAR ============ */
+.sistema-intro {
+  position: absolute;
+  left: 9.6rem;
+  top: 24.1rem;
+  width: 46.9rem;
+}
+.sistema-intro__title {
+  position: relative;
+  top: 5.5rem;
+  transform: translateY(-50%);
+  color: var(--dm-text);
+  font: 700 4.8rem/5.5rem var(--font-body);
+  letter-spacing: 2.4px;
+}
+.sistema-intro__title-accent {
+  color: var(--dm-accent-green);
+}
+.sistema-intro__desc {
+  margin-top: 3.4rem;
+  color: var(--dm-text);
+  font: 400 2rem/normal var(--font-body);
+  letter-spacing: 1px;
+  text-align: justify;
+}
+.sistema-intro__btn {
+  position: relative;
+  margin-top: 6.6rem;
+  width: 27.1rem;
+  height: 6.8rem;
+  border: 0;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  background: var(--dm-accent-green);
+  color: var(--color-violet-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font: 700 1.6rem/4rem var(--font-body);
+  letter-spacing: 0.16px;
+}
+.sistema-intro__btn img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* ============ SECTION 2: MANUAL PASSO A PASSO ============ */
+.sistema-manual {
+  position: absolute;
+  left: 0;
+  top: 84.4rem;
+  width: 144rem;
+}
+.sistema-manual__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 144rem;
+  height: 114.5rem;
+}
+.sistema-manual__bg img {
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.sistema-manual__bg .icon-light {
+  display: none;
+}
+.sistema[data-theme="light"] .sistema-manual__bg .icon-dark {
+  display: none;
+}
+.sistema[data-theme="light"] .sistema-manual__bg .icon-light {
+  display: block;
+}
+
+.sistema-manual__title {
+  position: absolute;
+  left: 50%;
+  top: 10.1rem;
+  transform: translateX(-50%);
+  width: 89.3rem;
+  text-align: center;
+  color: var(--dm-text);
+  font: 700 4.8rem/5.5rem var(--font-body);
+  letter-spacing: 2.4px;
+}
+.sistema-manual__title-accent {
+  color: var(--dm-accent-green);
+}
+
+.sistema-steps {
+  position: absolute;
+  left: 0;
+  top: 52.9rem;
+  width: 144rem;
+  display: flex;
+  justify-content: center;
+  gap: 4.4rem;
+}
+.sistema-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 36.4rem;
+  text-align: center;
+}
+.sistema-step__circle {
+  width: 13.3rem;
+  height: 13.3rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: var(--color-teal-deep);
+}
+.sistema-step--alt .sistema-step__circle {
+  background: var(--color-green-dark);
+}
+.sistema-step__number {
+  color: var(--color-violet-light);
+  font: 700 6.4rem/normal var(--font-body);
+  letter-spacing: 3.2px;
+}
+.sistema-step__title {
+  margin-top: 2.1rem;
+  width: 36.4rem;
+  color: var(--dm-step-accent);
+  font: 700 3rem/normal var(--font-body);
+  letter-spacing: 1.5px;
+}
+.sistema-step--alt .sistema-step__title {
+  color: var(--color-green-dark);
+}
+.sistema-step__desc {
+  margin-top: 1.6rem;
+  width: 36.4rem;
+  color: var(--dm-text);
+  font: 400 2rem/normal var(--font-body);
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.sistema-manual__photo {
+  position: absolute;
+  left: 0;
+  top: 20.9rem;
+  width: 144rem;
+  height: 26.7rem;
+}
+.sistema-manual__photo img {
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.sistema-manual__caption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-violet-light);
+  font: 500 3.2rem/5.5rem var(--font-body);
+  letter-spacing: 1.6px;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+
+/* ============ SECTION 3: BAIXE O APLICATIVO ============ */
+.sistema-app {
+  position: absolute;
+  left: 0;
+  top: 215.5rem;
+  width: 144rem;
+}
+.sistema-app__title {
+  position: relative;
+  left: 9.6rem;
+  width: 65.8rem;
+  color: var(--dm-text);
+  font: 700 4.8rem/5.5rem var(--font-body);
+  letter-spacing: 2.4px;
+}
+.sistema-app__title-accent {
+  color: var(--dm-accent-green);
+}
+.sistema-app__desc {
+  position: relative;
+  left: 9.3rem;
+  margin-top: 2rem;
+  width: 65.2rem;
+  color: var(--dm-text);
+  font: 400 2rem/normal var(--font-body);
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.sistema-app__store-btn {
+  position: absolute;
+  left: 9.6rem;
+  width: 31.6rem;
+  height: 9.0178rem;
+  border: 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  background: var(--dm-accent-green);
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 0 2.4rem;
+}
+.sistema-app__store-btn--appstore { top: 40.5rem; }
+.sistema-app__store-btn--playstore { top: 53.958rem; }
+.sistema-app__store-btn img {
+  width: 3.2rem;
+  height: 3.2rem;
+  flex-shrink: 0;
+}
+.sistema-app__store-text {
+  text-align: left;
+  color: var(--color-violet-light);
+}
+.sistema-app__store-eyebrow {
+  font: 400 1.4rem/normal var(--font-body);
+  letter-spacing: 0.7px;
+}
+.sistema-app__store-name {
+  margin-top: 0.4rem;
+  font: 600 2rem/normal var(--font-body);
+  letter-spacing: 1px;
+}
+
+.sistema-app__qrcode {
+  position: absolute;
+  left: 52.5rem;
+  top: 40.5rem;
+  width: 22.6rem;
+  height: 22.6rem;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.sistema-app__qrcode img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sistema-app__phone {
+  position: absolute;
+  left: 94.1rem;
+  top: 0;
+  width: 40.3rem;
+  height: 66.1rem;
+  overflow: hidden;
+  pointer-events: none;
+}
+.sistema-app__phone img {
+  position: absolute;
+  left: -21.46%;
+  top: -9.28%;
+  width: 135.63%;
+  height: 123.97%;
+  max-width: none;
+}
+
+/* ============ UTILITY BAR override (shared with footer.css) ============ */
+.sistema .utility-bar {
+  top: 284.8rem;
+}
+
+/*
+  MOBILE LAYOUT — "SISTEMA - MOBILE" (193:72 light / 330:997 dark), 375px design
+  width, own composition matching the mobile canvas convention set by
+  css/responsive.css (.mobile-canvas). Below 768px the desktop `.sistema`
+  is hidden and `.m-sistema` is shown instead; above it, the reverse.
+*/
+.m-sistema-wrapper {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .m-sistema-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .sistema-wrapper {
+    display: none;
+  }
+  .m-sistema-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: var(--dm-bg);
+  }
+  .m-sistema {
+    position: relative;
+    width: 37.5rem;
+    max-width: 100%;
+    min-height: 96.5rem;
+    margin: 0 auto;
+    background: var(--dm-bg);
+    overflow: hidden;
+    --dm-store-btn-bg: #527f7c;
+    --dm-step-accent-1: #5b9c93;
+    --dm-step-accent-2: #9ab97e;
+  }
+  .m-sistema[data-theme="light"] {
+    --dm-store-btn-bg: #5da578;
+    --dm-step-accent-1: #4c827a;
+    --dm-step-accent-2: #90ad76;
+  }
+
+  .m-sistema__video {
+    position: absolute;
+    left: 2rem;
+    top: 13.6rem;
+    width: 33.1rem;
+    height: 14.6rem;
+    border-radius: 1rem;
+    background: var(--color-green-normal);
+  }
+  .m-sistema__title {
+    position: absolute;
+    left: 50%;
+    top: 11.2rem;
+    transform: translate(-50%, -50%);
+    width: 22.5rem;
+    text-align: center;
+    color: var(--dm-text);
+    font: 700 1.6rem/normal var(--font-body);
+    letter-spacing: 0.8px;
+  }
+  .m-sistema__title-accent {
+    color: var(--color-green-normal);
+  }
+  .m-sistema__desc {
+    position: absolute;
+    left: 2.1rem;
+    top: 29.9rem;
+    width: 33rem;
+    color: var(--dm-text);
+    font: 400 1.2rem/normal var(--font-body);
+    letter-spacing: 0.6px;
+    text-align: justify;
+  }
+
+  .m-sistema-manual__bg {
+    position: absolute;
+    left: 0;
+    top: 40.9rem;
+    width: 39.1rem;
+    height: 48.3rem;
+  }
+  .m-sistema-manual__bg img {
+    position: absolute;
+    display: block;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .m-sistema-manual__bg .icon-light {
+    display: none;
+  }
+  .m-sistema[data-theme="light"] .m-sistema-manual__bg .icon-dark {
+    display: none;
+  }
+  .m-sistema[data-theme="light"] .m-sistema-manual__bg .icon-light {
+    display: block;
+  }
+
+  .m-sistema-manual__title {
+    position: absolute;
+    left: 50%;
+    top: 45.9rem;
+    transform: translate(-50%, -50%);
+    width: 25.9rem;
+    text-align: center;
+    color: var(--dm-text);
+    font: 700 1.6rem/normal var(--font-body);
+    letter-spacing: 0.8px;
+  }
+  .m-sistema-manual__title-accent {
+    color: var(--color-green-normal);
+  }
+
+  .m-sistema-manual__photo {
+    position: absolute;
+    left: 0;
+    top: 47.9rem;
+    width: 37.5rem;
+    height: 8.4rem;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .m-sistema-manual__photo img {
+    position: absolute;
+    left: 0.12%;
+    top: -213.58%;
+    width: 100%;
+    height: 567.14%;
+    max-width: none;
+  }
+  .m-sistema-manual__caption {
+    position: absolute;
+    left: 50%;
+    top: 52.1rem;
+    transform: translate(-50%, -50%);
+    width: 29.7rem;
+    text-align: justify;
+    color: var(--color-violet-light);
+    font: 500 0.9rem/normal var(--font-body);
+    letter-spacing: 0.45px;
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .m-sistema-step {
+    position: absolute;
+    left: 1.4rem;
+    width: 31.6rem;
+  }
+  .m-sistema-step--1 { top: 58.3rem; }
+  .m-sistema-step--2 { top: 67.8rem; }
+  .m-sistema-step--3 { top: 77.4rem; }
+  .m-sistema-step__row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .m-sistema-step__circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-teal-deep);
+  }
+  .m-sistema-step--2 .m-sistema-step__circle {
+    background: var(--color-green-dark);
+  }
+  .m-sistema-step__number {
+    color: var(--color-violet-light);
+    font: 700 1.2rem/normal var(--font-body);
+    letter-spacing: 0.6px;
+  }
+  .m-sistema-step__title {
+    color: var(--dm-step-accent-1);
+    font: 700 1rem/normal var(--font-body);
+    letter-spacing: 0.5px;
+  }
+  .m-sistema-step--2 .m-sistema-step__title {
+    color: var(--dm-step-accent-2);
+  }
+  .m-sistema-step__desc {
+    margin-top: 0.5rem;
+    margin-left: 2.8rem;
+    width: 28.8rem;
+    color: var(--dm-text);
+    font: 400 0.8rem/normal var(--font-body);
+    letter-spacing: 0.4px;
+    text-align: justify;
+  }
+
+  .m-sistema-stores {
+    position: absolute;
+    left: 0;
+    top: 91.2rem;
+    width: 37.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.7rem;
+  }
+  .m-sistema-store-btn {
+    width: 10rem;
+    height: 3.3rem;
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    background: var(--dm-store-btn-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .m-sistema-store-btn img {
+    width: 1.4rem;
+    height: 1.4rem;
+    flex-shrink: 0;
+  }
+  .m-sistema-store-text {
+    text-align: left;
+    color: var(--color-violet-light);
+  }
+  .m-sistema-store-eyebrow {
+    font: 400 0.5rem/normal var(--font-body);
+    letter-spacing: 0.25px;
+  }
+  .m-sistema-store-name {
+    margin-top: 0.1rem;
+    font: 600 1rem/normal var(--font-body);
+    letter-spacing: 0.5px;
+  }
+
+  .m-sistema .m-utility-bar {
+    position: absolute;
+    left: 2.5rem;
+    top: 91.7rem;
+    margin-top: 0;
+    padding: 0;
+    justify-content: flex-start;
+  }
+  .m-sistema .m-theme-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

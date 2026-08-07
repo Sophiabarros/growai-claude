@@ -27,6 +27,8 @@
 
   --color-teal: #669e9b;
   --color-teal-active: #7abeba;
+  --color-teal-deep: #4c827a;
+  --color-grey-dark-hover: #8e8f8a;
 
   --font-body: "Lexend", sans-serif;
 
@@ -43,10 +45,21 @@
   --dm-cta-text: #c0e79d;
   --dm-tag-text: #566847;
   --dm-tag-text-alt: #3d5f5d;
+  --dm-step-accent: var(--color-teal);
+  --dm-card-bg: var(--color-green-darker);
+  --dm-price: #88d3cf;
+  --dm-subtitle: #aff4f1;
+  --dm-heading-soft: #ebf8e1;
 }
 
 /* Light theme tokens - HOME screen */
-.home[data-theme="light"] {
+.home[data-theme="light"],
+.sistema[data-theme="light"],
+.m-sistema[data-theme="light"],
+.investimento[data-theme="light"],
+.m-investimento[data-theme="light"],
+.bibliografia[data-theme="light"],
+.m-bibliografia[data-theme="light"] {
   --dm-bg: #fcfcfd;
   --dm-surface: #f5f5f7;
   --dm-surface-alt: #f5f5f7;
@@ -59,5 +72,10 @@
   --dm-cta-text: #5da578;
   --dm-tag-text: #90ad76;
   --dm-tag-text-alt: #669e9b;
+  --dm-step-accent: var(--color-teal-deep);
+  --dm-card-bg: #ebf8e1;
+  --dm-price: var(--color-green-normal-hover);
+  --dm-subtitle: var(--color-grey-dark);
+  --dm-heading-soft: var(--dm-text);
 }
 

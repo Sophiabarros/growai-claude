@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game | TrackLink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <div class="game" id="gamePage" data-theme="dark">
+        <div class="game__bg">
+          <img alt="" src="assets/images/game/img-bg.png" />
+        </div>
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+          <nav class="header__nav" id="headerNav">
+            <a href="sistema.html" class="header__nav-link header__nav-link--sistema">Sistema</a>
+            <a href="investimento.html" class="header__nav-link header__nav-link--investimento">Investimento</a>
+            <a href="index.html#sobre" class="header__nav-link header__nav-link--sobre">Sobre nós</a>
+            <a href="bibliografia.html" class="header__nav-link header__nav-link--bibliografia">Bibliografia</a>
+            <a href="game.html" class="header__nav-link header__nav-link--game header__nav-link--active">Game</a>
+          </nav>
+        </header>
+
+        <p class="game__title">Endosymbiosis Protocol</p>
+        <div class="game__quote">
+          <p>O sangue alimenta a raiz. A memória sustenta o vidro. Bem-vindo ao Ciclo Eterno.</p>
+          <p>A execução é sua. A culpa também.</p>
+        </div>
+        <p class="game__desc">
+          Atrás do vidro, uma planta experimental cresce. Na tela, uma IA benevolente dita suas
+          tarefas. No seu inventário, pistas que você preferia não ter encontrado. Até onde você
+          vai para manter a simetria de uma rotina corporativa quando o próprio cenário questiona
+          a sua humanidade? Prepare-se para um puzzle point &amp; click onde a lógica é sua
+          ferramenta e a sua consciência, o alvo.
+        </p>
+        <button type="button" class="game__btn">
+          Embarque nessa aventura
+          <img alt="" src="assets/icons/icon-game-play.svg" />
+        </button>
+
+        <button type="button" aria-label="Alternar tema claro/escuro" class="theme-toggle" id="themeToggle">
+          <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+          <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (Games mobile, own artboard) ===== -->
+    <div class="m-game-wrapper">
+      <div class="m-game" id="mGamePage" data-theme="dark">
+        <div class="m-game__bg">
+          <img alt="" src="assets/images/game/img-bg.png" />
+        </div>
+
+        <header class="m-header">
+          <a href="index.html" class="m-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <button type="button" class="m-header__menu-toggle" id="mMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <img alt="" src="assets/icons/icon-game-hamburger.svg" />
+          </button>
+          <nav class="m-header__nav" id="mHeaderNav">
+            <a href="sistema.html">Sistema</a>
+            <a href="investimento.html">Investimento</a>
+            <a href="index.html#sobre">Sobre nós</a>
+            <a href="bibliografia.html">Bibliografia</a>
+            <a href="game.html" class="is-active">Game</a>
+          </nav>
+        </header>
+
+        <p class="m-game__title">Endosymbiosis Protocol</p>
+        <p class="m-game__quote">O sangue alimenta a raiz. A memória sustenta o vidro. Bem-vindo ao Ciclo Eterno.</p>
+        <p class="m-game__desc">
+          Atrás do vidro, uma planta experimental cresce. Na tela, uma IA benevolente dita suas
+          tarefas. No seu inventário, pistas que você preferia não ter encontrado. Até onde você
+          vai para manter a simetria de uma rotina corporativa quando o próprio cenário questiona
+          a sua humanidade? Prepare-se para um puzzle point &amp; click onde a lógica é sua
+          ferramenta e a sua consciência, o alvo.
+        </p>
+        <button type="button" class="m-game__btn">
+          Embarque nessa aventura
+          <img alt="" src="assets/icons/icon-game-play.svg" />
+        </button>
+
+        <button type="button" aria-label="Alternar tema claro/escuro" class="m-theme-toggle" id="mThemeToggle">
+          <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+          <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+        </button>
+      </div>
+    </div>
+
+    <script src="js/game.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>

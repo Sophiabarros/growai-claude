@@ -1,0 +1,370 @@
+/* INVESTIMENTO page (desktop) - "INVESTIMENTO" (1:4) / "INVESTIMENTO - DARKMODE" (271:332) frames */
+
+.investimento-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--dm-bg);
+  transition: background-color 0.2s ease;
+}
+.investimento {
+  position: relative;
+  width: 144rem;
+  min-height: 402.7rem;
+  flex-shrink: 0;
+  background: var(--dm-bg);
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  transform-origin: top center;
+}
+
+.invest-title {
+  position: absolute;
+  left: 50%;
+  top: 22.75rem;
+  transform: translate(-50%, -50%);
+  width: 84.7rem;
+  text-align: center;
+  color: var(--dm-text);
+  font: 700 4.8rem/5.5rem var(--font-body);
+  letter-spacing: 2.4px;
+}
+.invest-title-accent {
+  color: var(--dm-accent-green);
+}
+.invest-subtitle {
+  position: absolute;
+  left: 50%;
+  top: 28.594rem;
+  transform: translate(-50%, -50%);
+  width: 78.3rem;
+  text-align: center;
+  color: var(--dm-subtitle);
+  font: 700 2rem/normal var(--font-body);
+  letter-spacing: 0.2px;
+}
+
+/* ============ PRODUCT CARDS ============ */
+.invest-cards {
+  position: absolute;
+  left: 0;
+  top: 38.5rem;
+  width: 144rem;
+  display: grid;
+  grid-template-columns: repeat(3, 37.7063rem);
+  justify-content: center;
+  gap: 6.8rem 3.5407rem;
+}
+.invest-card {
+  position: relative;
+  width: 37.7063rem;
+  height: 41.6009rem;
+  border-radius: 2rem;
+  background: var(--dm-card-bg);
+  overflow: hidden;
+}
+.invest-card__image {
+  position: relative;
+  width: 100%;
+  height: 26.3767rem;
+}
+.invest-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.invest-card__link {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  width: 7.5236rem;
+  height: 7.5236rem;
+  border-radius: 2rem;
+  background: var(--color-violet-light);
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.invest-card__link img {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+.invest-card__link .icon-light {
+  display: none;
+}
+.investimento[data-theme="light"] .invest-card__link .icon-dark {
+  display: none;
+}
+.investimento[data-theme="light"] .invest-card__link .icon-light {
+  display: block;
+}
+.invest-card__body {
+  padding: 2rem 2.5rem 2.5rem;
+}
+.invest-card__title {
+  color: var(--dm-accent-green);
+  font: 700 2.4rem/4rem var(--font-body);
+  letter-spacing: 0.24px;
+}
+.invest-card__desc {
+  margin-top: 0.8rem;
+  color: var(--dm-text);
+  font: 400 1.6rem/normal var(--font-body);
+  letter-spacing: 0.16px;
+  text-align: justify;
+}
+.invest-card__price {
+  font-weight: 600;
+  color: var(--dm-price);
+}
+
+/* ============ VALOR TOTAL DO PROJETO ============ */
+.invest-total {
+  position: absolute;
+  left: 0;
+  top: 342.7rem;
+  width: 144rem;
+  height: 63.4rem;
+  overflow: hidden;
+}
+.invest-total__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 174.6rem;
+  height: 63.4rem;
+}
+.invest-total__bg img {
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.invest-total__bg .icon-light {
+  display: none;
+}
+.investimento[data-theme="light"] .invest-total__bg .icon-dark {
+  display: none;
+}
+.investimento[data-theme="light"] .invest-total__bg .icon-light {
+  display: block;
+}
+.invest-total__title {
+  position: absolute;
+  left: 50%;
+  top: 28.9rem;
+  transform: translate(-50%, -50%);
+  width: 60.1rem;
+  text-align: center;
+  color: var(--dm-text);
+  font: 700 4.8rem/normal var(--font-body);
+  letter-spacing: 2.4px;
+  white-space: nowrap;
+}
+.invest-total__title-accent {
+  color: var(--dm-accent-green);
+}
+.invest-total__value {
+  position: absolute;
+  left: 50%;
+  top: 36.65rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--dm-text);
+  font: 500 4.8rem/normal var(--font-body);
+  letter-spacing: 2.4px;
+  white-space: nowrap;
+}
+.invest-total__value-accent {
+  color: var(--dm-price);
+}
+
+/* ============ UTILITY BAR override (shared with footer.css) ============ */
+.investimento .utility-bar {
+  top: 392.19rem;
+}
+
+/*
+  MOBILE LAYOUT — "INVESTIMENTOS - MOBILE" (279:309 light / 375:775 dark),
+  375px design width, same convention as css/responsive.css.
+*/
+.m-investimento-wrapper {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .m-investimento-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .investimento-wrapper {
+    display: none;
+  }
+  .m-investimento-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: var(--dm-bg);
+  }
+  .m-investimento {
+    position: relative;
+    width: 37.5rem;
+    max-width: 100%;
+    min-height: 237.8rem;
+    margin: 0 auto;
+    background: var(--dm-bg);
+    overflow: hidden;
+  }
+
+  .m-invest-title {
+    position: absolute;
+    left: 50%;
+    top: 11.15rem;
+    transform: translate(-50%, -50%);
+    width: 33.2rem;
+    text-align: center;
+    color: var(--dm-text);
+    font: 700 2rem/normal var(--font-body);
+    letter-spacing: 0.1px;
+  }
+  .m-invest-title-accent {
+    color: var(--dm-accent-green);
+  }
+  .m-invest-subtitle {
+    position: absolute;
+    left: 50%;
+    top: 14.7rem;
+    transform: translate(-50%, -50%);
+    width: 33.2rem;
+    text-align: center;
+    color: var(--dm-subtitle);
+    font: 700 1.2rem/normal var(--font-body);
+    letter-spacing: 0.012px;
+  }
+
+  .m-invest-list {
+    position: relative;
+    margin: 19.5rem 2.3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  .m-invest-card {
+    position: relative;
+    height: 9.1rem;
+    border-radius: 0.6rem;
+    background: var(--dm-card-bg);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: stretch;
+  }
+  .m-invest-card--right {
+    flex-direction: row-reverse;
+  }
+  .m-invest-card__image {
+    width: 9.9rem;
+    height: 9.1rem;
+    flex-shrink: 0;
+    border-radius: 0.6rem 0 0 0.6rem;
+    overflow: hidden;
+  }
+  .m-invest-card--right .m-invest-card__image {
+    border-radius: 0 0.6rem 0.6rem 0;
+  }
+  .m-invest-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .m-invest-card__body {
+    position: relative;
+    flex: 1;
+    padding: 0.9rem 1rem;
+  }
+  .m-invest-card__link {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 2rem;
+    background: var(--color-violet-light);
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .m-invest-card__link img {
+    width: 1rem;
+    height: 1rem;
+  }
+  .m-invest-card__link .icon-light {
+    display: none;
+  }
+  .m-investimento[data-theme="light"] .m-invest-card__link .icon-dark {
+    display: none;
+  }
+  .m-investimento[data-theme="light"] .m-invest-card__link .icon-light {
+    display: block;
+  }
+  .m-invest-card__title {
+    padding-right: 2.6rem;
+    color: var(--dm-accent-green);
+    font: 700 1.4rem/normal var(--font-body);
+    letter-spacing: 0.14px;
+  }
+  .m-invest-card__desc {
+    margin-top: 0.4rem;
+    color: var(--dm-text);
+    font: 400 1rem/normal var(--font-body);
+    letter-spacing: 0.1px;
+    text-align: justify;
+  }
+  .m-invest-card__price {
+    font-weight: 600;
+    color: var(--dm-price);
+  }
+
+  .m-invest-total {
+    position: relative;
+    margin-top: 3.9rem;
+    height: 18.8rem;
+    background: var(--dm-card-bg);
+    text-align: center;
+    padding-top: 6.9rem;
+  }
+  .m-invest-total__title {
+    color: var(--dm-text);
+    font: 700 2rem/normal var(--font-body);
+    letter-spacing: 0.1px;
+  }
+  .m-invest-total__title-accent {
+    color: var(--dm-accent-green);
+  }
+  .m-invest-total__value {
+    margin-top: 0.5rem;
+    color: var(--dm-text);
+    font: 500 1.2rem/normal var(--font-body);
+    letter-spacing: 0.06px;
+  }
+  .m-invest-total__value-accent {
+    color: var(--dm-price);
+  }
+
+  .m-investimento .m-utility-bar {
+    position: absolute;
+    left: 0;
+    top: 232.95rem;
+    width: 37.5rem;
+    margin-top: 0;
+    padding: 0 2.5rem;
+  }
+}

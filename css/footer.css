@@ -33,10 +33,18 @@
 .theme-toggle .icon-light {
   display: none;
 }
-.home[data-theme="light"] .theme-toggle .icon-dark {
+.home[data-theme="light"] .theme-toggle .icon-dark,
+.sistema[data-theme="light"] .theme-toggle .icon-dark,
+.investimento[data-theme="light"] .theme-toggle .icon-dark,
+.bibliografia[data-theme="light"] .theme-toggle .icon-dark,
+.game[data-theme="light"] .theme-toggle .icon-dark {
   display: none;
 }
-.home[data-theme="light"] .theme-toggle .icon-light {
+.home[data-theme="light"] .theme-toggle .icon-light,
+.sistema[data-theme="light"] .theme-toggle .icon-light,
+.investimento[data-theme="light"] .theme-toggle .icon-light,
+.bibliografia[data-theme="light"] .theme-toggle .icon-light,
+.game[data-theme="light"] .theme-toggle .icon-light {
   display: block;
 }
 .scroll-top {

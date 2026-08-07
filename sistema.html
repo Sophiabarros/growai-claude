@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema | TrackLink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/sistema.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="sistema-wrapper">
+      <div class="sistema" id="sistemaPage" data-theme="dark">
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+          <nav class="header__nav" id="headerNav">
+            <a href="sistema.html" class="header__nav-link header__nav-link--sistema header__nav-link--active">Sistema</a>
+            <a href="investimento.html" class="header__nav-link header__nav-link--investimento">Investimento</a>
+            <a href="index.html#sobre" class="header__nav-link header__nav-link--sobre">Sobre nós</a>
+            <a href="bibliografia.html" class="header__nav-link header__nav-link--bibliografia">Bibliografia</a>
+            <a href="game.html" class="header__nav-link header__nav-link--game">Game</a>
+          </nav>
+        </header>
+
+        <!-- ===== VIDEO / DEMO BLOCK ===== -->
+        <div class="sistema-video"></div>
+
+        <!-- ===== SECTION 1: COMO UTILIZAR O GROWAI ===== -->
+        <section class="sistema-intro">
+          <p class="sistema-intro__title">
+            Como utilizar o <span class="sistema-intro__title-accent">GrowAI?</span>
+          </p>
+          <p class="sistema-intro__desc">
+            O GrowAI é utilizado por meio do aplicativo, onde o usuário configura cada estação de
+            cultivo conforme o objetivo desejado. A partir disso, o sistema monitora
+            automaticamente as condições, analisa a saúde das plantas e envia alertas e sugestões
+            para otimizar o cultivo.
+          </p>
+          <button type="button" class="sistema-intro__btn">
+            Leia mais sobre
+            <img alt="" src="assets/icons/icon-arrow-right.svg" />
+          </button>
+        </section>
+
+        <!-- ===== SECTION 2: MANUAL PASSO A PASSO ===== -->
+        <section class="sistema-manual">
+          <div class="sistema-manual__bg">
+            <img class="icon-dark" alt="" src="assets/icons/icon-fundo-manual-dark.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-fundo-manual-light.svg" />
+          </div>
+
+          <p class="sistema-manual__title">
+            Manual <span class="sistema-manual__title-accent">passo a passo</span>
+          </p>
+
+          <div class="sistema-manual__photo">
+            <img alt="" src="assets/images/img-sistema-manual.png" />
+            <p class="sistema-manual__caption">Em poucos passos, você começa a cultivar com inteligência</p>
+          </div>
+
+          <div class="sistema-steps">
+            <div class="sistema-step">
+              <div class="sistema-step__circle"><p class="sistema-step__number">1</p></div>
+              <p class="sistema-step__title">Configure sua conta e adicione a planta</p>
+              <p class="sistema-step__desc">
+                Crie sua conta e faça login no sistema. Em seguida, cadastre a planta que deseja
+                monitorar, informando seu tipo, nome e ambiente de cultivo. Depois, conecte os
+                sensores ao sistema seguindo as instruções da plataforma para iniciar a coleta de
+                dados.
+              </p>
+            </div>
+            <div class="sistema-step sistema-step--alt">
+              <div class="sistema-step__circle"><p class="sistema-step__number">2</p></div>
+              <p class="sistema-step__title">Acompanhe os dados da planta</p>
+              <p class="sistema-step__desc">
+                Acesse o painel para visualizar as informações coletadas pelos sensores em tempo
+                real, como umidade do solo, temperatura e luminosidade. Utilize esses dados para
+                entender as condições atuais da planta e acompanhar seu desenvolvimento ao longo
+                do tempo.
+              </p>
+            </div>
+            <div class="sistema-step">
+              <div class="sistema-step__circle"><p class="sistema-step__number">3</p></div>
+              <p class="sistema-step__title">Siga as recomendações</p>
+              <p class="sistema-step__desc">
+                Verifique as orientações geradas automaticamente com base nos dados coletados e
+                realize os ajustes necessários, como rega ou mudança de ambiente. Caso disponível,
+                ative funções automáticas para que o sistema execute essas ações e otimize o
+                cuidado com a planta.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== SECTION 3: BAIXE O NOSSO APLICATIVO ===== -->
+        <section class="sistema-app">
+          <p class="sistema-app__title">
+            Baixe o nosso <span class="sistema-app__title-accent">aplicativo</span>
+          </p>
+          <p class="sistema-app__desc">
+            O aplicativo GrowAI é o principal meio de controle da horta inteligente, permitindo
+            configurar, monitorar e otimizar o cultivo das plantas em um só lugar. Por meio dele,
+            o usuário conecta os sensores, acompanha dados como umidade, temperatura e
+            luminosidade em tempo real e recebe recomendações automatizadas. Dessa forma, o
+            aplicativo se torna essencial para o funcionamento do sistema, garantindo praticidade
+            e maior eficiência no cuidado com a horta.
+          </p>
+
+          <button type="button" class="sistema-app__store-btn sistema-app__store-btn--appstore">
+            <img alt="" src="assets/icons/icon-app-store.svg" />
+            <span class="sistema-app__store-text">
+              <span class="sistema-app__store-eyebrow">Disponível na</span>
+              <span class="sistema-app__store-name">App Store</span>
+            </span>
+          </button>
+          <button type="button" class="sistema-app__store-btn sistema-app__store-btn--playstore">
+            <img alt="" src="assets/icons/icon-play-store.svg" />
+            <span class="sistema-app__store-text">
+              <span class="sistema-app__store-eyebrow">Disponível na</span>
+              <span class="sistema-app__store-name">PlayStore</span>
+            </span>
+          </button>
+
+          <div class="sistema-app__qrcode">
+            <img alt="QR Code para baixar o aplicativo GrowAI" src="assets/images/img-sistema-qrcode.png" />
+          </div>
+
+          <div class="sistema-app__phone">
+            <img alt="Celular com o aplicativo GrowAI" src="assets/images/img-sistema-phone.png" />
+          </div>
+        </section>
+
+        <div class="utility-bar">
+          <button type="button" aria-label="Alternar tema claro/escuro" class="theme-toggle" id="themeToggle">
+            <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+          </button>
+          <button type="button" aria-label="Voltar ao topo" class="scroll-top" id="scrollTop">
+            <img alt="" src="assets/icons/icon-scroll-top.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (SISTEMA - MOBILE, own artboard) ===== -->
+    <div class="m-sistema-wrapper">
+      <div class="m-sistema" id="mSistemaPage" data-theme="dark">
+        <header class="m-header">
+          <a href="index.html" class="m-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <button type="button" class="m-header__menu-toggle" id="mMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <img alt="" src="assets/icons/icon-hamburger-dark.svg" />
+          </button>
+          <nav class="m-header__nav" id="mHeaderNav">
+            <a href="sistema.html" class="is-active">Sistema</a>
+            <a href="investimento.html">Investimento</a>
+            <a href="index.html#sobre">Sobre nós</a>
+            <a href="bibliografia.html">Bibliografia</a>
+            <a href="game.html">Game</a>
+          </nav>
+        </header>
+
+        <div class="m-sistema__video"></div>
+
+        <p class="m-sistema__title">
+          Como utilizar o <span class="m-sistema__title-accent">GrowAI?</span>
+        </p>
+        <p class="m-sistema__desc">
+          O GrowAI é utilizado por meio do aplicativo, onde o usuário configura cada estação de
+          cultivo conforme o objetivo desejado. A partir disso, o sistema monitora
+          automaticamente as condições, analisa a saúde das plantas e envia alertas e sugestões
+          para otimizar o cultivo.
+        </p>
+
+        <div class="m-sistema-manual__bg">
+          <img class="icon-dark" alt="" src="assets/icons/icon-m-fundo-manual-dark.svg" />
+          <img class="icon-light" alt="" src="assets/icons/icon-m-fundo-manual-light.svg" />
+        </div>
+
+        <p class="m-sistema-manual__title">
+          Manual <span class="m-sistema-manual__title-accent">passo a passo</span>
+        </p>
+
+        <div class="m-sistema-manual__photo">
+          <img alt="" src="assets/images/img-sistema-manual.png" />
+        </div>
+        <p class="m-sistema-manual__caption">Em poucos passos, você começa a cultivar com inteligência</p>
+
+        <div class="m-sistema-step m-sistema-step--1">
+          <div class="m-sistema-step__row">
+            <div class="m-sistema-step__circle"><p class="m-sistema-step__number">1</p></div>
+            <p class="m-sistema-step__title">Configure sua conta e adicione a planta</p>
+          </div>
+          <p class="m-sistema-step__desc">
+            Crie sua conta e faça login no sistema. Em seguida, cadastre a planta que deseja
+            monitorar, informando seu tipo, nome e ambiente de cultivo. Depois, conecte os
+            sensores ao sistema seguindo as instruções da plataforma para iniciar a coleta de
+            dados.
+          </p>
+        </div>
+        <div class="m-sistema-step m-sistema-step--2">
+          <div class="m-sistema-step__row">
+            <div class="m-sistema-step__circle"><p class="m-sistema-step__number">2</p></div>
+            <p class="m-sistema-step__title">Acompanhe os dados da planta</p>
+          </div>
+          <p class="m-sistema-step__desc">
+            Acesse o painel para visualizar as informações coletadas pelos sensores em tempo
+            real, como umidade do solo, temperatura e luminosidade. Utilize esses dados para
+            entender as condições atuais da planta e acompanhar seu desenvolvimento ao longo do
+            tempo.
+          </p>
+        </div>
+        <div class="m-sistema-step m-sistema-step--3">
+          <div class="m-sistema-step__row">
+            <div class="m-sistema-step__circle"><p class="m-sistema-step__number">3</p></div>
+            <p class="m-sistema-step__title">Siga as recomendações</p>
+          </div>
+          <p class="m-sistema-step__desc">
+            Verifique as orientações geradas automaticamente com base nos dados coletados e
+            realize os ajustes necessários, como rega ou mudança de ambiente. Caso disponível,
+            ative funções automáticas para que o sistema execute essas ações e otimize o cuidado
+            com a planta.
+          </p>
+        </div>
+
+        <div class="m-sistema-stores">
+          <button type="button" class="m-sistema-store-btn">
+            <img alt="" src="assets/icons/icon-play-store.svg" />
+            <span class="m-sistema-store-text">
+              <span class="m-sistema-store-eyebrow">Disponível na</span>
+              <span class="m-sistema-store-name">PlayStore</span>
+            </span>
+          </button>
+          <button type="button" class="m-sistema-store-btn">
+            <img alt="" src="assets/icons/icon-app-store.svg" />
+            <span class="m-sistema-store-text">
+              <span class="m-sistema-store-eyebrow">Disponível na</span>
+              <span class="m-sistema-store-name">AppStore</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="m-utility-bar">
+          <button type="button" aria-label="Alternar tema claro/escuro" class="m-theme-toggle" id="mThemeToggle">
+            <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/sistema.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>

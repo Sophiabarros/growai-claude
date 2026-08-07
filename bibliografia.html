@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliografia | TrackLink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/bibliografia.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="bibliografia-wrapper">
+      <div class="bibliografia" id="bibliografiaPage" data-theme="dark">
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+          <nav class="header__nav" id="headerNav">
+            <a href="sistema.html" class="header__nav-link header__nav-link--sistema">Sistema</a>
+            <a href="investimento.html" class="header__nav-link header__nav-link--investimento">Investimento</a>
+            <a href="index.html#sobre" class="header__nav-link header__nav-link--sobre">Sobre nós</a>
+            <a href="bibliografia.html" class="header__nav-link header__nav-link--bibliografia header__nav-link--active">Bibliografia</a>
+            <a href="game.html" class="header__nav-link header__nav-link--game">Game</a>
+          </nav>
+        </header>
+
+        <!-- ===== SECTION 1: BASE TEÓRICA ===== -->
+        <p class="bib-intro__title">
+          <span class="bib-intro__title-accent">Base teórica</span> e referência
+        </p>
+        <p class="bib-intro__desc">
+          As referências bibliográficas foram fundamentais para o desenvolvimento do GrowAI,
+          contribuindo para a compreensão de conceitos como automação, sensores e cultivo de
+          plantas medicinais. Elas garantem base teórica e maior credibilidade ao projeto.
+        </p>
+        <button type="button" class="bib-intro__btn">
+          Leia mais sobre
+          <img alt="" src="assets/icons/icon-arrow-right.svg" />
+        </button>
+        <div class="bib-intro__image">
+          <img alt="" src="assets/images/bibliografia/img-hero.png" />
+        </div>
+
+        <!-- ===== SECTION 2: BASE DE ARTIGOS CIENTÍFICOS ===== -->
+        <div class="bib-articles__bg">
+          <img class="icon-dark" alt="" src="assets/icons/icon-bib-subtract-dark.svg" />
+          <img class="icon-light" alt="" src="assets/icons/icon-bib-subtract-light.svg" />
+        </div>
+
+        <p class="bib-articles__title">
+          <span class="bib-articles__title-accent">Base</span> de artigos científicos
+        </p>
+        <p class="bib-articles__subtitle">Clique na imagem para acessar o artigo</p>
+
+        <div class="bib-articles__body">
+          <div class="bib-carousel">
+            <button type="button" class="bib-carousel__arrow bib-carousel__arrow--left" aria-label="Artigo anterior">
+              <img class="icon-dark" alt="" src="assets/icons/icon-bib-arrow-left-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-bib-arrow-left-light.svg" />
+            </button>
+            <div class="bib-carousel__card bib-carousel__card--left">
+              <img alt="" src="assets/images/bibliografia/img-carousel-left.png" />
+            </div>
+            <div class="bib-carousel__card bib-carousel__card--right">
+              <img alt="" src="assets/images/bibliografia/img-carousel-right.png" />
+            </div>
+            <div class="bib-carousel__card bib-carousel__card--center">
+              <img alt="" src="assets/images/bibliografia/img-carousel-center.png" />
+            </div>
+            <button type="button" class="bib-carousel__arrow bib-carousel__arrow--right" aria-label="Próximo artigo">
+              <img class="icon-dark" alt="" src="assets/icons/icon-bib-arrow-right-dark.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-bib-arrow-right-light.svg" />
+            </button>
+          </div>
+          <div class="bib-carousel__dots">
+            <img class="icon-dark" alt="" src="assets/icons/icon-bib-marcador-dark.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-bib-marcador-light.svg" />
+          </div>
+
+          <p class="bib-articles__desc">
+            Esta seção reúne a base de artigos científicos que fundamentam o desenvolvimento do
+            GrowAI, abordando temas como automação, uso de sensores, análise de dados e cultivo de
+            plantas medicinais em ambientes controlados. A partir dessas referências, foi possível
+            compreender melhor os processos envolvidos e orientar as decisões técnicas do projeto.
+            Dessa forma, os artigos contribuem para a consistência, confiabilidade e credibilidade
+            da solução proposta.
+          </p>
+        </div>
+
+        <div class="utility-bar">
+          <button type="button" aria-label="Alternar tema claro/escuro" class="theme-toggle" id="themeToggle">
+            <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+          </button>
+          <button type="button" aria-label="Voltar ao topo" class="scroll-top" id="scrollTop">
+            <img alt="" src="assets/icons/icon-scroll-top.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (BIBLIOGRAFIA - MOBILE, own artboard) ===== -->
+    <div class="m-bibliografia-wrapper">
+      <div class="m-bibliografia" id="mBibliografiaPage" data-theme="dark">
+        <header class="m-header">
+          <a href="index.html" class="m-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <button type="button" class="m-header__menu-toggle" id="mMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <img alt="" src="assets/icons/icon-hamburger-dark.svg" />
+          </button>
+          <nav class="m-header__nav" id="mHeaderNav">
+            <a href="sistema.html">Sistema</a>
+            <a href="investimento.html">Investimento</a>
+            <a href="index.html#sobre">Sobre nós</a>
+            <a href="bibliografia.html" class="is-active">Bibliografia</a>
+            <a href="game.html">Game</a>
+          </nav>
+        </header>
+
+        <div class="m-bib-intro__image">
+          <img alt="" src="assets/images/bibliografia/img-hero.png" />
+        </div>
+        <p class="m-bib-intro__title">
+          <span class="m-bib-intro__title-accent">Base teórica</span> e referência
+        </p>
+        <p class="m-bib-intro__desc">
+          As referências bibliográficas foram fundamentais para o desenvolvimento do GrowAI,
+          contribuindo para a compreensão de conceitos como automação, sensores e cultivo de
+          plantas medicinais. Elas garantem base teórica e maior credibilidade ao projeto.
+        </p>
+        <button type="button" class="m-bib-intro__btn">Leia mais sobre</button>
+
+        <div class="m-bib-articles__bg">
+          <img class="icon-dark" alt="" src="assets/icons/icon-bib-m-subtract-dark.svg" />
+          <img class="icon-light" alt="" src="assets/icons/icon-bib-m-subtract-light.svg" />
+        </div>
+
+        <p class="m-bib-articles__title">
+          <span class="m-bib-articles__title-accent">Base</span> de artigos científicos
+        </p>
+        <p class="m-bib-articles__subtitle">Clique na imagem para acessar o artigo</p>
+
+        <div class="m-bib-articles__body">
+          <div class="m-bib-carousel">
+            <div class="m-bib-carousel__card m-bib-carousel__card--left">
+              <img alt="" src="assets/images/bibliografia/img-carousel-left.png" />
+            </div>
+            <div class="m-bib-carousel__card m-bib-carousel__card--right">
+              <img alt="" src="assets/images/bibliografia/img-carousel-right.png" />
+            </div>
+            <div class="m-bib-carousel__card m-bib-carousel__card--center">
+              <img alt="" src="assets/images/bibliografia/img-carousel-center.png" />
+            </div>
+          </div>
+          <div class="m-bib-carousel__dots">
+            <img class="icon-dark" alt="" src="assets/icons/icon-bib-m-marcador-dark.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-bib-m-marcador-light.svg" />
+          </div>
+
+          <p class="m-bib-articles__desc">
+            Esta seção reúne a base de artigos científicos que fundamentam o desenvolvimento do
+            GrowAI, abordando temas como automação, uso de sensores, análise de dados e cultivo de
+            plantas medicinais em ambientes controlados. A partir dessas referências, foi possível
+            compreender melhor os processos envolvidos e orientar as decisões técnicas do projeto.
+            Dessa forma, os artigos contribuem para a consistência, confiabilidade e credibilidade
+            da solução proposta.
+          </p>
+        </div>
+
+        <div class="m-utility-bar">
+          <button type="button" aria-label="Alternar tema claro/escuro" class="m-theme-toggle" id="mThemeToggle">
+            <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+          </button>
+          <button type="button" aria-label="Voltar ao topo" class="m-scroll-top" id="mScrollTop">
+            <img alt="" src="assets/icons/icon-scroll-top.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bibliografia.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>
