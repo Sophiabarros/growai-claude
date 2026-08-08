@@ -25,6 +25,8 @@
   --color-green-light-hover: #edf8f8;
   --color-green-light-active: #cde3d5;
 
+  --color-danger: #ff6b6b;
+
   --color-teal: #669e9b;
   --color-teal-active: #7abeba;
   --color-teal-deep: #4c827a;
@@ -33,6 +35,7 @@
   --color-green-active: #6da9a6;
 
   --font-body: "Lexend", sans-serif;
+  --font-inter: "Inter", sans-serif;
 
   /* Theme tokens - default values are the HOME - DARKMODE screen */
   --dm-bg: #152623;
@@ -76,16 +79,28 @@
 
 /* Light theme tokens - HOME screen */
 .home[data-theme="light"],
+.home-wrapper[data-theme="light"],
+.home-wrapper--mobile[data-theme="light"],
 .sistema[data-theme="light"],
 .m-sistema[data-theme="light"],
+.sistema-wrapper[data-theme="light"],
+.m-sistema-wrapper[data-theme="light"],
 .investimento[data-theme="light"],
 .m-investimento[data-theme="light"],
+.investimento-wrapper[data-theme="light"],
+.m-investimento-wrapper[data-theme="light"],
 .bibliografia[data-theme="light"],
 .m-bibliografia[data-theme="light"],
+.bibliografia-wrapper[data-theme="light"],
+.m-bibliografia-wrapper[data-theme="light"],
 .signup[data-theme="light"],
 .m-signup[data-theme="light"],
+.signup-wrapper[data-theme="light"],
+.m-signup-wrapper[data-theme="light"],
 .login[data-theme="light"],
-.m-login[data-theme="light"] {
+.m-login[data-theme="light"],
+.login-wrapper[data-theme="light"],
+.m-login-wrapper[data-theme="light"] {
   --dm-bg: #fcfcfd;
   --dm-surface: #f5f5f7;
   --dm-surface-alt: #f5f5f7;

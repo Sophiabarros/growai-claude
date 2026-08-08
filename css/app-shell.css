@@ -29,7 +29,7 @@
 .app-nav__link {
   position: absolute;
   top: 0;
-  color: var(--app-muted);
+  color: var(--app-muted-alt);
 }
 .app-nav__link--active {
   color: var(--app-accent);
@@ -173,4 +173,64 @@
   .m-app-tab__label {
     font: 400 1rem/normal var(--font-body);
   }
+}
+
+/* ============ CONFIRM DIALOG (shared, replaces window.confirm) ============
+   Created dynamically by js/toast.js's showConfirm(); included here so any
+   app-*.html page can use it without extra markup or a page-specific stylesheet. */
+.confirm-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.confirm-modal[hidden] {
+  display: none;
+}
+.confirm-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 13, 0.7);
+}
+.confirm-modal__panel {
+  position: relative;
+  width: 40rem;
+  max-width: 100%;
+  background: var(--app-card-bg);
+  border-radius: 1.5rem;
+  padding: 2.4rem;
+  box-sizing: border-box;
+}
+.confirm-modal__message {
+  color: var(--app-text);
+  font: 500 1.6rem/1.5 var(--font-body);
+  margin: 0 0 2rem;
+}
+.confirm-modal__actions {
+  display: flex;
+  gap: 1.2rem;
+}
+.confirm-modal__cancel {
+  flex: 1;
+  height: 3.8rem;
+  border: 1px solid var(--app-muted);
+  border-radius: 0.8rem;
+  background: transparent;
+  color: var(--app-text);
+  font: 500 1.4rem/normal var(--font-body);
+  cursor: pointer;
+}
+.confirm-modal__confirm {
+  flex: 1;
+  height: 3.8rem;
+  border: 0;
+  border-radius: 0.8rem;
+  background: var(--color-danger);
+  color: var(--app-text);
+  font: 600 1.4rem/normal var(--font-body);
+  cursor: pointer;
 }

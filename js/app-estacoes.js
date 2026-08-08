@@ -1,30 +1,329 @@
 (function () {
   "use strict";
 
-  // Scales the fixed 1440px desktop canvas down to fit viewports between
-  // the mobile breakpoint and the design width - same approach as
-  // js/app-home.js.
-  var DESIGN_WIDTH = 1440;
-  var MOBILE_BREAKPOINT = 900;
-
-  var page = document.getElementById("appEstacoesPage");
-  var wrapper = document.querySelector(".app-estacoes-wrapper");
-  var naturalHeight = page.scrollHeight;
-
-  function applyScale() {
-    var width = window.innerWidth;
-
-    if (width >= DESIGN_WIDTH || width < MOBILE_BREAKPOINT) {
-      page.style.transform = "";
-      wrapper.style.height = "";
-      return;
-    }
-
-    var scale = width / DESIGN_WIDTH;
-    page.style.transform = "scale(" + scale + ")";
-    wrapper.style.height = Math.round(naturalHeight * scale) + "px";
+  if (!window.GrowAI || !GrowAI.isAuthenticated()) {
+    window.location.href = "login.html";
+    return;
   }
 
-  window.addEventListener("resize", applyScale);
-  applyScale();
+  var STATION_ICON = "assets/icons/app/icon-app-planta-station.svg";
+  var EDIT_ICON = "assets/icons/app/icon-app-editar.svg";
+  var DELETE_ICON = "assets/icons/app/icon-app-excluir.svg";
+  var ADD_ICON = "assets/icons/app/icon-app-add.svg";
+
+  var appGrid = document.getElementById("appEstacoesGrid");
+  var appStatus = document.getElementById("appEstacoesStatus");
+  var mList = document.getElementById("mAppEstacoesList");
+  var mStatus = document.getElementById("mAppEstacoesStatus");
+  var insights = document.querySelector(".app-insights");
+  var tabbar = document.querySelector(".m-app-tabbar");
+  var mPage = document.getElementById("mAppEstacoesPage");
+
+  var newStationBtn = document.getElementById("newStationBtn");
+  var modal = document.getElementById("stationModal");
+  var modalTitle = document.getElementById("stationModalTitle");
+  var form = document.getElementById("stationForm");
+  var modalError = document.getElementById("stationModalError");
+  var modalSubmit = document.getElementById("stationModalSubmit");
+
+  var stations = [];
+  var editingId = null;
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.textContent = value == null ? "" : String(value);
+    return div.innerHTML;
+  }
+
+  function statRow(label, value) {
+    return (
+      '<div class="est-card__stat"><p class="est-card__stat-label">' +
+      label +
+      '</p><p class="est-card__stat-value">' +
+      escapeHtml(value) +
+      "</p></div>"
+    );
+  }
+
+  function desktopCardHtml(s) {
+    return (
+      '<div class="est-card" data-station-id="' +
+      s.id +
+      '">' +
+      '<div class="est-card__top">' +
+      '<div class="est-card__icon"><img alt="" src="' +
+      STATION_ICON +
+      '" /></div>' +
+      '<button type="button" class="est-card__edit" data-action="edit"><img alt="Editar" src="' +
+      EDIT_ICON +
+      '" /></button>' +
+      '<button type="button" class="est-card__delete" data-action="delete"><img alt="Excluir" src="' +
+      DELETE_ICON +
+      '" /></button>' +
+      '<p class="est-card__name" title="' +
+      escapeHtml(s.name) +
+      '">' +
+      escapeHtml(s.name) +
+      "</p>" +
+      '<p class="est-card__plant">' +
+      escapeHtml(s.plant) +
+      "</p>" +
+      (s.tag ? '<p class="est-card__tag">' + escapeHtml(s.tag) + "</p>" : "") +
+      "</div>" +
+      '<div class="est-card__stats">' +
+      statRow("Rega a cada", s.water_interval_h + "h") +
+      statRow("Luz diária", s.light_hours + "h") +
+      statRow("Umidade alvo", s.humidity_target + "%") +
+      statRow("pH alvo", s.ph_target) +
+      "</div>" +
+      '<button type="button" class="est-card__btn" data-action="edit">Configurar rotina</button>' +
+      "</div>"
+    );
+  }
+
+  function mStatRow(label, value) {
+    return (
+      '<div class="m-est-card__stat"><p class="m-est-card__stat-label">' +
+      label +
+      '</p><p class="m-est-card__stat-value">' +
+      escapeHtml(value) +
+      "</p></div>"
+    );
+  }
+
+  function mobileCardHtml(s) {
+    return (
+      '<div class="m-est-card" data-station-id="' +
+      s.id +
+      '">' +
+      '<div class="m-est-card__top">' +
+      '<div class="m-est-card__icon"><img alt="" src="' +
+      STATION_ICON +
+      '" /></div>' +
+      '<button type="button" class="m-est-card__edit" data-action="edit"><img alt="Editar" src="' +
+      EDIT_ICON +
+      '" /></button>' +
+      '<button type="button" class="m-est-card__delete" data-action="delete"><img alt="Excluir" src="' +
+      DELETE_ICON +
+      '" /></button>' +
+      '<p class="m-est-card__name" title="' +
+      escapeHtml(s.name) +
+      '">' +
+      escapeHtml(s.name) +
+      "</p>" +
+      '<p class="m-est-card__plant">' +
+      escapeHtml(s.plant) +
+      "</p>" +
+      (s.tag ? '<p class="m-est-card__tag">' + escapeHtml(s.tag) + "</p>" : "") +
+      "</div>" +
+      '<div class="m-est-card__stats">' +
+      mStatRow("Rega a cada", s.water_interval_h + "h") +
+      mStatRow("Luz diária", s.light_hours + "h") +
+      mStatRow("Umidade alvo", s.humidity_target + "%") +
+      mStatRow("pH alvo", s.ph_target) +
+      "</div>" +
+      '<button type="button" class="m-est-card__btn" data-action="edit">Configurar rotina</button>' +
+      "</div>"
+    );
+  }
+
+  var ADD_TILE_HTML =
+    '<button type="button" class="m-est-add-card" id="mNewStationBtn" aria-label="Nova estação">' +
+    '<img alt="" src="' +
+    ADD_ICON +
+    '" />' +
+    "</button>";
+
+  function setStatus(el, message, isError) {
+    if (!message) {
+      el.hidden = true;
+      el.textContent = "";
+      return;
+    }
+    el.hidden = false;
+    el.textContent = message;
+    el.classList.toggle("app-estacoes__status--error", !!isError);
+    el.classList.toggle("m-app-estacoes__status--error", !!isError);
+  }
+
+  function findStation(id) {
+    return stations.filter(function (s) {
+      return String(s.id) === String(id);
+    })[0];
+  }
+
+  function render() {
+    if (stations.length === 0) {
+      setStatus(appStatus, "Você ainda não tem estações. Crie a primeira!", false);
+      setStatus(mStatus, "Você ainda não tem estações. Crie a primeira!", false);
+      appGrid.innerHTML = "";
+      mList.innerHTML = ADD_TILE_HTML;
+    } else {
+      setStatus(appStatus, "", false);
+      setStatus(mStatus, "", false);
+      appGrid.innerHTML = stations.map(desktopCardHtml).join("");
+      mList.innerHTML = stations.map(mobileCardHtml).join("") + ADD_TILE_HTML;
+    }
+
+    document.getElementById("mNewStationBtn").addEventListener("click", function () {
+      openModal("create");
+    });
+
+    positionDependents();
+    applyScale();
+  }
+
+  // Everything below the (variable-height) station grid/list has its
+  // position recomputed after each render instead of relying on the
+  // fixed Figma coordinates, which only account for exactly two cards.
+  function positionDependents() {
+    if (insights) {
+      var gridBottomPx = appGrid.offsetTop + appGrid.offsetHeight;
+      insights.style.top = gridBottomPx / 10 + 5.5 + "rem";
+    }
+    if (tabbar && mPage) {
+      var listBottomPx = mList.offsetTop + mList.offsetHeight;
+      var tabbarTopRem = listBottomPx / 10 + 1.2;
+      tabbar.style.top = tabbarTopRem + "rem";
+      mPage.style.minHeight = tabbarTopRem + 9.4 + "rem";
+    }
+  }
+
+  async function load() {
+    setStatus(appStatus, "Carregando estações...", false);
+    setStatus(mStatus, "Carregando estações...", false);
+    try {
+      stations = await GrowAI.getStations();
+      render();
+    } catch (err) {
+      setStatus(appStatus, err.message, true);
+      setStatus(mStatus, err.message, true);
+    }
+  }
+
+  // ---- modal ----
+  function openModal(mode, station) {
+    editingId = mode === "edit" ? station.id : null;
+    modalTitle.textContent = mode === "edit" ? "Editar Estação" : "Nova Estação";
+    modalError.hidden = true;
+    modal.classList.remove("is-closing");
+    form.reset();
+
+    if (mode === "edit") {
+      form.name.value = station.name;
+      form.plant.value = station.plant;
+      form.tag.value = station.tag || "";
+      form.water_interval_h.value = station.water_interval_h;
+      form.light_hours.value = station.light_hours;
+      form.humidity_target.value = station.humidity_target;
+      form.ph_target.value = station.ph_target;
+    }
+
+    // Nome/planta só fazem sentido ao criar uma estação nova.
+    form.name.disabled = mode === "edit";
+    form.plant.disabled = mode === "edit";
+    form.tag.disabled = mode === "edit";
+
+    modal.hidden = false;
+  }
+
+  function closeModal() {
+    modal.classList.add("is-closing");
+    window.setTimeout(function () {
+      modal.hidden = true;
+      modal.classList.remove("is-closing");
+    }, 180);
+    editingId = null;
+  }
+
+  document.addEventListener("click", async function (event) {
+    var target = event.target.closest("[data-action]");
+    if (!target) return;
+
+    if (target.dataset.action === "close-modal") {
+      closeModal();
+      return;
+    }
+    if (target.dataset.action === "edit") {
+      var card = target.closest("[data-station-id]");
+      var station = card && findStation(card.dataset.stationId);
+      if (station) openModal("edit", station);
+      return;
+    }
+    if (target.dataset.action === "delete") {
+      var delCard = target.closest("[data-station-id]");
+      var delStation = delCard && findStation(delCard.dataset.stationId);
+      if (!delStation) return;
+
+      var confirmed = await showConfirm(
+        'Excluir "' + delStation.name + '" (' + delStation.plant + ')? Essa ação não pode ser desfeita.',
+        { confirmLabel: "Excluir" }
+      );
+      if (!confirmed) return;
+
+      target.disabled = true;
+      try {
+        await GrowAI.deleteStation(delStation.id);
+        stations = stations.filter(function (s) {
+          return s.id !== delStation.id;
+        });
+        render();
+      } catch (err) {
+        target.disabled = false;
+        showToast(err.message, "error");
+      }
+    }
+  });
+
+  newStationBtn.addEventListener("click", function () {
+    openModal("create");
+  });
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    modalError.hidden = true;
+    modalSubmit.disabled = true;
+    modalSubmit.textContent = "Salvando...";
+
+    var payload = {
+      name: form.name.value,
+      plant: form.plant.value,
+      tag: form.tag.value || null,
+      water_interval_h: Number(form.water_interval_h.value),
+      light_hours: Number(form.light_hours.value),
+      humidity_target: Number(form.humidity_target.value),
+      ph_target: Number(form.ph_target.value),
+    };
+
+    try {
+      if (editingId) {
+        var updated = await GrowAI.updateStation(editingId, payload);
+        stations = stations.map(function (s) {
+          return s.id === updated.id ? updated : s;
+        });
+      } else {
+        var created = await GrowAI.createStation(payload);
+        stations = stations.concat([created]);
+      }
+      render();
+      closeModal();
+    } catch (err) {
+      modalError.textContent = err.message;
+      modalError.hidden = false;
+    } finally {
+      modalSubmit.disabled = false;
+      modalSubmit.textContent = "Salvar";
+    }
+  });
+
+  // ---- canvas scaling (recomputed on every render since content height
+  // now varies with the station count) ----
+  var applyScale = initResponsiveCanvas({
+    desktopPageId: "appEstacoesPage",
+    desktopWrapperSelector: ".app-estacoes-wrapper",
+    mobilePageId: "mAppEstacoesPage",
+    mobileWrapperSelector: ".m-app-estacoes-wrapper",
+  });
+
+  load();
 })();

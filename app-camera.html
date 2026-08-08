@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Câmeras da horta | TrackLink App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/app-shell.css" />
+    <link rel="stylesheet" href="css/app-camera.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="app-camera-wrapper">
+      <div class="app-camera" id="appCameraPage">
+        <!-- ===== HEADER ===== -->
+        <header class="app-header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <nav class="app-nav">
+            <a href="app-home.html" class="app-nav__link app-nav__link--home">Home</a>
+            <a href="app-estacoes.html" class="app-nav__link app-nav__link--estacoes">Estações</a>
+            <a href="app-camera.html" class="app-nav__link app-nav__link--camera app-nav__link--active">Câmera</a>
+            <a href="app-relatorios.html" class="app-nav__link app-nav__link--relatorios">Relatórios</a>
+            <a href="app-configuracoes.html" class="app-nav__link app-nav__link--config">Configurações</a>
+          </nav>
+          <div class="app-header__avatar"><img alt="" src="assets/images/app/img-app-avatar.png" /></div>
+          <div class="app-header__divider"></div>
+          <div class="app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+        </header>
+
+        <h1 class="app-camera__title">Câmeras da horta</h1>
+        <button type="button" class="app-camera__refresh" id="cameraRefreshBtn">
+          <img alt="" src="assets/icons/app/icon-app-atualizar.svg" />
+          Atualizar
+        </button>
+
+        <!-- ===== CAMERA CARDS (rendered by js/app-camera.js) ===== -->
+        <p class="app-camera__status" id="appCameraStatus" hidden></p>
+        <div class="cam-card cam-card--1" id="camCard1" hidden></div>
+        <div class="cam-card cam-card--2" id="camCard2" hidden></div>
+
+        <!-- ===== ADD CAMERA PLACEHOLDERS ===== -->
+        <button type="button" class="cam-add-card cam-add-card--1" id="camAddCard1" aria-label="Adicionar câmera à Estação 1" hidden>
+          <img alt="" src="assets/icons/app/icon-app-star-sparkle.svg" />
+        </button>
+        <button type="button" class="cam-add-card cam-add-card--2" id="camAddCard2" aria-label="Adicionar câmera à Estação 2" hidden>
+          <img alt="" src="assets/icons/app/icon-app-star-sparkle.svg" />
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (Câmera, 412px artboard) ===== -->
+    <div class="m-app-camera-wrapper">
+      <div class="m-app-camera" id="mAppCameraPage">
+        <header class="m-app-header">
+          <a href="index.html" class="m-app-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <div class="m-app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+          <a href="index.html" class="m-app-header__back" aria-label="Voltar ao site">
+            <img alt="" src="assets/icons/app/icon-app-navegador.svg" />
+          </a>
+        </header>
+
+        <h1 class="m-app-camera__title">Câmeras da horta</h1>
+        <button type="button" class="m-app-camera__refresh" id="mCameraRefreshBtn">
+          <img alt="" src="assets/icons/app/icon-app-atualizar-m.svg" />
+          Atualizar
+        </button>
+
+        <p class="m-app-camera__status" id="mAppCameraStatus" hidden></p>
+        <div class="cam-m-card cam-m-card--1" id="camMCard1" hidden></div>
+        <div class="cam-m-card cam-m-card--2" id="camMCard2" hidden></div>
+
+        <!-- ===== BOTTOM TAB BAR ===== -->
+        <nav class="m-app-tabbar">
+          <a href="app-home.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.8rem; height: 2rem">
+                <img alt="" style="left: 0; top: 0; width: 1.8rem; height: 2rem" src="assets/icons/app/icon-nav-home-inactive-1.svg" />
+                <img alt="" style="left: 0.6rem; top: 1rem; width: 0.6rem; height: 1rem" src="assets/icons/app/icon-nav-home-inactive-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Home</span>
+          </a>
+          <a href="app-estacoes.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.9rem; height: 2.3rem">
+                <img alt="" style="left: 0; top: 0; width: 2.9rem; height: 2.3rem" src="assets/icons/app/icon-nav-estacoes.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Estações</span>
+          </a>
+          <a href="app-camera.html" class="m-app-tab m-app-tab--active">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 1.8rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-camera-active-1.svg" />
+                <img alt="" style="left: 0.7rem; top: 0.6rem; width: 0.8rem; height: 0.8rem" src="assets/icons/app/icon-nav-camera-active-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Câmera</span>
+          </a>
+          <a href="app-relatorios.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.4rem; height: 1.8rem">
+                <img alt="" style="left: 0.6rem; top: 0.6rem; width: 0.2rem; height: 1.2rem" src="assets/icons/app/icon-nav-relatorios-1.svg" />
+                <img alt="" style="left: 1.2rem; top: 0; width: 0.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-relatorios-2.svg" />
+                <img alt="" style="left: 0; top: 1.2rem; width: 0.2rem; height: 0.6rem" src="assets/icons/app/icon-nav-relatorios-3.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Relatórios</span>
+          </a>
+          <a href="app-configuracoes.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 2.2rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 2.2rem" src="assets/icons/app/icon-nav-config-2.svg" />
+                <img alt="" style="left: 0.8rem; top: 0.8rem; width: 0.6rem; height: 0.6rem" src="assets/icons/app/icon-nav-config-1.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Config</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/responsive-canvas.js"></script>
+    <script src="js/app-camera.js"></script>
+  </body>
+</html>

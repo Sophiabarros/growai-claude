@@ -20,8 +20,12 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="page-loader__spinner"></div>
+    </div>
     <div class="sistema-wrapper">
       <div class="sistema" id="sistemaPage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="sistemaPage"></script>
         <!-- ===== HEADER ===== -->
         <header class="header">
           <a href="index.html" class="header__brand">
@@ -117,7 +121,7 @@
         <!-- ===== SECTION 3: BAIXE O NOSSO APLICATIVO ===== -->
         <section class="sistema-app">
           <p class="sistema-app__title">
-            Baixe o nosso <span class="sistema-app__title-accent">aplicativo</span>
+            Use o nosso <span class="sistema-app__title-accent">aplicativo</span>
           </p>
           <p class="sistema-app__desc">
             O aplicativo GrowAI é o principal meio de controle da horta inteligente, permitindo
@@ -128,23 +132,10 @@
             e maior eficiência no cuidado com a horta.
           </p>
 
-          <button type="button" class="sistema-app__store-btn sistema-app__store-btn--appstore">
-            <img alt="" src="assets/icons/icon-app-store.svg" />
-            <span class="sistema-app__store-text">
-              <span class="sistema-app__store-eyebrow">Disponível na</span>
-              <span class="sistema-app__store-name">App Store</span>
-            </span>
-          </button>
-          <button type="button" class="sistema-app__store-btn sistema-app__store-btn--playstore">
-            <img alt="" src="assets/icons/icon-play-store.svg" />
-            <span class="sistema-app__store-text">
-              <span class="sistema-app__store-eyebrow">Disponível na</span>
-              <span class="sistema-app__store-name">PlayStore</span>
-            </span>
-          </button>
-
-          <div class="sistema-app__qrcode">
-            <img alt="QR Code para baixar o aplicativo GrowAI" src="assets/images/img-sistema-qrcode.png" />
+          <div class="sistema-app__auth">
+            <a href="login.html" class="sistema-app__auth-btn">Faça Login</a>
+            <span class="sistema-app__auth-or">ou</span>
+            <a href="signup.html" class="sistema-app__auth-btn">Cadastre-se</a>
           </div>
 
           <div class="sistema-app__phone">
@@ -167,6 +158,7 @@
     <!-- ===== MOBILE (SISTEMA - MOBILE, own artboard) ===== -->
     <div class="m-sistema-wrapper">
       <div class="m-sistema" id="mSistemaPage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="mSistemaPage"></script>
         <header class="m-header">
           <a href="index.html" class="m-header__logo">
             <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
@@ -251,20 +243,8 @@
         </div>
 
         <div class="m-sistema-stores">
-          <button type="button" class="m-sistema-store-btn">
-            <img alt="" src="assets/icons/icon-play-store.svg" />
-            <span class="m-sistema-store-text">
-              <span class="m-sistema-store-eyebrow">Disponível na</span>
-              <span class="m-sistema-store-name">PlayStore</span>
-            </span>
-          </button>
-          <button type="button" class="m-sistema-store-btn">
-            <img alt="" src="assets/icons/icon-app-store.svg" />
-            <span class="m-sistema-store-text">
-              <span class="m-sistema-store-eyebrow">Disponível na</span>
-              <span class="m-sistema-store-name">AppStore</span>
-            </span>
-          </button>
+          <a href="login.html" class="m-sistema-auth-btn">Faça Login</a>
+          <a href="signup.html" class="m-sistema-auth-btn">Cadastre-se</a>
         </div>
 
         <div class="m-utility-bar">
@@ -276,8 +256,10 @@
       </div>
     </div>
 
+    <script src="js/theme.js"></script>
     <script src="js/sistema.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/page-loader.js"></script>
   </body>
 </html>

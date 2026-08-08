@@ -20,8 +20,12 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="page-loader__spinner"></div>
+    </div>
     <div class="bibliografia-wrapper">
       <div class="bibliografia" id="bibliografiaPage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="bibliografiaPage"></script>
         <!-- ===== HEADER ===== -->
         <header class="header">
           <a href="index.html" class="header__brand">
@@ -122,6 +126,7 @@
     <!-- ===== MOBILE (BIBLIOGRAFIA - MOBILE, own artboard) ===== -->
     <div class="m-bibliografia-wrapper">
       <div class="m-bibliografia" id="mBibliografiaPage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="mBibliografiaPage"></script>
         <header class="m-header">
           <a href="index.html" class="m-header__logo">
             <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
@@ -204,8 +209,10 @@
       </div>
     </div>
 
+    <script src="js/theme.js"></script>
     <script src="js/bibliografia.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/page-loader.js"></script>
   </body>
 </html>

@@ -148,6 +148,11 @@
   color: var(--su-input-text);
   opacity: 1;
 }
+.login-form__error {
+  margin: -0.4rem 0 1.6rem;
+  color: var(--color-danger);
+  font: 500 1.8rem/normal var(--font-body);
+}
 .login-form__forgot {
   display: block;
   margin-top: 1.9rem;
@@ -377,6 +382,12 @@
   .m-login-field input::placeholder {
     color: var(--su-input-text);
     opacity: 1;
+  }
+  .m-login-form__error {
+    width: 25.7rem;
+    margin: -0.6rem 0 0 5.1rem;
+    color: var(--color-danger);
+    font: 500 1.1rem/normal var(--font-body);
   }
   .m-login-form__submit {
     display: block;

@@ -1,28 +1,13 @@
 (function () {
   "use strict";
 
-  // Theme toggle (dark by default), synced across the desktop and mobile
-  // canvases - mirrors js/theme.js for the standalone Bibliografia page.
+  // Theme toggle, persisted across the whole site via js/theme.js.
   var page = document.getElementById("bibliografiaPage");
-  var mPage = document.getElementById("mBibliografiaPage");
-  var themeToggle = document.getElementById("themeToggle");
-  var mThemeToggle = document.getElementById("mThemeToggle");
-
-  function currentTheme() {
-    return page.getAttribute("data-theme");
-  }
-
-  function setTheme(theme) {
-    page.setAttribute("data-theme", theme);
-    mPage.setAttribute("data-theme", theme);
-  }
-
-  function toggleTheme() {
-    setTheme(currentTheme() === "light" ? "dark" : "light");
-  }
-
-  themeToggle.addEventListener("click", toggleTheme);
-  mThemeToggle.addEventListener("click", toggleTheme);
+  initThemeToggle({
+    pageIds: ["bibliografiaPage", "mBibliografiaPage"],
+    toggleIds: ["themeToggle", "mThemeToggle"],
+    wrapperSelectors: [".bibliografia-wrapper", ".m-bibliografia-wrapper"],
+  });
 
   // Scales the fixed 1440px desktop canvas down to fit tablet-width
   // viewports, same approach as js/components.js on the home page. Below

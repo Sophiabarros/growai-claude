@@ -3,6 +3,41 @@
 .home-wrapper {
   transition: background-color 0.2s ease;
 }
+
+/* ================================================================
+   PAGE LOADER — shown on entry to every marketing page (and briefly
+   again when clicking to another one) so navigation feels like one
+   continuous transition instead of a blank/flashing reload. See
+   js/page-loader.js.
+   ================================================================ */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0f0d;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+.page-loader--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.page-loader__spinner {
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 0.4rem solid rgba(255, 255, 255, 0.15);
+  border-top-color: #5da578;
+  border-radius: 50%;
+  animation: page-loader-spin 0.8s linear infinite;
+}
+@keyframes page-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .why-card__icon-bg,
 .why-card__image,
 .feature-card__icon,
@@ -18,15 +53,21 @@
 .theme-toggle,
 .scroll-top,
 .header__menu-toggle,
-.how__carousel-btn {
+.how__carousel-btn,
+.sistema-app__auth-btn,
+.m-sistema-auth-btn {
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 .hero__btn:hover,
-.cta-banner__btn:hover {
+.cta-banner__btn:hover,
+.sistema-app__auth-btn:hover,
+.m-sistema-auth-btn:hover {
   opacity: 0.9;
 }
 .hero__btn:active,
-.cta-banner__btn:active {
+.cta-banner__btn:active,
+.sistema-app__auth-btn:active,
+.m-sistema-auth-btn:active {
   transform: scale(0.98);
 }
 .theme-toggle:hover,
@@ -62,4 +103,281 @@
 /* Mobile nav dropdown */
 .header__nav {
   transition: opacity 0.2s ease;
+}
+
+/* ================================================================
+   APP SHELL — smoother nav, header, tab bar
+   ================================================================ */
+.app-nav__link {
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+.app-nav__link:hover {
+  opacity: 0.85;
+}
+.app-header__avatar,
+.app-header__bell {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.app-header__bell:hover,
+.app-header__avatar:hover {
+  opacity: 0.85;
+  transform: translateY(-0.1rem);
+}
+.m-app-tab__icon,
+.m-app-tab__label {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.m-app-tab:active .m-app-tab__icon {
+  transform: scale(0.92);
+}
+
+/* ================================================================
+   APP CARDS — gentle hover lift + fade-in on render
+   ================================================================ */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.8rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.est-card,
+.m-est-card,
+.cam-card,
+.m-cam-card,
+.app-sensor-card,
+.app-station-card,
+.rel-suggestion,
+.m-rel-suggestion {
+  animation: cardFadeIn 0.3s ease both;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.est-card:hover,
+.cam-card:hover,
+.app-station-card:hover,
+.rel-suggestion:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.25);
+}
+
+/* ================================================================
+   APP BUTTONS / ICON ACTIONS — consistent hover + press feedback
+   ================================================================ */
+.app-estacoes__new-btn,
+.est-card__btn,
+.est-card__edit,
+.est-card__delete,
+.m-est-card__edit,
+.m-est-card__delete,
+.m-est-card__btn,
+.cam-card__btn,
+.cam-m-card__btn,
+.app-camera__refresh,
+.m-app-camera__refresh,
+.rel-suggestion__btn,
+.m-rel-suggestion__btn,
+.app-station-card__btn,
+.station-modal__cancel,
+.station-modal__submit,
+.profile-modal__cancel,
+.profile-modal__submit,
+.profile-modal__avatar-btn,
+.confirm-modal__cancel,
+.confirm-modal__confirm {
+  transition: transform 0.12s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+}
+.app-estacoes__new-btn:hover,
+.est-card__btn:hover,
+.cam-card__btn:hover,
+.cam-m-card__btn:hover,
+.rel-suggestion__btn:hover,
+.m-rel-suggestion__btn:hover,
+.app-station-card__btn:hover,
+.station-modal__submit:hover,
+.profile-modal__submit:hover,
+.app-camera__refresh:hover,
+.m-app-camera__refresh:hover,
+.confirm-modal__confirm:hover {
+  opacity: 0.9;
+}
+.app-estacoes__new-btn:active,
+.est-card__btn:active,
+.est-card__edit:active,
+.est-card__delete:active,
+.m-est-card__edit:active,
+.m-est-card__delete:active,
+.m-est-card__btn:active,
+.cam-card__btn:active,
+.cam-m-card__btn:active,
+.rel-suggestion__btn:active,
+.m-rel-suggestion__btn:active,
+.app-station-card__btn:active,
+.station-modal__cancel:active,
+.station-modal__submit:active,
+.profile-modal__cancel:active,
+.profile-modal__submit:active,
+.profile-modal__avatar-btn:active,
+.confirm-modal__cancel:active,
+.confirm-modal__confirm:active {
+  transform: scale(0.96);
+}
+.est-card__edit:hover,
+.est-card__delete:hover,
+.m-est-card__edit:hover,
+.m-est-card__delete:hover {
+  transform: scale(1.06);
+}
+.station-modal__submit:disabled,
+.profile-modal__submit:disabled,
+.rel-suggestion__btn:disabled,
+.m-rel-suggestion__btn:disabled {
+  transform: none;
+}
+
+/* Settings toggle rows — brief tap feedback since the on/off state
+   itself is an instant icon swap, not something we can crossfade */
+.cfg-row[data-action="toggle"],
+.m-cfg-row[data-action="toggle"] {
+  transition: transform 0.12s ease;
+}
+.cfg-row[data-action="toggle"]:active,
+.m-cfg-row[data-action="toggle"]:active {
+  transform: scale(0.985);
+}
+
+/* ================================================================
+   MODALS — fade + scale in on open, fade + scale out on close
+   ================================================================ */
+@keyframes modalOverlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(1.2rem) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.station-modal:not([hidden]),
+.profile-modal:not([hidden]),
+.confirm-modal:not([hidden]) {
+  animation: modalOverlayIn 0.2s ease;
+}
+.station-modal:not([hidden]) .station-modal__panel,
+.profile-modal:not([hidden]) .profile-modal__panel,
+.confirm-modal:not([hidden]) .confirm-modal__panel {
+  animation: modalPanelIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.station-modal.is-closing,
+.profile-modal.is-closing,
+.confirm-modal.is-closing {
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+.station-modal.is-closing .station-modal__panel,
+.profile-modal.is-closing .profile-modal__panel,
+.confirm-modal.is-closing .confirm-modal__panel {
+  opacity: 0;
+  transform: translateY(1.2rem) scale(0.96);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* ================================================================
+   LOGIN / SIGNUP — inputs and primary actions
+   ================================================================ */
+.login-field input,
+.signup-field input {
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.login-field input:focus,
+.signup-field input:focus {
+  box-shadow: 0 0 0 0.2rem var(--color-green-accent);
+}
+.login-form__submit,
+.signup-form__submit,
+.m-login-form__submit,
+.m-signup-form__submit {
+  transition: transform 0.12s ease, opacity 0.15s ease;
+}
+.login-form__submit:hover,
+.signup-form__submit:hover,
+.m-login-form__submit:hover,
+.m-signup-form__submit:hover {
+  opacity: 0.9;
+}
+.login-form__submit:active,
+.signup-form__submit:active,
+.m-login-form__submit:active,
+.m-signup-form__submit:active {
+  transform: scale(0.98);
+}
+.login-form__error,
+.signup-form__error,
+.m-login-form__error,
+.m-signup-form__error,
+.station-modal__error,
+.profile-modal__error {
+  animation: cardFadeIn 0.2s ease both;
+}
+
+/* ================================================================
+   TOASTS — replaces native alert() popups across the app
+   ================================================================ */
+.toast-host {
+  position: fixed;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  pointer-events: none;
+}
+.toast {
+  pointer-events: auto;
+  max-width: 46rem;
+  padding: 1.3rem 2rem;
+  border-radius: 1rem;
+  background: var(--app-card-bg);
+  color: var(--app-text);
+  font: 500 1.5rem/1.4 var(--font-body);
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--app-muted);
+  opacity: 0;
+  transform: translateY(1rem) scale(0.97);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+.toast--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.toast--error {
+  border-color: var(--color-danger);
+}
+
+/* ================================================================
+   REDUCED MOTION — respect user preference
+   ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

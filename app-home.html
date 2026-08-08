@@ -50,26 +50,26 @@
         <p class="app-home__subtitle">Acompanhe em tempo real as condições de sua planta</p>
 
         <h2 class="app-sensors__title">Sensores</h2>
-        <div class="app-sensors">
+        <div class="app-sensors" id="appSensors">
           <div class="app-sensor-card">
             <span class="app-sensor-card__icon"><img alt="" src="assets/icons/app/icon-app-sun.svg" /></span>
             <p class="app-sensor-card__label">Luz</p>
-            <p class="app-sensor-card__value">75%</p>
+            <p class="app-sensor-card__value" id="appSensorLight">—</p>
           </div>
           <div class="app-sensor-card">
             <span class="app-sensor-card__icon"><img alt="" src="assets/icons/app/icon-app-ph.svg" /></span>
             <p class="app-sensor-card__label">PH</p>
-            <p class="app-sensor-card__value">pH 6.3</p>
+            <p class="app-sensor-card__value" id="appSensorPh">—</p>
           </div>
           <div class="app-sensor-card">
             <span class="app-sensor-card__icon"><img alt="" src="assets/icons/app/icon-app-humidity.svg" /></span>
             <p class="app-sensor-card__label">Umidade</p>
-            <p class="app-sensor-card__value">72%</p>
+            <p class="app-sensor-card__value" id="appSensorHumidity">—</p>
           </div>
           <div class="app-sensor-card">
             <span class="app-sensor-card__icon"><img alt="" src="assets/icons/app/icon-app-thermometer.svg" /></span>
             <p class="app-sensor-card__label">Temp</p>
-            <p class="app-sensor-card__value">24°C</p>
+            <p class="app-sensor-card__value" id="appSensorTemp">—</p>
           </div>
         </div>
 
@@ -85,39 +85,10 @@
           </div>
         </div>
 
-        <!-- ===== RIGHT COLUMN: STATION CARDS ===== -->
-        <div class="app-station-card app-station-card--camomila">
-          <img class="app-station-card__photo" alt="Camomila" src="assets/images/app/img-app-camomila.png" />
-          <div class="app-station-card__body">
-            <p class="app-station-card__name">Camomila</p>
-            <div class="app-station-card__stats">
-              <span class="app-station-card__stat app-station-card__stat--health">
-                <img alt="" src="assets/icons/app/icon-app-check.svg" /> Saúde: boa
-              </span>
-              <span class="app-station-card__stat">
-                <img alt="" src="assets/icons/app/icon-app-humidity.svg" /> 72%
-              </span>
-              <span class="app-station-card__stat">
-                <img alt="" src="assets/icons/app/icon-app-thermometer.svg" /> 24°C
-              </span>
-            </div>
-            <button type="button" class="app-station-card__btn">Ver câmera</button>
-          </div>
-        </div>
-
-        <div class="app-station-card app-station-card--hortela">
-          <img class="app-station-card__photo" alt="Hortelã" src="assets/images/app/img-app-hortela.png" />
-          <div class="app-station-card__body">
-            <p class="app-station-card__name">Hortelã</p>
-            <div class="app-station-card__stats">
-              <span class="app-station-card__stat app-station-card__stat--health">
-                <img alt="" src="assets/icons/app/icon-app-warning.svg" /> Saúde: média
-              </span>
-            </div>
-            <p class="app-station-card__warning">Luz insuficiente</p>
-            <button type="button" class="app-station-card__btn">Ver câmera</button>
-          </div>
-        </div>
+        <!-- ===== RIGHT COLUMN: STATION CARDS (rendered by js/app-home.js) ===== -->
+        <p class="app-home__status" id="appHomeStatus" hidden></p>
+        <div class="app-station-card app-station-card--camomila" id="appStationCard1" hidden></div>
+        <div class="app-station-card app-station-card--hortela" id="appStationCard2" hidden></div>
       </div>
     </div>
 
@@ -139,43 +110,18 @@
         </header>
 
         <h1 class="m-app-home__title">Status da horta</h1>
+        <p class="m-app-home__status" id="mAppHomeStatus" hidden></p>
 
-        <div class="m-app-station-card m-app-station-card--camomila">
-          <p class="m-app-station-card__name">Camomila</p>
-          <div class="m-app-station-card__stats">
-            <span class="m-app-station-card__stat m-app-station-card__stat--health">
-              <img alt="" src="assets/icons/app/icon-app-check.svg" /> Saúde: boa
-            </span>
-          </div>
-          <div class="m-app-station-card__stats">
-            <span class="m-app-station-card__stat">
-              <img alt="" src="assets/icons/app/icon-app-humidity.svg" /> 72%
-            </span>
-            <span class="m-app-station-card__stat">
-              <img alt="" src="assets/icons/app/icon-app-thermometer.svg" /> 24°C
-            </span>
-          </div>
-          <button type="button" class="m-app-station-card__btn">Ver câmera</button>
-        </div>
-
-        <div class="m-app-station-card m-app-station-card--hortela">
-          <p class="m-app-station-card__name">Hortelã</p>
-          <div class="m-app-station-card__stats">
-            <span class="m-app-station-card__stat m-app-station-card__stat--health">
-              <img alt="" src="assets/icons/app/icon-app-warning.svg" /> Saúde: média
-            </span>
-          </div>
-          <p class="m-app-station-card__warning">Luz insuficiente</p>
-          <button type="button" class="m-app-station-card__btn">Ver câmera</button>
-        </div>
+        <div class="m-app-station-card m-app-station-card--camomila" id="mAppStationCard1" hidden></div>
+        <div class="m-app-station-card m-app-station-card--hortela" id="mAppStationCard2" hidden></div>
 
         <div class="m-app-sensors">
           <p class="m-app-sensors__title">Sensores</p>
           <div class="m-app-sensors__grid">
-            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-sun.svg" /> 75%</span>
-            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-ph.svg" /> pH 6.3</span>
-            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-humidity.svg" /> 72%</span>
-            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-thermometer.svg" /> 24°C</span>
+            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-sun.svg" /> <span id="mSensorLight">—</span></span>
+            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-ph.svg" /> <span id="mSensorPh">—</span></span>
+            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-humidity.svg" /> <span id="mSensorHumidity">—</span></span>
+            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-thermometer.svg" /> <span id="mSensorTemp">—</span></span>
           </div>
         </div>
 
@@ -242,6 +188,8 @@
       </div>
     </div>
 
+    <script src="js/api.js"></script>
+    <script src="js/responsive-canvas.js"></script>
     <script src="js/app-home.js"></script>
   </body>
 </html>

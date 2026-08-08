@@ -17,6 +17,10 @@
   overflow: hidden;
   transition: background-color 0.2s ease;
   transform-origin: top center;
+  --dm-store-btn-bg: #527f7c;
+}
+.sistema[data-theme="light"] {
+  --dm-store-btn-bg: #5da578;
 }
 
 /* ============ VIDEO BLOCK (shared by section 1) ============ */
@@ -234,54 +238,31 @@
   text-align: justify;
 }
 
-.sistema-app__store-btn {
-  position: absolute;
-  left: 9.6rem;
-  width: 31.6rem;
-  height: 9.0178rem;
-  border: 0;
-  border-radius: 2rem;
-  cursor: pointer;
-  background: var(--dm-accent-green);
+.sistema-app__auth {
+  position: relative;
+  left: 9.3rem;
+  margin-top: 5rem;
+  width: 66.1rem;
   display: flex;
   align-items: center;
-  gap: 1.6rem;
-  padding: 0 2.4rem;
+  justify-content: space-between;
 }
-.sistema-app__store-btn--appstore { top: 40.5rem; }
-.sistema-app__store-btn--playstore { top: 53.958rem; }
-.sistema-app__store-btn img {
-  width: 3.2rem;
-  height: 3.2rem;
-  flex-shrink: 0;
-}
-.sistema-app__store-text {
-  text-align: left;
+.sistema-app__auth-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18.2rem;
+  height: 6.1rem;
+  border-radius: 1.5rem;
+  background: var(--dm-store-btn-bg);
   color: var(--color-violet-light);
-}
-.sistema-app__store-eyebrow {
-  font: 400 1.4rem/normal var(--font-body);
-  letter-spacing: 0.7px;
-}
-.sistema-app__store-name {
-  margin-top: 0.4rem;
   font: 600 2rem/normal var(--font-body);
-  letter-spacing: 1px;
+  text-decoration: none;
+  cursor: pointer;
 }
-
-.sistema-app__qrcode {
-  position: absolute;
-  left: 52.5rem;
-  top: 40.5rem;
-  width: 22.6rem;
-  height: 22.6rem;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
-}
-.sistema-app__qrcode img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.sistema-app__auth-or {
+  color: var(--dm-text);
+  font: 400 2rem/normal var(--font-body);
 }
 
 .sistema-app__phone {
@@ -510,37 +491,21 @@
     width: 37.5rem;
     display: flex;
     justify-content: center;
-    gap: 1.7rem;
+    gap: 2.1rem;
   }
-  .m-sistema-store-btn {
-    width: 10rem;
+  .m-sistema-auth-btn {
+    width: 9.1rem;
     height: 3.3rem;
-    border: 0;
     border-radius: 1rem;
     cursor: pointer;
     background: var(--dm-store-btn-bg);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-  }
-  .m-sistema-store-btn img {
-    width: 1.4rem;
-    height: 1.4rem;
-    flex-shrink: 0;
-  }
-  .m-sistema-store-text {
-    text-align: left;
     color: var(--color-violet-light);
-  }
-  .m-sistema-store-eyebrow {
-    font: 400 0.5rem/normal var(--font-body);
-    letter-spacing: 0.25px;
-  }
-  .m-sistema-store-name {
-    margin-top: 0.1rem;
     font: 600 1rem/normal var(--font-body);
     letter-spacing: 0.5px;
+    text-decoration: none;
   }
 
   .m-sistema .m-utility-bar {

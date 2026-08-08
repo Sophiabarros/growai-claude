@@ -20,8 +20,12 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="page-loader__spinner"></div>
+    </div>
     <div class="login-wrapper">
       <div class="login" id="loginPage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="loginPage"></script>
         <!-- ===== LEFT: PHOTO PANEL ===== -->
         <div class="login-hero">
           <img alt="" src="assets/images/img-signup-hero.png" />
@@ -74,6 +78,8 @@
             <input type="password" id="loginSenha" name="senha" placeholder="Digite sua senha..." required />
           </div>
 
+          <p class="login-form__error" id="loginError" hidden></p>
+
           <a class="login-form__forgot" href="#"><span>Esqueceu a senha? clique</span> <span class="accent">aqui</span> <span>para redefinir.</span></a>
 
           <button type="submit" class="login-form__submit">Entre novamente &gt;</button>
@@ -92,6 +98,7 @@
     <!-- ===== MOBILE (LOGIN - MOBILE, own artboard) ===== -->
     <div class="m-login-wrapper">
       <div class="m-login" id="mLoginPage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="mLoginPage"></script>
         <div class="m-login-hero">
           <img alt="" src="assets/images/img-signup-hero.png" />
 
@@ -159,6 +166,8 @@
               <input type="password" id="mLoginSenha" name="senha" placeholder="Digite sua senha..." required />
             </div>
 
+            <p class="m-login-form__error" id="mLoginError" hidden></p>
+
             <button type="submit" class="m-login-form__submit">Entre novamente &gt;</button>
             <a class="m-login-form__signup" href="signup.html">Não tem conta? <span class="accent">Criar conta</span></a>
           </form>
@@ -175,8 +184,11 @@
       </div>
     </div>
 
+    <script src="js/api.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/login.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/page-loader.js"></script>
   </body>
 </html>

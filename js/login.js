@@ -1,36 +1,41 @@
 (function () {
   "use strict";
 
-  // Theme toggle (dark by default), synced across the desktop and mobile
-  // canvases - mirrors js/signup.js.
+  // Theme toggle, persisted across the whole site via js/theme.js.
   var page = document.getElementById("loginPage");
-  var mPage = document.getElementById("mLoginPage");
-  var themeToggle = document.getElementById("themeToggle");
-  var mThemeToggle = document.getElementById("mThemeToggle");
+  initThemeToggle({
+    pageIds: ["loginPage", "mLoginPage"],
+    toggleIds: ["themeToggle", "mThemeToggle"],
+    wrapperSelectors: [".login-wrapper", ".m-login-wrapper"],
+  });
 
-  function currentTheme() {
-    return page.getAttribute("data-theme");
+  // Wires both the desktop and mobile forms to the GrowAI API (js/api.js).
+  function wireLoginForm(formId, errorId) {
+    var form = document.getElementById(formId);
+    var errorEl = document.getElementById(errorId);
+    var submitBtn = form.querySelector("[type=submit]");
+    var submitLabel = submitBtn.textContent;
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      errorEl.hidden = true;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Entrando...";
+
+      try {
+        await GrowAI.login(form.email.value, form.senha.value);
+        window.location.href = "app-home.html";
+      } catch (err) {
+        errorEl.textContent = err.message;
+        errorEl.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = submitLabel;
+      }
+    });
   }
 
-  function setTheme(theme) {
-    page.setAttribute("data-theme", theme);
-    mPage.setAttribute("data-theme", theme);
-  }
-
-  function toggleTheme() {
-    setTheme(currentTheme() === "light" ? "dark" : "light");
-  }
-
-  themeToggle.addEventListener("click", toggleTheme);
-  mThemeToggle.addEventListener("click", toggleTheme);
-
-  // No backend yet - this is a front-end only prototype like the rest of
-  // the site, so just stop the browser from navigating away.
-  function stubSubmit(event) {
-    event.preventDefault();
-  }
-  document.getElementById("loginForm").addEventListener("submit", stubSubmit);
-  document.getElementById("mLoginForm").addEventListener("submit", stubSubmit);
+  wireLoginForm("loginForm", "loginError");
+  wireLoginForm("mLoginForm", "mLoginError");
 
   // Scales the fixed 1440px desktop canvas down to fit tablet-width
   // viewports, same approach as js/signup.js.

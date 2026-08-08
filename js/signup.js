@@ -1,36 +1,45 @@
 (function () {
   "use strict";
 
-  // Theme toggle (dark by default), synced across the desktop and mobile
-  // canvases - mirrors js/sistema.js.
+  // Theme toggle, persisted across the whole site via js/theme.js.
   var page = document.getElementById("signupPage");
-  var mPage = document.getElementById("mSignupPage");
-  var themeToggle = document.getElementById("themeToggle");
-  var mThemeToggle = document.getElementById("mThemeToggle");
+  initThemeToggle({
+    pageIds: ["signupPage", "mSignupPage"],
+    toggleIds: ["themeToggle", "mThemeToggle"],
+    wrapperSelectors: [".signup-wrapper", ".m-signup-wrapper"],
+  });
 
-  function currentTheme() {
-    return page.getAttribute("data-theme");
+  // Wires both the desktop and mobile forms to the GrowAI API (js/api.js).
+  // The backend only stores a single "name" field, so nome+sobrenome are
+  // joined before sending.
+  function wireSignupForm(formId, errorId) {
+    var form = document.getElementById(formId);
+    var errorEl = document.getElementById(errorId);
+    var submitBtn = form.querySelector("[type=submit]");
+    var submitLabel = submitBtn.textContent;
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      errorEl.hidden = true;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Criando conta...";
+
+      var fullName = (form.nome.value + " " + form.sobrenome.value).trim();
+
+      try {
+        await GrowAI.register(fullName, form.email.value, form.senha.value);
+        window.location.href = "app-home.html";
+      } catch (err) {
+        errorEl.textContent = err.message;
+        errorEl.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = submitLabel;
+      }
+    });
   }
 
-  function setTheme(theme) {
-    page.setAttribute("data-theme", theme);
-    mPage.setAttribute("data-theme", theme);
-  }
-
-  function toggleTheme() {
-    setTheme(currentTheme() === "light" ? "dark" : "light");
-  }
-
-  themeToggle.addEventListener("click", toggleTheme);
-  mThemeToggle.addEventListener("click", toggleTheme);
-
-  // No backend yet - this is a front-end only prototype like the rest of
-  // the site, so just stop the browser from navigating away.
-  function stubSubmit(event) {
-    event.preventDefault();
-  }
-  document.getElementById("signupForm").addEventListener("submit", stubSubmit);
-  document.getElementById("mSignupForm").addEventListener("submit", stubSubmit);
+  wireSignupForm("signupForm", "signupError");
+  wireSignupForm("mSignupForm", "mSignupError");
 
   // Scales the fixed 1440px desktop canvas down to fit tablet-width
   // viewports, same approach as js/sistema.js.

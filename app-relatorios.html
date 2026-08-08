@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatório semanal | TrackLink App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/app-shell.css" />
+    <link rel="stylesheet" href="css/app-relatorios.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="app-relatorios-wrapper">
+      <div class="app-relatorios" id="appRelatoriosPage">
+        <!-- ===== HEADER ===== -->
+        <header class="app-header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <nav class="app-nav">
+            <a href="app-home.html" class="app-nav__link app-nav__link--home">Home</a>
+            <a href="app-estacoes.html" class="app-nav__link app-nav__link--estacoes">Estações</a>
+            <a href="app-camera.html" class="app-nav__link app-nav__link--camera">Câmera</a>
+            <a href="app-relatorios.html" class="app-nav__link app-nav__link--relatorios app-nav__link--active">Relatórios</a>
+            <a href="app-configuracoes.html" class="app-nav__link app-nav__link--config">Configurações</a>
+          </nav>
+          <div class="app-header__avatar"><img alt="" src="assets/images/app/img-app-avatar.png" /></div>
+          <div class="app-header__divider"></div>
+          <div class="app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+        </header>
+
+        <h1 class="rel-title">Relatório semanal</h1>
+        <p class="rel-subtitle">19 - 26 de abril</p>
+
+        <!-- ===== SAÚDE DAS PLANTAS (line chart) ===== -->
+        <div class="rel-chart-card rel-chart-card--1">
+          <p class="rel-chart-card__label">Saúde das plantas</p>
+          <div class="rel-chart1">
+            <img class="rel-chart1__grid" alt="" src="assets/icons/app/chart-saude-grid-d.svg" />
+            <img class="rel-chart1__axes" alt="" src="assets/icons/app/chart-saude-axes-d.svg" />
+            <div class="rel-chart1__data" id="relChart1Data"></div>
+            <div class="rel-chart1__y-labels">
+              <span>100</span><span>75</span><span>50</span><span>25</span><span>0</span>
+            </div>
+            <div class="rel-chart1__x-labels">
+              <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CONDIÇÕES AMBIENTAIS (bar chart) ===== -->
+        <div class="rel-chart-card rel-chart-card--2">
+          <p class="rel-chart-card__label">Condições ambientais</p>
+          <div class="rel-chart2">
+            <img class="rel-chart2__group" alt="" src="assets/icons/app/chart-cond-group-d.svg" />
+            <img class="rel-chart2__vector" alt="" src="assets/icons/app/chart-cond-vector-d.svg" />
+            <img class="rel-chart2__axis" alt="" src="assets/icons/app/chart-cond-axis-d.svg" />
+            <div class="rel-chart2__data" id="relChart2Data"></div>
+            <div class="rel-chart2__y-labels">
+              <span>80</span><span>60</span><span>40</span><span>20</span><span>0</span>
+            </div>
+            <div class="rel-chart2__x-labels">
+              <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span class="is-highlight">Sáb</span><span>Dom</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SUGESTÕES DE OTIMIZAÇÃO ===== -->
+        <h2 class="rel-suggestions-title">Sugestões de otimização</h2>
+
+        <div class="rel-suggestion rel-suggestion--1" id="relSuggestion1" hidden></div>
+        <div class="rel-suggestion rel-suggestion--2" id="relSuggestion2" hidden></div>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (Relatórios, 412px artboard) ===== -->
+    <div class="m-app-relatorios-wrapper">
+      <div class="m-app-relatorios" id="mAppRelatoriosPage">
+        <header class="m-app-header">
+          <a href="index.html" class="m-app-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <div class="m-app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+          <a href="index.html" class="m-app-header__back" aria-label="Voltar ao site">
+            <img alt="" src="assets/icons/app/icon-app-navegador.svg" />
+          </a>
+        </header>
+
+        <h1 class="m-rel-title">Relatório semanal</h1>
+        <p class="m-rel-subtitle">19 - 26 de abril</p>
+
+        <!-- ===== SAÚDE DAS PLANTAS (line chart) ===== -->
+        <div class="m-rel-chart-card m-rel-chart-card--1">
+          <p class="m-rel-chart-card__label">Saúde das plantas</p>
+          <div class="m-rel-chart1">
+            <img class="m-rel-chart1__grid" alt="" src="assets/icons/app/chart-saude-grid.svg" />
+            <img class="m-rel-chart1__axes" alt="" src="assets/icons/app/chart-saude-axes.svg" />
+            <div class="m-rel-chart1__data" id="mRelChart1Data"></div>
+            <div class="m-rel-chart1__y-labels">
+              <span>100</span><span>75</span><span>50</span><span>25</span><span>0</span>
+            </div>
+            <div class="m-rel-chart1__x-labels">
+              <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CONDIÇÕES AMBIENTAIS (bar chart) ===== -->
+        <div class="m-rel-chart-card m-rel-chart-card--2">
+          <p class="m-rel-chart-card__label">Condições ambientais</p>
+          <div class="m-rel-chart2">
+            <img class="m-rel-chart2__group" alt="" src="assets/icons/app/chart-cond-group.svg" />
+            <img class="m-rel-chart2__vector" alt="" src="assets/icons/app/chart-cond-vector.svg" />
+            <img class="m-rel-chart2__axis" alt="" src="assets/icons/app/chart-cond-axis.svg" />
+            <div class="m-rel-chart2__data" id="mRelChart2Data"></div>
+            <div class="m-rel-chart2__y-labels">
+              <span>80</span><span>60</span><span>40</span><span>20</span><span>0</span>
+            </div>
+            <div class="m-rel-chart2__x-labels">
+              <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span class="is-highlight">Sáb</span><span>Dom</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SUGESTÕES DE OTIMIZAÇÃO ===== -->
+        <h2 class="m-rel-suggestions-title">Sugestões de otimização</h2>
+
+        <div class="m-rel-suggestion m-rel-suggestion--1" id="mRelSuggestion1" hidden></div>
+        <div class="m-rel-suggestion m-rel-suggestion--2" id="mRelSuggestion2" hidden></div>
+
+        <!-- ===== BOTTOM TAB BAR ===== -->
+        <nav class="m-app-tabbar">
+          <a href="app-home.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.8rem; height: 2rem">
+                <img alt="" style="left: 0; top: 0; width: 1.8rem; height: 2rem" src="assets/icons/app/icon-nav-home-inactive-1.svg" />
+                <img alt="" style="left: 0.6rem; top: 1rem; width: 0.6rem; height: 1rem" src="assets/icons/app/icon-nav-home-inactive-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Home</span>
+          </a>
+          <a href="app-estacoes.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.9rem; height: 2.3rem">
+                <img alt="" style="left: 0; top: 0; width: 2.9rem; height: 2.3rem" src="assets/icons/app/icon-nav-estacoes.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Estações</span>
+          </a>
+          <a href="app-camera.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 1.8rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-camera-1.svg" />
+                <img alt="" style="left: 0.7rem; top: 0.6rem; width: 0.8rem; height: 0.8rem" src="assets/icons/app/icon-nav-camera-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Câmera</span>
+          </a>
+          <a href="app-relatorios.html" class="m-app-tab m-app-tab--active">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.4rem; height: 1.8rem">
+                <img alt="" style="left: 0.6rem; top: 0.6rem; width: 0.2rem; height: 1.2rem" src="assets/icons/app/icon-nav-relatorios-active-2.svg" />
+                <img alt="" style="left: 1.2rem; top: 0; width: 0.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-relatorios-active-3.svg" />
+                <img alt="" style="left: 0; top: 1.2rem; width: 0.2rem; height: 0.6rem" src="assets/icons/app/icon-nav-relatorios-active-1.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Relatórios</span>
+          </a>
+          <a href="app-configuracoes.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 2.2rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 2.2rem" src="assets/icons/app/icon-nav-config-2.svg" />
+                <img alt="" style="left: 0.8rem; top: 0.8rem; width: 0.6rem; height: 0.6rem" src="assets/icons/app/icon-nav-config-1.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Config</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/responsive-canvas.js"></script>
+    <script src="js/app-relatorios.js"></script>
+  </body>
+</html>

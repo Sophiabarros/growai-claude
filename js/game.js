@@ -1,31 +1,15 @@
 (function () {
   "use strict";
 
-  // Theme toggle, synced across the desktop and mobile canvases and with
-  // the rest of the site - mirrors js/theme.js. The Game page itself has
-  // no light-mode design in Figma, so toggling only flips the button icon
-  // and keeps this page's theme state consistent when the user navigates
-  // to another page.
+  // Theme toggle, persisted across the whole site via js/theme.js. The
+  // Game page itself has no light-mode design in Figma, so this mostly
+  // just keeps the toggle button icon and stored preference consistent
+  // with whatever the user picked on another page.
   var page = document.getElementById("gamePage");
-  var mPage = document.getElementById("mGamePage");
-  var themeToggle = document.getElementById("themeToggle");
-  var mThemeToggle = document.getElementById("mThemeToggle");
-
-  function currentTheme() {
-    return page.getAttribute("data-theme");
-  }
-
-  function setTheme(theme) {
-    page.setAttribute("data-theme", theme);
-    mPage.setAttribute("data-theme", theme);
-  }
-
-  function toggleTheme() {
-    setTheme(currentTheme() === "light" ? "dark" : "light");
-  }
-
-  themeToggle.addEventListener("click", toggleTheme);
-  mThemeToggle.addEventListener("click", toggleTheme);
+  initThemeToggle({
+    pageIds: ["gamePage", "mGamePage"],
+    toggleIds: ["themeToggle", "mThemeToggle"],
+  });
 
   // Scales the fixed 1440px desktop canvas down to fit tablet-width
   // viewports, same approach as js/components.js on the home page. Below

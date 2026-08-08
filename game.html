@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="page-loader__spinner"></div>
+    </div>
     <div class="game-wrapper">
       <div class="game" id="gamePage" data-theme="dark">
         <div class="game__bg">
@@ -120,8 +123,10 @@
       </div>
     </div>
 
+    <script src="js/theme.js"></script>
     <script src="js/game.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/page-loader.js"></script>
   </body>
 </html>

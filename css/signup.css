@@ -149,6 +149,12 @@
   color: var(--su-input-text);
   opacity: 1;
 }
+.signup-form__error {
+  width: 61.3rem;
+  margin: -0.4rem 0 0 1.9rem;
+  color: var(--color-danger);
+  font: 500 1.8rem/normal var(--font-body);
+}
 .signup-form__submit {
   display: block;
   width: 61.3rem;
@@ -368,6 +374,12 @@
   .m-signup-field input::placeholder {
     color: var(--su-input-text);
     opacity: 1;
+  }
+  .m-signup-form__error {
+    width: 25.7rem;
+    margin: -0.5rem 0 0 5.1rem;
+    color: var(--color-danger);
+    font: 500 1.1rem/normal var(--font-body);
   }
   .m-signup-form__submit {
     display: block;

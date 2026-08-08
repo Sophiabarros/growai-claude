@@ -168,7 +168,7 @@
     transform: translateX(-50%);
     width: 29.1rem;
     text-align: center;
-    color: var(--dm-text);
+    color: var(--color-violet-light);
     font: 400 1rem/1.5rem var(--font-body);
     letter-spacing: 0.1px;
     text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.4);
@@ -183,7 +183,7 @@
     transform: translateX(-50%);
     width: 20.5282rem;
     text-align: center;
-    color: var(--dm-text-soft);
+    color: var(--color-violet-light);
     font: 400 0.8rem/1.5rem var(--font-body);
     letter-spacing: 0.08px;
   }
@@ -213,7 +213,7 @@
     left: 0;
     width: 10.7rem;
     background: var(--color-green-normal);
-    color: var(--dm-text);
+    color: var(--color-violet-light);
   }
   .m-hero__btn--primary img {
     width: 0.9536rem;
@@ -476,6 +476,15 @@
     display: block;
     width: 100%;
     height: 100%;
+  }
+  .m-differentials__bg .icon-light {
+    display: none;
+  }
+  .mobile-canvas[data-theme="light"] .m-differentials__bg .icon-dark {
+    display: none;
+  }
+  .mobile-canvas[data-theme="light"] .m-differentials__bg .icon-light {
+    display: block;
   }
   .m-differentials__title {
     text-align: center;

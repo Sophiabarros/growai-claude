@@ -1,28 +1,13 @@
 (function () {
   "use strict";
 
-  // Theme toggle (dark by default), synced across the desktop and mobile
-  // canvases - mirrors js/theme.js for the standalone Investimento page.
+  // Theme toggle, persisted across the whole site via js/theme.js.
   var page = document.getElementById("investimentoPage");
-  var mPage = document.getElementById("mInvestimentoPage");
-  var themeToggle = document.getElementById("themeToggle");
-  var mThemeToggle = document.getElementById("mThemeToggle");
-
-  function currentTheme() {
-    return page.getAttribute("data-theme");
-  }
-
-  function setTheme(theme) {
-    page.setAttribute("data-theme", theme);
-    mPage.setAttribute("data-theme", theme);
-  }
-
-  function toggleTheme() {
-    setTheme(currentTheme() === "light" ? "dark" : "light");
-  }
-
-  themeToggle.addEventListener("click", toggleTheme);
-  mThemeToggle.addEventListener("click", toggleTheme);
+  initThemeToggle({
+    pageIds: ["investimentoPage", "mInvestimentoPage"],
+    toggleIds: ["themeToggle", "mThemeToggle"],
+    wrapperSelectors: [".investimento-wrapper", ".m-investimento-wrapper"],
+  });
 
   // Scales the fixed 1440px desktop canvas down to fit tablet-width
   // viewports, same approach as js/components.js on the home page. Below

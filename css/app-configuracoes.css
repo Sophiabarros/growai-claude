@@ -1,0 +1,362 @@
+/* APP CONFIGURAÇÕES page - "CONFIGURAÇÕES - DESKTOP" (519:461) and
+   mobile "Configurações" (456:832) frames.
+   Dark-only, no light variant exists in Figma for the App screens.
+   Header/nav/tabbar chrome shared with the other app-*.html pages lives
+   in css/app-shell.css (included alongside this file). */
+
+.app-configuracoes-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--app-bg);
+}
+.app-configuracoes {
+  position: relative;
+  width: 144rem;
+  height: 124.5rem;
+  flex-shrink: 0;
+  background: var(--app-bg);
+  overflow: hidden;
+  transform-origin: top center;
+}
+
+.cfg-title {
+  position: absolute;
+  left: 9.7rem;
+  top: 17.6rem;
+  color: var(--app-text);
+  font: 600 4.8rem/normal var(--font-body);
+}
+
+.cfg-col {
+  position: absolute;
+  left: 9.4rem;
+  top: 29.3rem;
+  width: 58.2rem;
+}
+
+.cfg-box {
+  position: relative;
+  width: 58.2rem;
+  background: rgba(21, 38, 35, 0.3);
+  border: 0.5px solid var(--app-bg);
+  border-radius: 0.6rem;
+  box-sizing: border-box;
+  padding: 2.1rem 2.8rem 2.1rem;
+  margin-top: 4.4rem;
+}
+.cfg-col > .cfg-box:first-child { margin-top: 0; }
+
+.cfg-box__label {
+  color: var(--app-muted-alt);
+  font: 500 2rem/normal var(--font-body);
+  margin: 0 0 1.6rem;
+}
+
+.cfg-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 5.3rem;
+  background: var(--app-card-bg);
+  border: 0.5px solid var(--app-bg);
+  border-radius: 0.6rem;
+  box-sizing: border-box;
+  padding: 0 1.8rem 0 6.8rem;
+}
+.cfg-row + .cfg-row { margin-top: 1.6rem; }
+.cfg-row--perfil { height: 5.9rem; padding-left: 8rem; }
+.cfg-row--notif { padding-left: 5rem; }
+.cfg-row--sobre { padding-left: 7rem; }
+.cfg-row[data-action="toggle"] { cursor: pointer; }
+
+.cfg-row__icon {
+  position: absolute;
+  left: 2.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+}
+.cfg-row--perfil .cfg-row__icon { left: 2.2rem; width: 3.4rem; height: 3.4rem; border-radius: 50%; }
+.cfg-row--notif .cfg-row__icon { left: 1.7rem; width: 1.9rem; height: 1.9rem; }
+.cfg-row--dados .cfg-row__icon { width: 1.9rem; height: 1.7rem; }
+
+.cfg-row__title {
+  color: var(--app-text);
+  font: 400 1.5rem/normal var(--font-body);
+}
+.cfg-row__subtitle {
+  margin-top: 0.3rem;
+  font: 400 1rem/normal var(--font-body);
+  color: var(--app-info);
+}
+.cfg-row__subtitle--accent { color: var(--app-accent); }
+
+.cfg-row__trailing {
+  position: absolute;
+  right: 1.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+}
+.cfg-row__trailing img { display: block; }
+.cfg-row__trailing--arrow img { width: 1rem; height: 1.7rem; }
+.cfg-row__trailing--toggle img { width: 2.2rem; height: 1.4rem; }
+
+.cfg-photos {
+  position: absolute;
+  left: 73.9rem;
+  top: 29.3rem;
+}
+.cfg-photo {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.cfg-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cfg-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 13, 0.3);
+}
+.cfg-photo--hero { width: 60.8rem; height: 37.2rem; }
+.cfg-photo--side1 { position: absolute; left: 0; top: 39.3rem; width: 29.3rem; height: 44.6rem; }
+.cfg-photo--side2 { position: absolute; left: 31.4rem; top: 38.9rem; width: 29.4rem; height: 44.6rem; }
+
+/*
+  MOBILE LAYOUT — "Configurações" (456:832), 412px design width, same
+  convention as css/app-estacoes.css.
+*/
+.m-app-configuracoes-wrapper {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .m-app-configuracoes-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .app-configuracoes-wrapper {
+    display: none;
+  }
+  .m-app-configuracoes-wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: center;
+    background: var(--app-bg);
+  }
+  .m-app-configuracoes {
+    position: relative;
+    width: 41.2rem;
+    flex-shrink: 0;
+    min-height: 91.7rem;
+    margin: 0 auto;
+    background: var(--app-bg);
+    overflow: hidden;
+    transform-origin: top center;
+  }
+
+  .m-cfg-content {
+    padding: 10.5rem 2.5rem 3rem;
+    box-sizing: border-box;
+  }
+
+  .m-cfg-title {
+    color: var(--app-text);
+    font: 600 2rem/normal var(--font-body);
+    margin: 0 0 2.5rem;
+  }
+
+  .m-cfg-section { margin-top: 1.9rem; }
+  .m-cfg-section:first-of-type { margin-top: 0; }
+
+  .m-cfg-section__label {
+    color: var(--app-muted-alt);
+    font: 500 1.4rem/normal var(--font-body);
+    margin: 0 0 1.5rem;
+  }
+
+  .m-cfg-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    background: var(--app-card-bg);
+    border: 0.5px solid var(--app-bg);
+    box-sizing: border-box;
+    padding: 0 1.3rem 0 4.9rem;
+  }
+  .m-cfg-row--tall { height: 5.3rem; }
+  .m-cfg-row--solo { border-radius: 0.6rem; }
+  .m-cfg-row[data-action="toggle"] { cursor: pointer; }
+  .m-cfg-group > .m-cfg-row:first-child { border-radius: 0.6rem 0.6rem 0 0; }
+  .m-cfg-group > .m-cfg-row:last-child { border-radius: 0 0 0.6rem 0.6rem; }
+
+  .m-cfg-row__icon {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .m-cfg-row__title {
+    color: var(--app-text);
+    font: 400 1.5rem/normal var(--font-body);
+  }
+  .m-cfg-row__subtitle {
+    margin-top: 0.2rem;
+    font: 400 1rem/normal var(--font-body);
+    color: var(--app-info);
+  }
+  .m-cfg-row__subtitle--accent { color: var(--app-accent); }
+
+  .m-cfg-row__trailing {
+    position: absolute;
+    right: 1.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+  }
+  .m-cfg-row__trailing img { display: block; }
+  .m-cfg-row__trailing--arrow img { width: 0.9rem; height: 1.6rem; }
+  .m-cfg-row__trailing--toggle img { width: 2.2rem; height: 1.4rem; }
+
+  .m-app-tabbar {
+    top: 82.3rem;
+  }
+}
+
+/* ============ EDIT PROFILE MODAL ============ */
+/* No Figma spec for this interaction - styled to match the station
+   create/edit modal (css/app-estacoes.css) instead of a traced frame. */
+.profile-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.profile-modal[hidden] {
+  display: none;
+}
+.profile-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 13, 0.7);
+}
+.profile-modal__panel {
+  position: relative;
+  width: 40rem;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--app-card-bg);
+  border-radius: 1.5rem;
+  padding: 2.4rem;
+  box-sizing: border-box;
+}
+.profile-modal__title {
+  color: var(--app-text);
+  font: 700 2rem/normal var(--font-body);
+  margin: 0 0 1.8rem;
+}
+.profile-modal__avatar {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+.profile-modal__avatar img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--app-bg);
+}
+.profile-modal__avatar-btn {
+  height: 3.4rem;
+  padding: 0 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--app-muted);
+  border-radius: 0.8rem;
+  color: var(--app-text);
+  font: 500 1.3rem/normal var(--font-body);
+  cursor: pointer;
+}
+.profile-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+.profile-modal__field label {
+  color: var(--app-info);
+  font: 500 1.3rem/normal var(--font-body);
+}
+.profile-modal__field input {
+  height: 3.8rem;
+  border: 1px solid var(--app-muted);
+  border-radius: 0.8rem;
+  padding: 0 1.2rem;
+  background: var(--app-bg);
+  color: var(--app-text);
+  font: 400 1.4rem/normal var(--font-body);
+  box-sizing: border-box;
+  outline: none;
+}
+.profile-modal__field input:disabled {
+  opacity: 0.6;
+}
+.profile-modal__error {
+  color: var(--color-danger);
+  font: 500 1.3rem/normal var(--font-body);
+  margin: 0 0 1rem;
+}
+.profile-modal__actions {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.6rem;
+}
+.profile-modal__cancel {
+  flex: 1;
+  height: 3.8rem;
+  border: 1px solid var(--app-muted);
+  border-radius: 0.8rem;
+  background: transparent;
+  color: var(--app-text);
+  font: 500 1.4rem/normal var(--font-body);
+  cursor: pointer;
+}
+.profile-modal__submit {
+  flex: 1;
+  height: 3.8rem;
+  border: 0;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, var(--color-green-normal), #68ada3);
+  color: var(--app-card-bg);
+  font: 600 1.4rem/normal var(--font-body);
+  cursor: pointer;
+}
+.profile-modal__submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.cfg-row[data-action="edit-profile"] { cursor: pointer; }
+.m-cfg-row[data-action="edit-profile"] { cursor: pointer; }

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configurações | TrackLink App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/app-shell.css" />
+    <link rel="stylesheet" href="css/app-configuracoes.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="app-configuracoes-wrapper">
+      <div class="app-configuracoes" id="appConfiguracoesPage">
+        <!-- ===== HEADER ===== -->
+        <header class="app-header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <nav class="app-nav">
+            <a href="app-home.html" class="app-nav__link app-nav__link--home">Home</a>
+            <a href="app-estacoes.html" class="app-nav__link app-nav__link--estacoes">Estações</a>
+            <a href="app-camera.html" class="app-nav__link app-nav__link--camera">Câmera</a>
+            <a href="app-relatorios.html" class="app-nav__link app-nav__link--relatorios">Relatórios</a>
+            <a href="app-configuracoes.html" class="app-nav__link app-nav__link--config app-nav__link--active">Configurações</a>
+          </nav>
+          <div class="app-header__avatar"><img alt="" src="assets/images/app/img-app-avatar.png" /></div>
+          <div class="app-header__divider"></div>
+          <div class="app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+        </header>
+
+        <h1 class="cfg-title">Configurações</h1>
+
+        <div class="cfg-col">
+          <div class="cfg-box">
+            <p class="cfg-box__label">Conta</p>
+            <div class="cfg-row cfg-row--perfil" data-action="edit-profile">
+              <img class="cfg-row__icon" alt="" id="cfgProfileIcon" src="assets/images/app/img-app-avatar.png" />
+              <div>
+                <p class="cfg-row__title" id="cfgProfileName">Perfil</p>
+                <p class="cfg-row__subtitle" id="cfgProfileEmail"></p>
+              </div>
+              <span class="cfg-row__trailing cfg-row__trailing--arrow"><img alt="" src="assets/icons/app/icon-cfg-seta-d.svg" /></span>
+            </div>
+          </div>
+
+          <div class="cfg-box">
+            <p class="cfg-box__label">Dispositivos</p>
+            <div class="cfg-row cfg-row--wifi">
+              <img class="cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-wifi-d.svg" />
+              <div>
+                <p class="cfg-row__title">Conexão ESP32</p>
+                <p class="cfg-row__subtitle cfg-row__subtitle--accent">2 dispositivos conectados</p>
+              </div>
+              <span class="cfg-row__trailing cfg-row__trailing--arrow"><img alt="" src="assets/icons/app/icon-cfg-seta-d.svg" /></span>
+            </div>
+            <div class="cfg-row cfg-row--dados">
+              <img class="cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-dados-d.svg" />
+              <div>
+                <p class="cfg-row__title">Armazenamento de Dados</p>
+                <p class="cfg-row__subtitle">1.2 MB usados</p>
+              </div>
+              <span class="cfg-row__trailing cfg-row__trailing--arrow"><img alt="" src="assets/icons/app/icon-cfg-seta-d.svg" /></span>
+            </div>
+          </div>
+
+          <div class="cfg-box">
+            <p class="cfg-box__label">Notificações</p>
+            <div class="cfg-row cfg-row--notif" data-action="toggle" data-key="health_alerts">
+              <img class="cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-bell-d.svg" />
+              <p class="cfg-row__title">Alertas de Saúde</p>
+              <span class="cfg-row__trailing cfg-row__trailing--toggle" id="cfgToggleHealth"><img alt="Ativado" src="assets/icons/app/icon-cfg-toggle-on-d.svg" /></span>
+            </div>
+            <div class="cfg-row cfg-row--notif" data-action="toggle" data-key="watering_updates">
+              <img class="cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-bell-2-d.svg" />
+              <p class="cfg-row__title">Atualizações de Rega</p>
+              <span class="cfg-row__trailing cfg-row__trailing--toggle" id="cfgToggleWatering"><img alt="Ativado" src="assets/icons/app/icon-cfg-toggle-on-d.svg" /></span>
+            </div>
+            <div class="cfg-row cfg-row--notif" data-action="toggle" data-key="weekly_reports">
+              <img class="cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-bell-2-d.svg" />
+              <p class="cfg-row__title">Relatórios Semanais</p>
+              <span class="cfg-row__trailing cfg-row__trailing--toggle" id="cfgToggleWeekly"><img alt="Desativado" src="assets/icons/app/icon-cfg-toggle-off-d.svg" /></span>
+            </div>
+          </div>
+
+          <div class="cfg-box">
+            <p class="cfg-box__label">Sobre</p>
+            <div class="cfg-row cfg-row--sobre">
+              <img class="cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-sobre-d.svg" />
+              <div>
+                <p class="cfg-row__title">GrowAI</p>
+                <p class="cfg-row__subtitle">Versão 1.0.0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cfg-photos">
+          <div class="cfg-photo cfg-photo--hero"><img alt="" src="assets/images/app/img-cfg-hero.png" /></div>
+          <div class="cfg-photo cfg-photo--side1"><img alt="" src="assets/images/app/img-cfg-side1.png" /></div>
+          <div class="cfg-photo cfg-photo--side2"><img alt="" src="assets/images/app/img-cfg-side2.png" /></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (Configurações, 412px artboard) ===== -->
+    <div class="m-app-configuracoes-wrapper">
+      <div class="m-app-configuracoes" id="mAppConfiguracoesPage">
+        <header class="m-app-header">
+          <a href="index.html" class="m-app-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <div class="m-app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+          <a href="index.html" class="m-app-header__back" aria-label="Voltar ao site">
+            <img alt="" src="assets/icons/app/icon-app-navegador.svg" />
+          </a>
+        </header>
+
+        <div class="m-cfg-content">
+          <h1 class="m-cfg-title">Configurações</h1>
+
+          <div class="m-cfg-section">
+            <p class="m-cfg-section__label">Conta</p>
+            <div class="m-cfg-row m-cfg-row--solo m-cfg-row--tall" data-action="edit-profile">
+              <img class="m-cfg-row__icon" alt="" id="mCfgProfileIcon" src="assets/icons/app/icon-cfg-perfil.svg" />
+              <div>
+                <p class="m-cfg-row__title" id="mCfgProfileName">Perfil</p>
+                <p class="m-cfg-row__subtitle" id="mCfgProfileEmail"></p>
+              </div>
+              <span class="m-cfg-row__trailing m-cfg-row__trailing--arrow"><img alt="" src="assets/icons/app/icon-cfg-seta.svg" /></span>
+            </div>
+          </div>
+
+          <div class="m-cfg-section">
+            <p class="m-cfg-section__label">Dispositivos</p>
+            <div class="m-cfg-group">
+              <div class="m-cfg-row m-cfg-row--tall">
+                <img class="m-cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-wifi.svg" />
+                <div>
+                  <p class="m-cfg-row__title">Conexão ESP32</p>
+                  <p class="m-cfg-row__subtitle m-cfg-row__subtitle--accent">2 dispositivos conectados</p>
+                </div>
+                <span class="m-cfg-row__trailing m-cfg-row__trailing--arrow"><img alt="" src="assets/icons/app/icon-cfg-seta.svg" /></span>
+              </div>
+              <div class="m-cfg-row m-cfg-row--tall">
+                <img class="m-cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-dados.svg" />
+                <div>
+                  <p class="m-cfg-row__title">Armazenamento de Dados</p>
+                  <p class="m-cfg-row__subtitle">1.2 MB usados</p>
+                </div>
+                <span class="m-cfg-row__trailing m-cfg-row__trailing--arrow"><img alt="" src="assets/icons/app/icon-cfg-seta.svg" /></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-cfg-section">
+            <p class="m-cfg-section__label">Notificações</p>
+            <div class="m-cfg-group">
+              <div class="m-cfg-row" data-action="toggle" data-key="health_alerts">
+                <img class="m-cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-bell.svg" />
+                <p class="m-cfg-row__title">Alertas de Saúde</p>
+                <span class="m-cfg-row__trailing m-cfg-row__trailing--toggle" id="mCfgToggleHealth"><img alt="Ativado" src="assets/icons/app/icon-cfg-toggle-on.svg" /></span>
+              </div>
+              <div class="m-cfg-row" data-action="toggle" data-key="watering_updates">
+                <img class="m-cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-bell.svg" />
+                <p class="m-cfg-row__title">Atualizações de Rega</p>
+                <span class="m-cfg-row__trailing m-cfg-row__trailing--toggle" id="mCfgToggleWatering"><img alt="Ativado" src="assets/icons/app/icon-cfg-toggle-on.svg" /></span>
+              </div>
+              <div class="m-cfg-row" data-action="toggle" data-key="weekly_reports">
+                <img class="m-cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-bell-2.svg" />
+                <p class="m-cfg-row__title">Relatórios Semanais</p>
+                <span class="m-cfg-row__trailing m-cfg-row__trailing--toggle" id="mCfgToggleWeekly"><img alt="Desativado" src="assets/icons/app/icon-cfg-toggle-off.svg" /></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-cfg-section">
+            <p class="m-cfg-section__label">Sobre</p>
+            <div class="m-cfg-row m-cfg-row--solo m-cfg-row--tall">
+              <img class="m-cfg-row__icon" alt="" src="assets/icons/app/icon-cfg-sobre.svg" />
+              <div>
+                <p class="m-cfg-row__title">GrowAI</p>
+                <p class="m-cfg-row__subtitle">Versão 1.0.0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== BOTTOM TAB BAR ===== -->
+        <nav class="m-app-tabbar">
+          <a href="app-home.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.8rem; height: 2rem">
+                <img alt="" style="left: 0; top: 0; width: 1.8rem; height: 2rem" src="assets/icons/app/icon-nav-home-inactive-1.svg" />
+                <img alt="" style="left: 0.6rem; top: 1rem; width: 0.6rem; height: 1rem" src="assets/icons/app/icon-nav-home-inactive-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Home</span>
+          </a>
+          <a href="app-estacoes.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.9rem; height: 2.3rem">
+                <img alt="" style="left: 0; top: 0; width: 2.9rem; height: 2.3rem" src="assets/icons/app/icon-nav-estacoes.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Estações</span>
+          </a>
+          <a href="app-camera.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 1.8rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-camera-1.svg" />
+                <img alt="" style="left: 0.7rem; top: 0.6rem; width: 0.8rem; height: 0.8rem" src="assets/icons/app/icon-nav-camera-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Câmera</span>
+          </a>
+          <a href="app-relatorios.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.4rem; height: 1.8rem">
+                <img alt="" style="left: 0.6rem; top: 0.6rem; width: 0.2rem; height: 1.2rem" src="assets/icons/app/icon-nav-relatorios-1.svg" />
+                <img alt="" style="left: 1.2rem; top: 0; width: 0.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-relatorios-2.svg" />
+                <img alt="" style="left: 0; top: 1.2rem; width: 0.2rem; height: 0.6rem" src="assets/icons/app/icon-nav-relatorios-3.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Relatórios</span>
+          </a>
+          <a href="app-configuracoes.html" class="m-app-tab m-app-tab--active">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 2.2rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 2.2rem" src="assets/icons/app/icon-nav-config-active-2.svg" />
+                <img alt="" style="left: 0.8rem; top: 0.8rem; width: 0.6rem; height: 0.6rem" src="assets/icons/app/icon-nav-config-active-1.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Config</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ===== EDIT PROFILE MODAL ===== -->
+    <div class="profile-modal" id="profileModal" hidden>
+      <div class="profile-modal__backdrop" data-action="close-profile-modal"></div>
+      <form class="profile-modal__panel" id="profileForm">
+        <h2 class="profile-modal__title">Editar perfil</h2>
+
+        <div class="profile-modal__avatar">
+          <img id="profileAvatarPreview" alt="" src="assets/images/app/img-app-avatar.png" />
+          <label class="profile-modal__avatar-btn" for="profileAvatarInput">Trocar foto</label>
+          <input type="file" id="profileAvatarInput" name="avatar" accept="image/png,image/jpeg,image/webp" hidden />
+        </div>
+
+        <div class="profile-modal__field">
+          <label for="profileName">Nome</label>
+          <input type="text" id="profileName" name="name" required />
+        </div>
+        <div class="profile-modal__field">
+          <label for="profileEmailDisplay">E-mail</label>
+          <input type="email" id="profileEmailDisplay" disabled />
+        </div>
+
+        <p class="profile-modal__error" id="profileModalError" hidden></p>
+
+        <div class="profile-modal__actions">
+          <button type="button" class="profile-modal__cancel" data-action="close-profile-modal">Cancelar</button>
+          <button type="submit" class="profile-modal__submit" id="profileModalSubmit">Salvar</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/responsive-canvas.js"></script>
+    <script src="js/app-configuracoes.js"></script>
+  </body>
+</html>

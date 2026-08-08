@@ -20,8 +20,12 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <div class="investimento-wrapper">
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="page-loader__spinner"></div>
+    </div>
+   <div class="investimento-wrapper">
       <div class="investimento" id="investimentoPage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="investimentoPage"></script>
         <!-- ===== HEADER ===== -->
         <header class="header">
           <a href="index.html" class="header__brand">
@@ -276,6 +280,7 @@
     <!-- ===== MOBILE (INVESTIMENTOS - MOBILE, own artboard) ===== -->
     <div class="m-investimento-wrapper">
       <div class="m-investimento" id="mInvestimentoPage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="mInvestimentoPage"></script>
         <header class="m-header">
           <a href="index.html" class="m-header__logo">
             <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
@@ -465,8 +470,10 @@
       </div>
     </div>
 
+    <script src="js/theme.js"></script>
     <script src="js/investimento.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/page-loader.js"></script>
   </body>
 </html>

@@ -20,8 +20,12 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="page-loader__spinner"></div>
+    </div>
     <div class="home-wrapper">
       <div class="home" id="home" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="home"></script>
         <!-- ===== HEADER ===== -->
         <header class="header">
           <a href="index.html" class="header__brand">
@@ -50,7 +54,8 @@
             <img alt="" src="assets/images/hero-background.png" />
           </div>
           <div class="hero__header-bg">
-            <img alt="" src="assets/icons/header-bg.svg" />
+            <img class="icon-dark" alt="" src="assets/icons/header-bg.svg" />
+            <img class="icon-light" alt="" src="assets/icons/header-bg-light.svg" />
           </div>
 
           <div class="hero__content">
@@ -243,7 +248,8 @@
         <!-- ===== SECTION 4: DIFFERENTIALS ===== -->
         <section class="differentials">
           <div class="differentials__bg">
-            <img alt="" src="assets/icons/section4-bg.svg" />
+            <img class="icon-dark" alt="" src="assets/icons/section4-bg.svg" />
+            <img class="icon-light" alt="" src="assets/icons/section4-bg-light.svg" />
           </div>
           <div class="differentials__content">
             <div class="differentials__titles">
@@ -411,6 +417,7 @@
     <!-- ===== MOBILE (HOME - Mobile / HOME - Mobile Darkmode, own artboard) ===== -->
     <div class="home-wrapper--mobile">
       <div class="mobile-canvas" id="mobileHome" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="mobileHome"></script>
         <header class="m-header">
           <a href="index.html" class="m-header__logo">
             <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
@@ -558,7 +565,10 @@
         </section>
 
         <section class="m-differentials">
-          <div class="m-differentials__bg"><img alt="" src="assets/icons/icon-mobile-subtract-dark.svg" /></div>
+          <div class="m-differentials__bg">
+            <img class="icon-dark" alt="" src="assets/icons/icon-mobile-subtract-dark.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-mobile-subtract-light.svg" />
+          </div>
           <p class="m-differentials__title">
             <span class="m-differentials__title-accent">Diferenciais</span> Tecnológicos do
             <span class="m-differentials__title-accent">GrowAI</span>
@@ -688,6 +698,7 @@
     </div>
 
     <script src="js/theme.js"></script>
+    <script src="js/page-loader.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/components.js"></script>

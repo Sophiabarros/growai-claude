@@ -1,0 +1,368 @@
+/* APP CÂMERA page (desktop) - "CÂMERA - DESKTOP" (484:410) frame.
+   Dark-only, no light variant exists in Figma for the App screens.
+   Header/nav/tabbar chrome shared with the other app-*.html pages lives
+   in css/app-shell.css (included alongside this file). */
+
+.app-camera-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--app-bg);
+}
+.app-camera {
+  position: relative;
+  width: 144rem;
+  height: 111.3rem;
+  flex-shrink: 0;
+  background: var(--app-bg);
+  overflow: hidden;
+  transform-origin: top center;
+}
+
+/* ============ TITLE + REFRESH LINK ============ */
+.app-camera__title {
+  position: absolute;
+  left: 10rem;
+  top: 20.1rem;
+  color: var(--app-text);
+  font: 600 4.8rem/normal var(--font-body);
+}
+.app-camera__refresh {
+  position: absolute;
+  right: 10rem;
+  top: 21rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-green-normal);
+  font: 400 2.4rem/normal var(--font-body);
+  cursor: pointer;
+}
+.app-camera__refresh img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.app-camera__refresh:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.app-camera__status {
+  position: absolute;
+  left: 10rem;
+  top: 29.6rem;
+  color: var(--app-info);
+  font: 400 1.8rem/normal var(--font-body);
+}
+.app-camera__status--error {
+  color: var(--color-danger);
+}
+.cam-card__empty {
+  padding: 2rem;
+  color: var(--app-info);
+  font: 400 1.4rem/normal var(--font-body);
+}
+
+/* ============ CAMERA CARDS ============ */
+.cam-card {
+  position: absolute;
+  top: 29.6rem;
+  width: 56.8rem;
+  height: 35rem;
+  background: var(--app-card-bg);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.cam-card--1 { left: 10rem; }
+.cam-card--2 { left: 77.2rem; }
+
+.cam-card__photo {
+  display: block;
+  width: 100%;
+  height: 18.4rem;
+  object-fit: cover;
+}
+.cam-card__time {
+  position: absolute;
+  top: 0.96rem;
+  right: 2.68rem;
+  height: 2.3rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  background: var(--app-bg);
+  border-radius: 0.6rem;
+  color: var(--app-text);
+  font: 400 1.2rem/normal var(--font-body);
+  text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+
+.cam-card__body {
+  padding: 1.9rem 2rem 2rem;
+}
+.cam-card__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cam-card__title-row-left {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.cam-card__name {
+  color: var(--app-text);
+  font: 700 1.6rem/normal var(--font-body);
+}
+.cam-card__plant {
+  color: var(--app-info);
+  font: 500 1.3rem/normal var(--font-body);
+}
+.cam-card__plant::before {
+  content: "\2022";
+  margin-right: 0.6rem;
+}
+.cam-card__health {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font: 400 1.3rem/normal var(--font-body);
+  white-space: nowrap;
+}
+.cam-card__health img {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+.cam-card__health--ok { color: var(--app-muted-alt); }
+.cam-card__health--warn { color: var(--app-accent); }
+
+.cam-card__analysis {
+  margin-top: 1.5rem;
+  background: rgba(252, 252, 253, 0.05);
+  border-radius: 0.7rem;
+  padding: 1.2rem 1.5rem;
+}
+.cam-card__analysis-label {
+  color: var(--app-info);
+  font: 500 1.2rem/normal var(--font-body);
+}
+.cam-card__analysis-text {
+  margin-top: 0.4rem;
+  color: var(--app-text);
+  font: 400 1.2rem/normal var(--font-body);
+}
+
+.cam-card__btn {
+  display: block;
+  margin-top: 2rem;
+  width: 100%;
+  height: 3.1rem;
+  border: 0;
+  border-radius: 0.7rem;
+  background: linear-gradient(135deg, var(--color-green-normal), #68ada3);
+  color: var(--app-card-bg);
+  font: 500 1.2rem/normal var(--font-body);
+  cursor: pointer;
+}
+
+/* ============ ADD CAMERA PLACEHOLDER CARDS ============ */
+.cam-add-card {
+  position: absolute;
+  top: 68.6rem;
+  width: 56.8rem;
+  height: 32rem;
+  background: #101614;
+  border: 2px solid var(--app-card-bg);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cam-add-card[hidden] { display: none; }
+.cam-add-card--1 { left: 10rem; }
+.cam-add-card--2 { left: 77.2rem; }
+.cam-add-card img {
+  width: 9rem;
+  height: 9rem;
+}
+
+/*
+  MOBILE LAYOUT — "Câmera" (456:667), 412px design width, same
+  convention as css/app-estacoes.css.
+*/
+.m-app-camera-wrapper {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .m-app-camera-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .app-camera-wrapper {
+    display: none;
+  }
+  .m-app-camera-wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: center;
+    background: var(--app-bg);
+  }
+  .m-app-camera {
+    position: relative;
+    width: 41.2rem;
+    flex-shrink: 0;
+    min-height: 112.3rem;
+    margin: 0 auto;
+    background: var(--app-bg);
+    overflow: hidden;
+    transform-origin: top center;
+  }
+
+  .m-app-camera__title {
+    position: absolute;
+    left: 2.5rem;
+    top: 10.5rem;
+    color: var(--app-text);
+    font: 600 2rem/normal var(--font-body);
+  }
+  .m-app-camera__refresh {
+    position: absolute;
+    right: 2.4rem;
+    top: 10.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    border: 0;
+    background: transparent;
+    color: var(--color-green-normal);
+    font: 400 1.6rem/normal var(--font-body);
+    cursor: pointer;
+  }
+  .m-app-camera__refresh img {
+    width: 2.2rem;
+    height: 2rem;
+  }
+  .m-app-camera__refresh:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+  .m-app-camera__status {
+    position: absolute;
+    left: 2.5rem;
+    right: 2.5rem;
+    top: 15.7rem;
+    color: var(--app-info);
+    font: 400 1.3rem/normal var(--font-body);
+  }
+  .m-app-camera__status--error {
+    color: var(--color-danger);
+  }
+  .cam-m-card__empty {
+    padding: 1.5rem;
+    color: var(--app-info);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+
+  .cam-m-card {
+    position: absolute;
+    width: 36.3rem;
+    background: var(--app-card-bg);
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+  .cam-m-card--1 { left: 2.5rem; top: 15.7rem; }
+  .cam-m-card--2 { left: 2.3rem; top: 58.6rem; }
+
+  .cam-m-card__photo {
+    display: block;
+    width: 100%;
+    height: 21.2rem;
+    object-fit: cover;
+  }
+  .cam-m-card__time {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.1rem;
+    height: 1.9rem;
+    padding: 0 0.7rem;
+    display: flex;
+    align-items: center;
+    background: var(--app-bg);
+    border-radius: 0.6rem;
+    color: var(--app-text);
+    font: 400 1rem/normal var(--font-body);
+    text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+  }
+
+  .cam-m-card__body {
+    position: relative;
+    padding: 2.6rem 1.5rem 1.5rem;
+  }
+  .cam-m-card__name {
+    color: var(--app-text);
+    font: 700 1.5rem/normal var(--font-body);
+  }
+  .cam-m-card__plant {
+    margin-top: 0.4rem;
+    color: var(--app-info);
+    font: 500 1.1rem/normal var(--font-body);
+  }
+  .cam-m-card__health {
+    position: absolute;
+    top: 2.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font: 400 1.2rem/normal var(--font-body);
+    white-space: nowrap;
+  }
+  .cam-m-card__health img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .cam-m-card__health--ok { color: var(--app-muted-alt); }
+  .cam-m-card__health--warn { color: var(--app-accent); }
+
+  .cam-m-card__analysis {
+    margin: 1.1rem -0.5rem 0;
+    background: rgba(252, 252, 253, 0.05);
+    border-radius: 0.7rem;
+    padding: 1rem 1.3rem;
+  }
+  .cam-m-card__analysis-label {
+    color: var(--app-info);
+    font: 500 1.1rem/normal var(--font-body);
+  }
+  .cam-m-card__analysis-text {
+    margin-top: 0.4rem;
+    color: var(--app-text);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+
+  .cam-m-card__btn {
+    display: block;
+    margin-top: 1.6rem;
+    width: 100%;
+    height: 2.85rem;
+    border: 0;
+    border-radius: 0.7rem;
+    background: linear-gradient(135deg, var(--color-green-normal), #68ada3);
+    color: var(--app-card-bg);
+    font: 500 1.2rem/normal var(--font-body);
+    cursor: pointer;
+  }
+
+  .m-app-tabbar {
+    top: 102.9rem;
+  }
+}

@@ -1,0 +1,436 @@
+/* APP RELATÓRIOS page - "RELATÓRIOS - DESKTOP" (490:762) and mobile
+   "Relatórios" (456:750) frames.
+   Dark-only, no light variant exists in Figma for the App screens.
+   Header/nav/tabbar chrome shared with the other app-*.html pages lives
+   in css/app-shell.css (included alongside this file). */
+
+.app-relatorios-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--app-bg);
+}
+.app-relatorios {
+  position: relative;
+  width: 144rem;
+  height: 117.5rem;
+  flex-shrink: 0;
+  background: var(--app-bg);
+  overflow: hidden;
+  transform-origin: top center;
+}
+
+/* ============ TITLE ============ */
+.rel-title {
+  position: absolute;
+  left: 13.3rem;
+  top: 20.2rem;
+  color: var(--app-text);
+  font: 600 4.8rem/normal var(--font-body);
+}
+.rel-subtitle {
+  position: absolute;
+  left: 14rem;
+  top: 26.2rem;
+  color: var(--app-info);
+  font: 400 2.4rem/normal var(--font-body);
+}
+
+/* ============ CHART CARDS ============ */
+.rel-chart-card {
+  position: absolute;
+  top: 32.3rem;
+  width: 55.2rem;
+  height: 38.5rem;
+  background: var(--app-card-bg);
+  border-radius: 2rem;
+}
+.rel-chart-card--1 { left: 13.3rem; }
+.rel-chart-card--2 { left: 75.4rem; }
+
+.rel-chart-card__label {
+  position: absolute;
+  left: 3.6rem;
+  top: 2.7rem;
+  color: var(--app-text);
+  font: 400 2rem/normal var(--font-body);
+}
+
+.rel-chart1 {
+  position: absolute;
+  left: 2.4rem;
+  top: 7.2rem;
+  width: 50.4rem;
+  height: 29.2rem;
+  overflow: hidden;
+}
+.rel-chart1__grid { position: absolute; left: 5.04rem; top: 2.336rem; width: 42.84rem; height: 23.36rem; }
+.rel-chart1__axes { position: absolute; left: 4.662rem; top: 2.336rem; width: 43.218rem; height: 23.71rem; }
+.rel-chart1__data { position: absolute; inset: 0; }
+.rel-chart1__y-labels {
+  position: absolute;
+  left: 0;
+  top: 2.336rem;
+  bottom: 3.504rem;
+  width: 4.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  color: var(--app-info);
+  font: 400 1.2rem/normal var(--font-inter);
+}
+.rel-chart1__x-labels {
+  position: absolute;
+  left: 3.3rem;
+  right: 0.4rem;
+  top: 26.56rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: var(--app-info);
+  font: 400 1.2rem/normal var(--font-inter);
+}
+
+.rel-chart2 {
+  position: absolute;
+  left: 3.4rem;
+  top: 7.2rem;
+  width: 48.7rem;
+  height: 29.2rem;
+  overflow: hidden;
+}
+.rel-chart2__group { position: absolute; left: 6.847rem; top: 2.654rem; width: 38.809rem; height: 17.702rem; }
+.rel-chart2__vector { position: absolute; left: 6.847rem; top: 2.654rem; width: 38.809rem; height: 17.702rem; }
+.rel-chart2__axis { position: absolute; left: 6.239rem; top: 2.654rem; width: 0.598rem; height: 17.702rem; }
+.rel-chart2__data { position: absolute; inset: 0; }
+.rel-chart2__y-labels {
+  position: absolute;
+  left: 0;
+  top: 1.46rem;
+  bottom: 4.38rem;
+  width: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  color: var(--app-info);
+  font: 400 1.3rem/normal var(--font-inter);
+}
+.rel-chart2__x-labels {
+  position: absolute;
+  left: 6.229rem;
+  right: 2.075rem;
+  top: 24.8rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: var(--app-info);
+  font: 400 1.3rem/normal var(--font-inter);
+}
+.rel-chart2__x-labels span.is-highlight {
+  color: #7ab2b0;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* ============ SUGGESTIONS ============ */
+.rel-suggestions-title {
+  position: absolute;
+  left: 13.3rem;
+  top: 79.2rem;
+  color: var(--app-text);
+  font: 600 4.8rem/normal var(--font-body);
+}
+
+.rel-suggestion {
+  position: absolute;
+  top: 88.3rem;
+  width: 55.2rem;
+  height: 18.3rem;
+  background: var(--app-card-bg);
+  border-radius: 2rem;
+}
+.rel-suggestion--1 { left: 13.3rem; }
+.rel-suggestion--2 { left: 75.3rem; }
+
+.rel-suggestion__name {
+  position: absolute;
+  left: 2.3rem;
+  top: 2.1rem;
+  color: var(--app-text);
+  font: 400 2rem/normal var(--font-body);
+}
+.rel-suggestion__desc {
+  position: absolute;
+  left: 2.3rem;
+  top: 5.91rem;
+  width: 48.4rem;
+  color: var(--app-info);
+  font: 400 1.6rem/normal var(--font-body);
+}
+.rel-suggestion__stat {
+  position: absolute;
+  left: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: var(--app-text);
+  font: 400 1.6rem/normal var(--font-body);
+  white-space: nowrap;
+}
+.rel-suggestion__stat img { width: 2.2rem; height: 1.4rem; }
+.rel-suggestion__stat--growth { top: 9.7rem; }
+.rel-suggestion__stat--health { top: 13.19rem; }
+.rel-suggestion--2 .rel-suggestion__stat { left: 2.3rem; }
+
+.rel-suggestion__badge {
+  position: absolute;
+  top: 1.6rem;
+  right: 2.3rem;
+}
+.rel-suggestion__badge img { display: block; }
+
+.rel-suggestion__btn {
+  position: absolute;
+  left: 35rem;
+  top: 12.5rem;
+  width: 17.9rem;
+  height: 2.9rem;
+  border: 0;
+  border-radius: 0.7rem;
+  background: var(--color-green-normal);
+  color: var(--app-card-bg);
+  font: 500 1.2rem/normal var(--font-body);
+  cursor: pointer;
+}
+.rel-suggestion__btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/*
+  MOBILE LAYOUT — "Relatórios" (456:750), 412px design width, same
+  convention as css/app-estacoes.css.
+*/
+.m-app-relatorios-wrapper {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .m-app-relatorios-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .app-relatorios-wrapper {
+    display: none;
+  }
+  .m-app-relatorios-wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: center;
+    background: var(--app-bg);
+  }
+  .m-app-relatorios {
+    position: relative;
+    width: 41.2rem;
+    flex-shrink: 0;
+    min-height: 114rem;
+    margin: 0 auto;
+    background: var(--app-bg);
+    overflow: hidden;
+    transform-origin: top center;
+  }
+
+  .m-rel-title {
+    position: absolute;
+    left: 2.5rem;
+    top: 10.5rem;
+    color: var(--app-text);
+    font: 600 2rem/normal var(--font-body);
+  }
+  .m-rel-subtitle {
+    position: absolute;
+    left: 2.5rem;
+    top: 13.2rem;
+    color: var(--app-info);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+
+  .m-rel-chart-card {
+    position: absolute;
+    width: 36.3rem;
+    height: 21.4rem;
+    background: var(--app-card-bg);
+    border-radius: 1.5rem;
+  }
+  .m-rel-chart-card--1 { left: 2.4rem; top: 17.3rem; }
+  .m-rel-chart-card--2 { left: 2.3rem; top: 41.3rem; }
+
+  .m-rel-chart-card__label {
+    position: absolute;
+    left: 1.4rem;
+    top: 1.3rem;
+    color: var(--app-text);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+
+  .m-rel-chart1 {
+    position: absolute;
+    left: 4.9rem;
+    top: 3.5rem;
+    width: 26.5rem;
+    height: 16.6rem;
+    overflow: hidden;
+  }
+  .m-rel-chart1__grid { position: absolute; left: 2.65rem; top: 1.33rem; width: 22.53rem; height: 13.28rem; }
+  .m-rel-chart1__axes { position: absolute; left: 2.45rem; top: 1.33rem; width: 22.72rem; height: 13.48rem; }
+  .m-rel-chart1__data { position: absolute; inset: 0; }
+  .m-rel-chart1__y-labels {
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    bottom: 1.8rem;
+    width: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    color: var(--app-info);
+    font: 400 1.2rem/normal var(--font-inter);
+  }
+  .m-rel-chart1__x-labels {
+    position: absolute;
+    left: 1.9rem;
+    right: 0.3rem;
+    top: 15.1rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--app-info);
+    font: 400 1.2rem/normal var(--font-inter);
+  }
+
+  .m-rel-chart2 {
+    position: absolute;
+    left: 5.7rem;
+    top: 2.6rem;
+    width: 25.8rem;
+    height: 18.6rem;
+    overflow: hidden;
+  }
+  .m-rel-chart2__group { position: absolute; left: 3.63rem; top: 1.69rem; width: 20.56rem; height: 13.58rem; }
+  .m-rel-chart2__vector { position: absolute; left: 3.63rem; top: 1.69rem; width: 20.56rem; height: 13.58rem; }
+  .m-rel-chart2__axis { position: absolute; left: 3.3rem; top: 1.69rem; width: 0.33rem; height: 13.68rem; }
+  .m-rel-chart2__data { position: absolute; inset: 0; }
+  .m-rel-chart2__y-labels {
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    bottom: 1.5rem;
+    width: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    color: var(--app-info);
+    font: 400 1.3rem/normal var(--font-inter);
+  }
+  .m-rel-chart2__x-labels {
+    position: absolute;
+    left: 3.3rem;
+    right: 1.1rem;
+    top: 15.8rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--app-info);
+    font: 400 1.3rem/normal var(--font-inter);
+  }
+  .m-rel-chart2__x-labels span.is-highlight {
+    color: #7ab2b0;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .m-rel-suggestions-title {
+    position: absolute;
+    left: 3rem;
+    top: 65.8rem;
+    color: var(--app-text);
+    font: 600 2rem/normal var(--font-body);
+  }
+
+  .m-rel-suggestion {
+    position: absolute;
+    left: 2.5rem;
+    width: 36.3rem;
+    background: var(--app-card-bg);
+    border-radius: 1.5rem;
+    padding: 1.4rem;
+    box-sizing: border-box;
+  }
+  .m-rel-suggestion--1 { top: 70.9rem; height: 12.2rem; }
+  .m-rel-suggestion--2 { top: 85.7rem; height: 16.3rem; }
+
+  .m-rel-suggestion__name {
+    color: var(--app-text);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+  .m-rel-suggestion__badge {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+  }
+  .m-rel-suggestion__badge img {
+    display: block;
+  }
+  .m-rel-suggestion__desc {
+    margin-top: 1.3rem;
+    color: var(--app-info);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+  .m-rel-suggestion__stats {
+    margin-top: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .m-rel-suggestion__stat {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--app-text);
+    font: 400 1.2rem/normal var(--font-body);
+    white-space: nowrap;
+  }
+  .m-rel-suggestion__stat img {
+    width: 2rem;
+    height: 1.3rem;
+  }
+  .m-rel-suggestion__btn {
+    display: block;
+    margin: 1.2rem -0.4rem 0;
+    width: calc(100% + 0.8rem);
+    height: 2.85rem;
+    border: 0;
+    border-radius: 0.7rem;
+    background: var(--color-green-normal);
+    color: var(--app-card-bg);
+    font: 500 1.2rem/normal var(--font-body);
+    cursor: pointer;
+  }
+  .m-rel-suggestion__btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .m-app-tabbar {
+    top: 104.6rem;
+  }
+}

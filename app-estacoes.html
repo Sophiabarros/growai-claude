@@ -46,66 +46,11 @@
         </header>
 
         <h1 class="app-estacoes__title">Minhas estações</h1>
-        <button type="button" class="app-estacoes__new-btn">+ Nova Estação</button>
+        <button type="button" class="app-estacoes__new-btn" id="newStationBtn">+ Nova Estação</button>
 
-        <!-- ===== STATION CARDS ===== -->
-        <div class="est-card est-card--1">
-          <div class="est-card__top">
-            <div class="est-card__icon"><img alt="" src="assets/icons/app/icon-app-planta-station.svg" /></div>
-            <button type="button" class="est-card__edit"><img alt="Editar" src="assets/icons/app/icon-app-editar.svg" /></button>
-            <p class="est-card__name">Estação 1</p>
-            <p class="est-card__plant">Camomila</p>
-            <p class="est-card__tag">Anti-inflamatória</p>
-          </div>
-          <div class="est-card__stats">
-            <div class="est-card__stat">
-              <p class="est-card__stat-label">Rega a cada</p>
-              <p class="est-card__stat-value">8h</p>
-            </div>
-            <div class="est-card__stat">
-              <p class="est-card__stat-label">Luz diária</p>
-              <p class="est-card__stat-value">12h</p>
-            </div>
-            <div class="est-card__stat">
-              <p class="est-card__stat-label">Umidade alvo</p>
-              <p class="est-card__stat-value">75%</p>
-            </div>
-            <div class="est-card__stat">
-              <p class="est-card__stat-label">pH alvo</p>
-              <p class="est-card__stat-value">6.5</p>
-            </div>
-          </div>
-          <button type="button" class="est-card__btn">Configurar rotina</button>
-        </div>
-
-        <div class="est-card est-card--2">
-          <div class="est-card__top">
-            <div class="est-card__icon"><img alt="" src="assets/icons/app/icon-app-planta-station.svg" /></div>
-            <button type="button" class="est-card__edit"><img alt="Editar" src="assets/icons/app/icon-app-editar.svg" /></button>
-            <p class="est-card__name">Estação 2</p>
-            <p class="est-card__plant">Hortelã</p>
-            <p class="est-card__tag">Calmante</p>
-          </div>
-          <div class="est-card__stats">
-            <div class="est-card__stat">
-              <p class="est-card__stat-label">Rega a cada</p>
-              <p class="est-card__stat-value">6h</p>
-            </div>
-            <div class="est-card__stat">
-              <p class="est-card__stat-label">Luz diária</p>
-              <p class="est-card__stat-value">10h</p>
-            </div>
-            <div class="est-card__stat">
-              <p class="est-card__stat-label">Umidade alvo</p>
-              <p class="est-card__stat-value">65%</p>
-            </div>
-            <div class="est-card__stat">
-              <p class="est-card__stat-label">pH alvo</p>
-              <p class="est-card__stat-value">6</p>
-            </div>
-          </div>
-          <button type="button" class="est-card__btn">Configurar rotina</button>
-        </div>
+        <!-- ===== STATION CARDS (rendered by js/app-estacoes.js) ===== -->
+        <p class="app-estacoes__status" id="appEstacoesStatus" hidden></p>
+        <div class="app-estacoes__grid" id="appEstacoesGrid"></div>
 
         <!-- ===== INSIGHTS ===== -->
         <div class="app-insights">
@@ -139,68 +84,10 @@
         </header>
 
         <h1 class="m-app-estacoes__title">Minhas estações</h1>
+        <p class="m-app-estacoes__status" id="mAppEstacoesStatus" hidden></p>
 
-        <div class="m-est-card m-est-card--1">
-          <div class="m-est-card__top">
-            <div class="m-est-card__icon"><img alt="" src="assets/icons/app/icon-app-planta-station.svg" /></div>
-            <button type="button" class="m-est-card__edit"><img alt="Editar" src="assets/icons/app/icon-app-editar.svg" /></button>
-            <p class="m-est-card__name">Estação 1</p>
-            <p class="m-est-card__plant">Camomila</p>
-            <p class="m-est-card__tag">Anti-inflamatória</p>
-          </div>
-          <div class="m-est-card__stats">
-            <div class="m-est-card__stat">
-              <p class="m-est-card__stat-label">Rega a cada</p>
-              <p class="m-est-card__stat-value">8h</p>
-            </div>
-            <div class="m-est-card__stat">
-              <p class="m-est-card__stat-label">Luz diária</p>
-              <p class="m-est-card__stat-value">12h</p>
-            </div>
-            <div class="m-est-card__stat">
-              <p class="m-est-card__stat-label">Umidade alvo</p>
-              <p class="m-est-card__stat-value">75%</p>
-            </div>
-            <div class="m-est-card__stat">
-              <p class="m-est-card__stat-label">pH alvo</p>
-              <p class="m-est-card__stat-value">6.5</p>
-            </div>
-          </div>
-          <button type="button" class="m-est-card__btn">Configurar rotina</button>
-        </div>
-
-        <div class="m-est-card m-est-card--2">
-          <div class="m-est-card__top">
-            <div class="m-est-card__icon"><img alt="" src="assets/icons/app/icon-app-planta-station.svg" /></div>
-            <button type="button" class="m-est-card__edit"><img alt="Editar" src="assets/icons/app/icon-app-editar.svg" /></button>
-            <p class="m-est-card__name">Estação 2</p>
-            <p class="m-est-card__plant">Hortelã</p>
-            <p class="m-est-card__tag">Calmante</p>
-          </div>
-          <div class="m-est-card__stats">
-            <div class="m-est-card__stat">
-              <p class="m-est-card__stat-label">Rega a cada</p>
-              <p class="m-est-card__stat-value">6h</p>
-            </div>
-            <div class="m-est-card__stat">
-              <p class="m-est-card__stat-label">Luz diária</p>
-              <p class="m-est-card__stat-value">10h</p>
-            </div>
-            <div class="m-est-card__stat">
-              <p class="m-est-card__stat-label">Umidade alvo</p>
-              <p class="m-est-card__stat-value">65%</p>
-            </div>
-            <div class="m-est-card__stat">
-              <p class="m-est-card__stat-label">pH alvo</p>
-              <p class="m-est-card__stat-value">6</p>
-            </div>
-          </div>
-          <button type="button" class="m-est-card__btn">Configurar rotina</button>
-        </div>
-
-        <button type="button" class="m-est-add-card" aria-label="Nova estação">
-          <img alt="" src="assets/icons/app/icon-app-add.svg" />
-        </button>
+        <!-- ===== STATION CARDS + "add" TILE (rendered by js/app-estacoes.js) ===== -->
+        <div class="m-est-list" id="mAppEstacoesList"></div>
 
         <!-- ===== BOTTOM TAB BAR ===== -->
         <nav class="m-app-tabbar">
@@ -253,6 +140,57 @@
       </div>
     </div>
 
+    <!-- ===== CREATE/EDIT STATION MODAL ===== -->
+    <div class="station-modal" id="stationModal" hidden>
+      <div class="station-modal__backdrop" data-action="close-modal"></div>
+      <form class="station-modal__panel" id="stationForm">
+        <h2 class="station-modal__title" id="stationModalTitle">Nova Estação</h2>
+
+        <div class="station-modal__field">
+          <label for="stationName">Nome</label>
+          <input type="text" id="stationName" name="name" required />
+        </div>
+        <div class="station-modal__field">
+          <label for="stationPlant">Planta</label>
+          <input type="text" id="stationPlant" name="plant" required />
+        </div>
+        <div class="station-modal__field">
+          <label for="stationTag">Categoria</label>
+          <input type="text" id="stationTag" name="tag" placeholder="Ex: Calmante" />
+        </div>
+        <div class="station-modal__row">
+          <div class="station-modal__field">
+            <label for="stationWater">Rega a cada (h)</label>
+            <input type="number" id="stationWater" name="water_interval_h" min="1" step="1" required />
+          </div>
+          <div class="station-modal__field">
+            <label for="stationLight">Luz diária (h)</label>
+            <input type="number" id="stationLight" name="light_hours" min="0" max="24" step="1" required />
+          </div>
+        </div>
+        <div class="station-modal__row">
+          <div class="station-modal__field">
+            <label for="stationHumidity">Umidade alvo (%)</label>
+            <input type="number" id="stationHumidity" name="humidity_target" min="0" max="100" step="1" required />
+          </div>
+          <div class="station-modal__field">
+            <label for="stationPh">pH alvo</label>
+            <input type="number" id="stationPh" name="ph_target" min="0" max="14" step="0.1" required />
+          </div>
+        </div>
+
+        <p class="station-modal__error" id="stationModalError" hidden></p>
+
+        <div class="station-modal__actions">
+          <button type="button" class="station-modal__cancel" data-action="close-modal">Cancelar</button>
+          <button type="submit" class="station-modal__submit" id="stationModalSubmit">Salvar</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/responsive-canvas.js"></script>
     <script src="js/app-estacoes.js"></script>
   </body>
 </html>
