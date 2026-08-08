@@ -1,0 +1,389 @@
+/* APP HOME page (desktop) - "HOME - DESKTOP" (455:354) frame. Dark-only, no
+   light variant exists in Figma for the App screens. */
+
+.app-home-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--app-bg);
+}
+.app-home {
+  position: relative;
+  width: 144rem;
+  height: 102.4rem;
+  flex-shrink: 0;
+  background: var(--app-bg);
+  overflow: hidden;
+  transform-origin: top center;
+}
+
+/* Header/nav/tabbar chrome shared with the other app-*.html pages lives
+   in css/app-shell.css (included alongside this file). */
+
+/* ============ MAIN: LEFT COLUMN ============ */
+.app-home__title {
+  position: absolute;
+  left: 11rem;
+  top: 19.7rem;
+  width: 50.3rem;
+  color: var(--app-text);
+  font: 700 4.8rem/normal var(--font-body);
+}
+.app-home__subtitle {
+  position: absolute;
+  left: 11rem;
+  top: 29.4rem;
+  width: 45.3rem;
+  color: var(--app-text);
+  font: 400 1.6rem/normal var(--font-body);
+}
+
+.app-sensors__title {
+  position: absolute;
+  left: 10.3rem;
+  top: 35.1rem;
+  color: var(--app-text);
+  font: 600 4.8rem/normal var(--font-body);
+}
+.app-sensors {
+  position: absolute;
+  left: 9.9rem;
+  top: 44.6rem;
+  width: 60.4rem;
+  height: 17rem;
+  background: var(--app-card-bg);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1.1rem;
+}
+.app-sensor-card {
+  width: 13.8rem;
+  height: 14.2rem;
+  flex-shrink: 0;
+  background: var(--app-card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 1.5rem;
+  padding: 2.6rem 0 0 3rem;
+}
+.app-sensor-card__icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.app-sensor-card__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.app-sensor-card__label {
+  margin-top: 1.6rem;
+  color: var(--app-text);
+  font: 400 1.6rem/normal var(--font-body);
+}
+.app-sensor-card__value {
+  margin-top: 0.4rem;
+  color: var(--app-text);
+  font: 400 2rem/normal var(--font-body);
+}
+
+.app-alerts__title {
+  position: absolute;
+  left: 10.1rem;
+  top: 68.4rem;
+  color: var(--app-text);
+  font: 600 4.8rem/normal var(--font-body);
+}
+.app-alerts {
+  position: absolute;
+  left: 10.3rem;
+  top: 77.9rem;
+  width: 60rem;
+  height: 13.5rem;
+  background: var(--app-card-bg);
+  border-radius: 1.5rem;
+  padding: 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.app-alert {
+  height: 4rem;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 0 1.5rem;
+  font: 400 1.5rem/normal var(--font-body);
+}
+.app-alert--warn {
+  background: rgba(192, 231, 157, 0.1);
+  color: var(--app-accent);
+}
+.app-alert--info {
+  background: rgba(136, 211, 207, 0.1);
+  color: var(--app-info);
+}
+.app-alert img {
+  width: 1.7rem;
+  height: 1.7rem;
+  flex-shrink: 0;
+}
+
+/* ============ MAIN: RIGHT COLUMN (station cards) ============ */
+.app-station-card {
+  position: absolute;
+  left: 85.4rem;
+  width: 46.9rem;
+  background: var(--app-card-bg);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.app-station-card--camomila {
+  top: 19.7rem;
+  height: 32.2rem;
+}
+.app-station-card--hortela {
+  top: 60.2rem;
+  height: 32.3rem;
+}
+.app-station-card__photo {
+  display: block;
+  width: 100%;
+  height: 13.9rem;
+  object-fit: cover;
+}
+.app-station-card--hortela .app-station-card__photo {
+  height: 14.8rem;
+}
+.app-station-card__body {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 13.9rem);
+  padding: 1.6rem 2.2rem 2.2rem;
+  box-sizing: border-box;
+}
+.app-station-card--hortela .app-station-card__body {
+  height: calc(100% - 14.8rem);
+}
+.app-station-card__name {
+  color: var(--app-text);
+  font: 700 2rem/normal var(--font-body);
+}
+.app-station-card__stats {
+  margin-top: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font: 400 1.2rem/normal var(--font-body);
+}
+.app-station-card__stat {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--app-info);
+}
+.app-station-card__stat img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.app-station-card__stat--health {
+  color: var(--app-info);
+}
+.app-station-card--hortela .app-station-card__stat--health {
+  color: var(--app-accent);
+}
+.app-station-card__warning {
+  margin-top: 1.8rem;
+  color: var(--app-accent);
+  font: 400 1.2rem/normal var(--font-body);
+}
+.app-station-card__btn {
+  display: block;
+  margin-top: auto;
+  width: 100%;
+  height: 3.5rem;
+  border: 0;
+  border-radius: 0.7rem;
+  background: linear-gradient(135deg, var(--color-green-normal), var(--color-teal));
+  color: var(--app-card-bg);
+  font: 500 2rem/normal var(--font-body);
+  cursor: pointer;
+}
+
+/*
+  MOBILE LAYOUT — "Home" (456:465), 412px design width (this app screen
+  uses a 412px artboard in Figma, not the 375px used by the marketing
+  site pages). Below 900px the desktop `.app-home` is hidden and
+  `.m-app-home` is shown instead; above it, the reverse.
+*/
+.m-app-home-wrapper {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .m-app-home-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .app-home-wrapper {
+    display: none;
+  }
+  .m-app-home-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: var(--app-bg);
+  }
+  .m-app-home {
+    position: relative;
+    width: 41.2rem;
+    max-width: 100%;
+    min-height: 91.7rem;
+    margin: 0 auto;
+    background: var(--app-bg);
+    overflow: hidden;
+  }
+
+  .m-app-home__title {
+    position: absolute;
+    left: 2.5rem;
+    top: 10.5rem;
+    color: var(--app-text);
+    font: 600 2rem/normal var(--font-body);
+  }
+
+  .m-app-station-card {
+    position: absolute;
+    left: 2.5rem;
+    width: 36.3rem;
+    height: 14.5rem;
+    background: var(--app-card-bg);
+    border-radius: 1.5rem;
+    padding: 1.3rem 1.4rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  .m-app-station-card--camomila { top: 15.7rem; }
+  .m-app-station-card--hortela { top: 32.5rem; }
+  .m-app-station-card__name {
+    color: var(--app-text);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+  .m-app-station-card__stats {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    font: 400 1.2rem/normal var(--font-body);
+  }
+  .m-app-station-card__stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--app-info);
+  }
+  .m-app-station-card__stat--health { color: var(--app-info); }
+  .m-app-station-card--hortela .m-app-station-card__stat--health { color: var(--app-accent); }
+  .m-app-station-card__stat img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .m-app-station-card__warning {
+    margin-top: 1.2rem;
+    color: var(--app-accent);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+  .m-app-station-card__btn {
+    display: block;
+    margin-top: auto;
+    width: 100%;
+    height: 2.2rem;
+    border: 0;
+    border-radius: 0.7rem;
+    background: linear-gradient(135deg, var(--color-green-normal), var(--color-teal));
+    color: var(--app-card-bg);
+    font: 500 1.2rem/normal var(--font-body);
+    cursor: pointer;
+  }
+
+  .m-app-sensors {
+    position: absolute;
+    left: 2.5rem;
+    top: 49.3rem;
+    width: 36.3rem;
+    height: 11.6rem;
+    background: var(--app-card-bg);
+    border-radius: 1.5rem;
+    padding: 1.3rem 1.4rem;
+  }
+  .m-app-sensors__title {
+    color: var(--app-text);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+  .m-app-sensors__grid {
+    margin-top: 2.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.1rem;
+  }
+  .m-app-sensors__item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--app-text);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+  .m-app-sensors__item img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .m-app-alerts__title {
+    position: absolute;
+    left: 2.5rem;
+    top: 64rem;
+    color: var(--app-text);
+    font: 600 2rem/normal var(--font-body);
+  }
+  .m-app-alerts {
+    position: absolute;
+    left: 2.5rem;
+    top: 68.1rem;
+    width: 36.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .m-app-alert {
+    height: 4rem;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.2rem;
+    font: 400 1.3rem/normal var(--font-body);
+  }
+  .m-app-alert--warn {
+    background: rgba(192, 231, 157, 0.1);
+    color: var(--app-accent);
+  }
+  .m-app-alert--info {
+    background: rgba(136, 211, 207, 0.1);
+    color: var(--app-info);
+  }
+  .m-app-alert img {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  .m-app-tabbar {
+    top: 82.3rem;
+  }
+}

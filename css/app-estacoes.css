@@ -1,0 +1,349 @@
+/* APP ESTAÇÕES page (desktop) - "ESTAÇÕES - DESKTOP" (478:370) frame.
+   Dark-only, no light variant exists in Figma for the App screens.
+   Header/nav/tabbar chrome shared with the other app-*.html pages lives
+   in css/app-shell.css (included alongside this file). */
+
+.app-estacoes-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--app-bg);
+}
+.app-estacoes {
+  position: relative;
+  width: 144rem;
+  height: 102.4rem;
+  flex-shrink: 0;
+  background: var(--app-bg);
+  overflow: hidden;
+  transform-origin: top center;
+}
+
+/* ============ TITLE + NEW STATION BUTTON ============ */
+.app-estacoes__title {
+  position: absolute;
+  left: 13.6rem;
+  top: 20.2rem;
+  color: var(--app-text);
+  font: 600 4.8rem/normal var(--font-body);
+}
+.app-estacoes__new-btn {
+  position: absolute;
+  left: 109.5rem;
+  top: 20.8rem;
+  width: 20.7rem;
+  height: 5.4rem;
+  border: 0;
+  border-radius: 3.5rem;
+  background: #3d6862;
+  color: var(--app-text);
+  font: 700 2rem/normal var(--font-body);
+  cursor: pointer;
+}
+
+/* ============ STATION CARDS ============ */
+.est-card {
+  position: absolute;
+  top: 32.3rem;
+  width: 55.2rem;
+  height: 38.5rem;
+  background: var(--app-card-bg);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.est-card--1 { left: 13.3rem; }
+.est-card--2 { left: 75.4rem; }
+
+.est-card__top {
+  position: relative;
+  height: 9.9rem;
+}
+.est-card__icon {
+  width: 9.9rem;
+  height: 9.9rem;
+  background: rgba(93, 165, 120, 0.2);
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.est-card__icon img {
+  width: 4.4rem;
+  height: 4.4rem;
+}
+.est-card__edit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5rem;
+  height: 5rem;
+  border: 0;
+  background: rgba(93, 165, 120, 0.2);
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.est-card__edit img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.est-card__name {
+  position: absolute;
+  left: 11.7rem;
+  top: 0.4rem;
+  color: var(--app-text);
+  font: 700 2rem/normal var(--font-body);
+}
+.est-card__plant {
+  position: absolute;
+  left: 11.7rem;
+  top: 4.5rem;
+  color: var(--app-info);
+  font: 500 1.6rem/normal var(--font-body);
+}
+.est-card__tag {
+  position: absolute;
+  left: 11.7rem;
+  top: 6.9rem;
+  color: var(--app-muted);
+  font: 300 1.6rem/normal var(--font-body);
+}
+
+.est-card__stats {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  row-gap: 2.6rem;
+}
+.est-card__stat-label {
+  color: var(--app-info);
+  font: 500 1.6rem/normal var(--font-body);
+}
+.est-card__stat-value {
+  margin-top: 0.5rem;
+  color: var(--app-text);
+  font: 300 2rem/normal var(--font-body);
+}
+
+.est-card__btn {
+  display: block;
+  margin-top: 3rem;
+  width: 100%;
+  height: 3.4rem;
+  border: 0;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--color-green-normal), var(--color-teal));
+  color: var(--app-card-bg);
+  font: 500 1.5rem/normal var(--font-body);
+  cursor: pointer;
+}
+
+/* ============ INSIGHTS ============ */
+.app-insights {
+  position: absolute;
+  left: 13.3rem;
+  top: 76.3rem;
+  width: 117.3rem;
+  height: 15rem;
+  background: var(--app-card-bg);
+  border-radius: 2rem;
+  padding: 1.3rem 2.2rem;
+  box-sizing: border-box;
+}
+.app-insights__title {
+  color: var(--app-text);
+  font: 700 2rem/normal var(--font-body);
+}
+.app-insights__card {
+  margin-top: 1.3rem;
+  height: 7.9rem;
+  border: 1px solid var(--color-green-normal);
+  border-radius: 1.7rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2.4rem;
+  box-sizing: border-box;
+}
+.app-insights__card img {
+  width: 3.9rem;
+  height: 4.1rem;
+  flex-shrink: 0;
+}
+.app-insights__headline {
+  color: var(--app-text);
+  font: 700 1.5rem/normal var(--font-body);
+}
+.app-insights__desc {
+  margin-top: 0.4rem;
+  color: var(--app-text);
+  font: 400 1.5rem/normal var(--font-body);
+}
+
+/*
+  MOBILE LAYOUT — "Estações" (456:576), 412px design width, same
+  convention as css/app-home.css.
+*/
+.m-app-estacoes-wrapper {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .m-app-estacoes-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .app-estacoes-wrapper {
+    display: none;
+  }
+  .m-app-estacoes-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: var(--app-bg);
+  }
+  .m-app-estacoes {
+    position: relative;
+    width: 41.2rem;
+    max-width: 100%;
+    min-height: 108rem;
+    margin: 0 auto;
+    background: var(--app-bg);
+    overflow: hidden;
+  }
+
+  .m-app-estacoes__title {
+    position: absolute;
+    left: 2.5rem;
+    top: 10.5rem;
+    color: var(--app-text);
+    font: 600 2rem/normal var(--font-body);
+  }
+
+  .m-est-card {
+    position: absolute;
+    left: 2.5rem;
+    width: 36.3rem;
+    height: 25.3rem;
+    background: var(--app-card-bg);
+    border-radius: 1.5rem;
+    padding: 1.3rem;
+    box-sizing: border-box;
+  }
+  .m-est-card--1 { top: 15.7rem; }
+  .m-est-card--2 { top: 43.6rem; }
+
+  .m-est-card__top {
+    position: relative;
+    height: 6.5rem;
+  }
+  .m-est-card__icon {
+    width: 6.5rem;
+    height: 6.5rem;
+    background: rgba(93, 165, 120, 0.2);
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .m-est-card__icon img {
+    width: 2.9rem;
+    height: 2.9rem;
+  }
+  .m-est-card__edit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3.3rem;
+    height: 3.3rem;
+    border: 0;
+    background: rgba(93, 165, 120, 0.2);
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .m-est-card__edit img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .m-est-card__name {
+    position: absolute;
+    left: 7.7rem;
+    top: 0.2rem;
+    color: var(--app-text);
+    font: 700 1.5rem/normal var(--font-body);
+  }
+  .m-est-card__plant {
+    position: absolute;
+    left: 7.7rem;
+    top: 3.5rem;
+    color: var(--app-info);
+    font: 500 1.1rem/normal var(--font-body);
+  }
+  .m-est-card__tag {
+    position: absolute;
+    left: 7.7rem;
+    top: 5.1rem;
+    color: var(--app-muted);
+    font: 300 1rem/normal var(--font-body);
+  }
+
+  .m-est-card__stats {
+    margin-top: 1.8rem;
+    display: grid;
+    grid-template-columns: 16.4rem 1fr;
+    row-gap: 1.6rem;
+  }
+  .m-est-card__stat-label {
+    color: var(--app-info);
+    font: 500 1.1rem/normal var(--font-body);
+  }
+  .m-est-card__stat-value {
+    margin-top: 0.3rem;
+    color: var(--app-text);
+    font: 300 1rem/normal var(--font-body);
+  }
+
+  .m-est-card__btn {
+    display: block;
+    margin-top: 1.7rem;
+    width: 100%;
+    height: 2.2rem;
+    border: 0;
+    border-radius: 0.7rem;
+    background: linear-gradient(135deg, var(--color-green-normal), var(--color-teal));
+    color: var(--app-card-bg);
+    font: 500 1.2rem/normal var(--font-body);
+    cursor: pointer;
+  }
+
+  .m-est-add-card {
+    position: absolute;
+    left: 2.5rem;
+    top: 71.5rem;
+    width: 36.3rem;
+    height: 25.3rem;
+    background: #101614;
+    border: 2px solid var(--app-card-bg);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .m-est-add-card img {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .m-app-tabbar {
+    top: 98rem;
+  }
+}

@@ -1,0 +1,406 @@
+/* SIGN UP page (desktop) - "SIGN UP" (447:401 light / 459:499 dark) frames */
+
+.signup-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--dm-bg);
+  transition: background-color 0.2s ease;
+}
+.signup {
+  position: relative;
+  width: 144rem;
+  height: 102.4rem;
+  flex-shrink: 0;
+  background: var(--dm-bg);
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  transform-origin: top center;
+}
+
+/* brand mark reuses .header__brand (header.css), repositioned top-right */
+.signup .header__brand {
+  left: 110.3rem;
+  top: 5.4rem;
+}
+
+/* ============ LEFT: PHOTO PANEL ============ */
+.signup-hero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 69rem;
+  height: 102.4rem;
+  overflow: hidden;
+}
+.signup-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.signup-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.signup-hero__eyebrow {
+  position: absolute;
+  left: 9rem;
+  top: 18.2rem;
+  color: var(--color-green-accent);
+  font: 600 3.2rem/normal var(--font-body);
+  white-space: nowrap;
+  z-index: 1;
+}
+.signup-hero__title {
+  position: absolute;
+  left: 8.7rem;
+  top: 21.8rem;
+  width: 43.4rem;
+  color: var(--color-violet-light);
+  font: 700 6.2rem/normal var(--font-body);
+  z-index: 1;
+}
+.signup-hero__desc {
+  position: absolute;
+  left: 9rem;
+  top: 38.2rem;
+  width: 44.5rem;
+  color: var(--color-violet-light);
+  font: 700 2.4rem/normal var(--font-body);
+  text-align: justify;
+  z-index: 1;
+}
+
+.signup-hero__contacts {
+  position: absolute;
+  left: 8.7rem;
+  top: 61.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  z-index: 1;
+}
+.signup-contact {
+  display: flex;
+  align-items: center;
+  gap: 2.1rem;
+}
+.signup-contact__icon {
+  width: 6rem;
+  height: 6rem;
+  flex-shrink: 0;
+}
+.signup-contact__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.signup-contact__text {
+  color: var(--color-violet-light);
+  font: 700 2.4rem/normal var(--font-body);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* ============ RIGHT: FORM ============ */
+.signup-form {
+  position: absolute;
+  left: 73.7rem;
+  top: 15.3rem;
+  width: 63.2rem;
+}
+.signup-form__title {
+  text-align: center;
+  color: var(--su-title);
+  font: 700 4.8rem/normal var(--font-body);
+  margin-bottom: 1.6rem;
+}
+.signup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 61.3rem;
+  margin: 0 0 1.6rem 1.9rem;
+}
+.signup-field label {
+  color: var(--su-label);
+  font: 700 2.4rem/normal var(--font-body);
+}
+.signup-field input {
+  height: 5.6rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 1.5rem;
+  padding: 0 2.1rem;
+  background: var(--su-input-bg);
+  box-shadow: var(--su-input-shadow);
+  color: var(--su-input-text);
+  font: 700 2.4rem/normal var(--font-body);
+  outline: none;
+}
+.signup-field input::placeholder {
+  color: var(--su-input-text);
+  opacity: 1;
+}
+.signup-form__submit {
+  display: block;
+  width: 61.3rem;
+  height: 6.379rem;
+  margin: 5.2rem 0 0 1.9rem;
+  border: 0;
+  border-radius: 1.5rem;
+  background: var(--color-green-active);
+  color: var(--color-violet-light);
+  font: 700 2.4rem/normal var(--font-body);
+  cursor: pointer;
+}
+.signup-form__login {
+  display: block;
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--su-link-rest);
+  font: 400 2rem/normal var(--font-body);
+  text-decoration: none;
+}
+.signup-form__login .accent {
+  color: var(--su-link-accent);
+}
+
+.signup .utility-bar {
+  left: 8.7rem;
+  top: 92.8rem;
+  width: auto;
+  transform: none;
+}
+
+/*
+  MOBILE LAYOUT — "SIGN UP - MOBILE" (454:342 light) / "SIGN UP - MOBILE
+  DARKMOBILE" (480:730 dark), 375px design width. Below 768px the desktop
+  `.signup` is hidden and `.m-signup` is shown instead; above it, the
+  reverse - same convention as css/sistema.css.
+*/
+.m-signup-wrapper {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .m-signup-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .signup-wrapper {
+    display: none;
+  }
+  .m-signup-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: var(--dm-bg);
+  }
+  .m-signup {
+    position: relative;
+    width: 37.5rem;
+    max-width: 100%;
+    min-height: 96rem;
+    margin: 0 auto;
+    background: var(--dm-bg);
+    overflow: hidden;
+  }
+
+  .m-signup .m-header__menu-toggle img {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+
+  .m-signup-hero {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 37.5rem;
+    height: 49.8rem;
+    overflow: hidden;
+  }
+  .m-signup-hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .m-signup-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .m-signup-hero__eyebrow {
+    position: absolute;
+    left: 3.2rem;
+    top: 13.8rem;
+    color: var(--color-green-accent);
+    font: 600 1.8rem/normal var(--font-body);
+    z-index: 1;
+  }
+  .m-signup-hero__title {
+    position: absolute;
+    left: 3.2rem;
+    top: 16.4rem;
+    width: 32rem;
+    color: var(--color-violet-light);
+    font: 700 2rem/normal var(--font-body);
+    z-index: 1;
+  }
+  .m-signup-hero__desc {
+    position: absolute;
+    left: 3.2rem;
+    top: 21.8rem;
+    width: 32rem;
+    color: var(--color-violet-light);
+    font: 700 1.6rem/normal var(--font-body);
+    text-align: justify;
+    z-index: 1;
+  }
+
+  .m-signup-hero__contacts {
+    position: absolute;
+    left: 3.3rem;
+    top: 30.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    z-index: 1;
+  }
+  .m-signup-contact {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  .m-signup-contact__icon {
+    width: 4rem;
+    height: 3.4rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+  .m-signup-contact__icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .m-signup-contact__text {
+    color: var(--color-violet-light);
+    font: 700 1.2rem/normal var(--font-body);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .m-signup-card {
+    position: absolute;
+    left: 0;
+    top: 46rem;
+    width: 37.5rem;
+    height: 50rem;
+    border-radius: 2.5rem 2.5rem 0 0;
+    background: var(--dm-bg);
+  }
+  .m-signup-card__brand-icon {
+    position: absolute;
+    right: 4.6rem;
+    top: 2.6rem;
+    width: 4.3rem;
+    height: 4.3rem;
+    overflow: hidden;
+  }
+  .m-signup-card__brand-icon > div {
+    position: absolute;
+  }
+  .m-signup-card__brand-icon img {
+    position: absolute;
+    display: block;
+    max-width: none;
+  }
+  .m-signup-card__brand-icon .v1 { inset: 31.47% 38.48% 30.25% 23.64%; }
+  .m-signup-card__brand-icon .v2 { inset: 30.5% 16.61% 18.73% 5.09%; }
+  .m-signup-card__brand-icon .v3 { inset: 27.76% 39.26% 62.86% 51.17%; }
+  .m-signup-card__brand-icon .v4 { inset: 18% 6.45% 21.27% 37.11%; }
+  .m-signup-card__brand-icon .v5 { inset: 14.09% 64.45% 72.24% 22.07%; }
+  .m-signup-card__brand-icon img.fill { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+  .m-signup-form__title {
+    text-align: center;
+    margin: 5.4rem 0 2.5rem;
+    color: var(--su-title);
+    font: 700 2.4rem/normal var(--font-body);
+  }
+  .m-signup-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 25.7rem;
+    margin: 0 0 1.3rem 5.1rem;
+  }
+  .m-signup-field label {
+    color: var(--su-label);
+    font: 700 1.2rem/normal var(--font-body);
+  }
+  .m-signup-field input {
+    height: 2.8rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 1.4rem;
+    padding: 0 1.8rem;
+    background: var(--su-input-bg);
+    color: var(--su-input-text);
+    font: 700 1.2rem/normal var(--font-body);
+    outline: none;
+  }
+  .m-signup-field input::placeholder {
+    color: var(--su-input-text);
+    opacity: 1;
+  }
+  .m-signup-form__submit {
+    display: block;
+    width: 25.7rem;
+    height: 3.9rem;
+    margin: 1.8rem 0 0 5rem;
+    border: 0;
+    border-radius: 1.5rem;
+    background: var(--color-green-active);
+    color: var(--color-violet-light);
+    font: 700 1.4rem/normal var(--font-body);
+    cursor: pointer;
+  }
+  .m-signup-form__login {
+    display: block;
+    width: 100%;
+    margin-top: 1.1rem;
+    text-align: center;
+    color: var(--su-m-link-rest);
+    font: 400 1.2rem/normal var(--font-body);
+    text-decoration: none;
+  }
+  .m-signup-form__login .accent {
+    color: var(--su-m-link-accent);
+  }
+
+  .m-signup .m-utility-bar {
+    position: absolute;
+    left: 3rem;
+    top: 41.5rem;
+    margin-top: 0;
+    padding: 0;
+    justify-content: flex-start;
+    z-index: 2;
+  }
+}

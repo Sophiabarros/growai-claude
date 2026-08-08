@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | TrackLink App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/app-shell.css" />
+    <link rel="stylesheet" href="css/app-home.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="app-home-wrapper">
+      <div class="app-home" id="appHomePage">
+        <!-- ===== HEADER ===== -->
+        <header class="app-header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <nav class="app-nav">
+            <a href="app-home.html" class="app-nav__link app-nav__link--home app-nav__link--active">Home</a>
+            <a href="app-estacoes.html" class="app-nav__link app-nav__link--estacoes">Estações</a>
+            <a href="app-camera.html" class="app-nav__link app-nav__link--camera">Câmera</a>
+            <a href="app-relatorios.html" class="app-nav__link app-nav__link--relatorios">Relatórios</a>
+            <a href="app-configuracoes.html" class="app-nav__link app-nav__link--config">Configurações</a>
+          </nav>
+          <div class="app-header__avatar"><img alt="" src="assets/images/app/img-app-avatar.png" /></div>
+          <div class="app-header__divider"></div>
+          <div class="app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+        </header>
+
+        <!-- ===== LEFT COLUMN ===== -->
+        <h1 class="app-home__title">Status da horta</h1>
+        <p class="app-home__subtitle">Acompanhe em tempo real as condições de sua planta</p>
+
+        <h2 class="app-sensors__title">Sensores</h2>
+        <div class="app-sensors">
+          <div class="app-sensor-card">
+            <span class="app-sensor-card__icon"><img alt="" src="assets/icons/app/icon-app-sun.svg" /></span>
+            <p class="app-sensor-card__label">Luz</p>
+            <p class="app-sensor-card__value">75%</p>
+          </div>
+          <div class="app-sensor-card">
+            <span class="app-sensor-card__icon"><img alt="" src="assets/icons/app/icon-app-ph.svg" /></span>
+            <p class="app-sensor-card__label">PH</p>
+            <p class="app-sensor-card__value">pH 6.3</p>
+          </div>
+          <div class="app-sensor-card">
+            <span class="app-sensor-card__icon"><img alt="" src="assets/icons/app/icon-app-humidity.svg" /></span>
+            <p class="app-sensor-card__label">Umidade</p>
+            <p class="app-sensor-card__value">72%</p>
+          </div>
+          <div class="app-sensor-card">
+            <span class="app-sensor-card__icon"><img alt="" src="assets/icons/app/icon-app-thermometer.svg" /></span>
+            <p class="app-sensor-card__label">Temp</p>
+            <p class="app-sensor-card__value">24°C</p>
+          </div>
+        </div>
+
+        <h2 class="app-alerts__title">Alertas</h2>
+        <div class="app-alerts">
+          <div class="app-alert app-alert--warn">
+            <img alt="" src="assets/icons/app/icon-app-warning.svg" />
+            <span>Planta precisa de luz</span>
+          </div>
+          <div class="app-alert app-alert--info">
+            <img alt="" src="assets/icons/app/icon-app-humidity.svg" />
+            <span>Planta foi regada</span>
+          </div>
+        </div>
+
+        <!-- ===== RIGHT COLUMN: STATION CARDS ===== -->
+        <div class="app-station-card app-station-card--camomila">
+          <img class="app-station-card__photo" alt="Camomila" src="assets/images/app/img-app-camomila.png" />
+          <div class="app-station-card__body">
+            <p class="app-station-card__name">Camomila</p>
+            <div class="app-station-card__stats">
+              <span class="app-station-card__stat app-station-card__stat--health">
+                <img alt="" src="assets/icons/app/icon-app-check.svg" /> Saúde: boa
+              </span>
+              <span class="app-station-card__stat">
+                <img alt="" src="assets/icons/app/icon-app-humidity.svg" /> 72%
+              </span>
+              <span class="app-station-card__stat">
+                <img alt="" src="assets/icons/app/icon-app-thermometer.svg" /> 24°C
+              </span>
+            </div>
+            <button type="button" class="app-station-card__btn">Ver câmera</button>
+          </div>
+        </div>
+
+        <div class="app-station-card app-station-card--hortela">
+          <img class="app-station-card__photo" alt="Hortelã" src="assets/images/app/img-app-hortela.png" />
+          <div class="app-station-card__body">
+            <p class="app-station-card__name">Hortelã</p>
+            <div class="app-station-card__stats">
+              <span class="app-station-card__stat app-station-card__stat--health">
+                <img alt="" src="assets/icons/app/icon-app-warning.svg" /> Saúde: média
+              </span>
+            </div>
+            <p class="app-station-card__warning">Luz insuficiente</p>
+            <button type="button" class="app-station-card__btn">Ver câmera</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (Home, 412px artboard) ===== -->
+    <div class="m-app-home-wrapper">
+      <div class="m-app-home" id="mAppHomePage">
+        <header class="m-app-header">
+          <a href="index.html" class="m-app-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <div class="m-app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+          <a href="index.html" class="m-app-header__back" aria-label="Voltar ao site">
+            <img alt="" src="assets/icons/app/icon-app-navegador.svg" />
+          </a>
+        </header>
+
+        <h1 class="m-app-home__title">Status da horta</h1>
+
+        <div class="m-app-station-card m-app-station-card--camomila">
+          <p class="m-app-station-card__name">Camomila</p>
+          <div class="m-app-station-card__stats">
+            <span class="m-app-station-card__stat m-app-station-card__stat--health">
+              <img alt="" src="assets/icons/app/icon-app-check.svg" /> Saúde: boa
+            </span>
+          </div>
+          <div class="m-app-station-card__stats">
+            <span class="m-app-station-card__stat">
+              <img alt="" src="assets/icons/app/icon-app-humidity.svg" /> 72%
+            </span>
+            <span class="m-app-station-card__stat">
+              <img alt="" src="assets/icons/app/icon-app-thermometer.svg" /> 24°C
+            </span>
+          </div>
+          <button type="button" class="m-app-station-card__btn">Ver câmera</button>
+        </div>
+
+        <div class="m-app-station-card m-app-station-card--hortela">
+          <p class="m-app-station-card__name">Hortelã</p>
+          <div class="m-app-station-card__stats">
+            <span class="m-app-station-card__stat m-app-station-card__stat--health">
+              <img alt="" src="assets/icons/app/icon-app-warning.svg" /> Saúde: média
+            </span>
+          </div>
+          <p class="m-app-station-card__warning">Luz insuficiente</p>
+          <button type="button" class="m-app-station-card__btn">Ver câmera</button>
+        </div>
+
+        <div class="m-app-sensors">
+          <p class="m-app-sensors__title">Sensores</p>
+          <div class="m-app-sensors__grid">
+            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-sun.svg" /> 75%</span>
+            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-ph.svg" /> pH 6.3</span>
+            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-humidity.svg" /> 72%</span>
+            <span class="m-app-sensors__item"><img alt="" src="assets/icons/app/icon-app-thermometer.svg" /> 24°C</span>
+          </div>
+        </div>
+
+        <h2 class="m-app-alerts__title">Alertas</h2>
+        <div class="m-app-alerts">
+          <div class="m-app-alert m-app-alert--warn">
+            <img alt="" src="assets/icons/app/icon-app-warning.svg" />
+            <span>Planta precisa de luz</span>
+          </div>
+          <div class="m-app-alert m-app-alert--info">
+            <img alt="" src="assets/icons/app/icon-app-humidity.svg" />
+            <span>Planta foi regada</span>
+          </div>
+        </div>
+
+        <!-- ===== BOTTOM TAB BAR ===== -->
+        <nav class="m-app-tabbar">
+          <a href="app-home.html" class="m-app-tab m-app-tab--active">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.8rem; height: 2rem">
+                <img alt="" style="left: 0; top: 0; width: 1.8rem; height: 2rem" src="assets/icons/app/icon-nav-home-1.svg" />
+                <img alt="" style="left: 0.6rem; top: 1rem; width: 0.6rem; height: 1rem" src="assets/icons/app/icon-nav-home-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Home</span>
+          </a>
+          <a href="app-estacoes.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.9rem; height: 2.3rem">
+                <img alt="" style="left: 0; top: 0; width: 2.9rem; height: 2.3rem" src="assets/icons/app/icon-nav-estacoes.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Estações</span>
+          </a>
+          <a href="app-camera.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 1.8rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-camera-1.svg" />
+                <img alt="" style="left: 0.7rem; top: 0.6rem; width: 0.8rem; height: 0.8rem" src="assets/icons/app/icon-nav-camera-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Câmera</span>
+          </a>
+          <a href="app-relatorios.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.4rem; height: 1.8rem">
+                <img alt="" style="left: 0.6rem; top: 0.6rem; width: 0.2rem; height: 1.2rem" src="assets/icons/app/icon-nav-relatorios-1.svg" />
+                <img alt="" style="left: 1.2rem; top: 0; width: 0.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-relatorios-2.svg" />
+                <img alt="" style="left: 0; top: 1.2rem; width: 0.2rem; height: 0.6rem" src="assets/icons/app/icon-nav-relatorios-3.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Relatórios</span>
+          </a>
+          <a href="app-configuracoes.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 2.2rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 2.2rem" src="assets/icons/app/icon-nav-config-2.svg" />
+                <img alt="" style="left: 0.8rem; top: 0.8rem; width: 0.6rem; height: 0.6rem" src="assets/icons/app/icon-nav-config-1.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Config</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <script src="js/app-home.js"></script>
+  </body>
+</html>

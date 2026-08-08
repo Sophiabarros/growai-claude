@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minhas estações | TrackLink App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/app-shell.css" />
+    <link rel="stylesheet" href="css/app-estacoes.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <div class="app-estacoes-wrapper">
+      <div class="app-estacoes" id="appEstacoesPage">
+        <!-- ===== HEADER ===== -->
+        <header class="app-header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <nav class="app-nav">
+            <a href="app-home.html" class="app-nav__link app-nav__link--home">Home</a>
+            <a href="app-estacoes.html" class="app-nav__link app-nav__link--estacoes app-nav__link--active">Estações</a>
+            <a href="app-camera.html" class="app-nav__link app-nav__link--camera">Câmera</a>
+            <a href="app-relatorios.html" class="app-nav__link app-nav__link--relatorios">Relatórios</a>
+            <a href="app-configuracoes.html" class="app-nav__link app-nav__link--config">Configurações</a>
+          </nav>
+          <div class="app-header__avatar"><img alt="" src="assets/images/app/img-app-avatar.png" /></div>
+          <div class="app-header__divider"></div>
+          <div class="app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+        </header>
+
+        <h1 class="app-estacoes__title">Minhas estações</h1>
+        <button type="button" class="app-estacoes__new-btn">+ Nova Estação</button>
+
+        <!-- ===== STATION CARDS ===== -->
+        <div class="est-card est-card--1">
+          <div class="est-card__top">
+            <div class="est-card__icon"><img alt="" src="assets/icons/app/icon-app-planta-station.svg" /></div>
+            <button type="button" class="est-card__edit"><img alt="Editar" src="assets/icons/app/icon-app-editar.svg" /></button>
+            <p class="est-card__name">Estação 1</p>
+            <p class="est-card__plant">Camomila</p>
+            <p class="est-card__tag">Anti-inflamatória</p>
+          </div>
+          <div class="est-card__stats">
+            <div class="est-card__stat">
+              <p class="est-card__stat-label">Rega a cada</p>
+              <p class="est-card__stat-value">8h</p>
+            </div>
+            <div class="est-card__stat">
+              <p class="est-card__stat-label">Luz diária</p>
+              <p class="est-card__stat-value">12h</p>
+            </div>
+            <div class="est-card__stat">
+              <p class="est-card__stat-label">Umidade alvo</p>
+              <p class="est-card__stat-value">75%</p>
+            </div>
+            <div class="est-card__stat">
+              <p class="est-card__stat-label">pH alvo</p>
+              <p class="est-card__stat-value">6.5</p>
+            </div>
+          </div>
+          <button type="button" class="est-card__btn">Configurar rotina</button>
+        </div>
+
+        <div class="est-card est-card--2">
+          <div class="est-card__top">
+            <div class="est-card__icon"><img alt="" src="assets/icons/app/icon-app-planta-station.svg" /></div>
+            <button type="button" class="est-card__edit"><img alt="Editar" src="assets/icons/app/icon-app-editar.svg" /></button>
+            <p class="est-card__name">Estação 2</p>
+            <p class="est-card__plant">Hortelã</p>
+            <p class="est-card__tag">Calmante</p>
+          </div>
+          <div class="est-card__stats">
+            <div class="est-card__stat">
+              <p class="est-card__stat-label">Rega a cada</p>
+              <p class="est-card__stat-value">6h</p>
+            </div>
+            <div class="est-card__stat">
+              <p class="est-card__stat-label">Luz diária</p>
+              <p class="est-card__stat-value">10h</p>
+            </div>
+            <div class="est-card__stat">
+              <p class="est-card__stat-label">Umidade alvo</p>
+              <p class="est-card__stat-value">65%</p>
+            </div>
+            <div class="est-card__stat">
+              <p class="est-card__stat-label">pH alvo</p>
+              <p class="est-card__stat-value">6</p>
+            </div>
+          </div>
+          <button type="button" class="est-card__btn">Configurar rotina</button>
+        </div>
+
+        <!-- ===== INSIGHTS ===== -->
+        <div class="app-insights">
+          <p class="app-insights__title">Insights de Saúde</p>
+          <div class="app-insights__card">
+            <img alt="" src="assets/icons/app/icon-app-insights-warn.svg" />
+            <div>
+              <p class="app-insights__headline">Estação 1 precisa de ajuste de pH</p>
+              <p class="app-insights__desc">O nível de pH da Camomila está ligeiramente acima do alvo de 6.5. Recomendamos verificação manual.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (Estações, 412px artboard) ===== -->
+    <div class="m-app-estacoes-wrapper">
+      <div class="m-app-estacoes" id="mAppEstacoesPage">
+        <header class="m-app-header">
+          <a href="index.html" class="m-app-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <div class="m-app-header__bell"><img alt="" src="assets/icons/app/icon-app-bell.svg" /></div>
+          <a href="index.html" class="m-app-header__back" aria-label="Voltar ao site">
+            <img alt="" src="assets/icons/app/icon-app-navegador.svg" />
+          </a>
+        </header>
+
+        <h1 class="m-app-estacoes__title">Minhas estações</h1>
+
+        <div class="m-est-card m-est-card--1">
+          <div class="m-est-card__top">
+            <div class="m-est-card__icon"><img alt="" src="assets/icons/app/icon-app-planta-station.svg" /></div>
+            <button type="button" class="m-est-card__edit"><img alt="Editar" src="assets/icons/app/icon-app-editar.svg" /></button>
+            <p class="m-est-card__name">Estação 1</p>
+            <p class="m-est-card__plant">Camomila</p>
+            <p class="m-est-card__tag">Anti-inflamatória</p>
+          </div>
+          <div class="m-est-card__stats">
+            <div class="m-est-card__stat">
+              <p class="m-est-card__stat-label">Rega a cada</p>
+              <p class="m-est-card__stat-value">8h</p>
+            </div>
+            <div class="m-est-card__stat">
+              <p class="m-est-card__stat-label">Luz diária</p>
+              <p class="m-est-card__stat-value">12h</p>
+            </div>
+            <div class="m-est-card__stat">
+              <p class="m-est-card__stat-label">Umidade alvo</p>
+              <p class="m-est-card__stat-value">75%</p>
+            </div>
+            <div class="m-est-card__stat">
+              <p class="m-est-card__stat-label">pH alvo</p>
+              <p class="m-est-card__stat-value">6.5</p>
+            </div>
+          </div>
+          <button type="button" class="m-est-card__btn">Configurar rotina</button>
+        </div>
+
+        <div class="m-est-card m-est-card--2">
+          <div class="m-est-card__top">
+            <div class="m-est-card__icon"><img alt="" src="assets/icons/app/icon-app-planta-station.svg" /></div>
+            <button type="button" class="m-est-card__edit"><img alt="Editar" src="assets/icons/app/icon-app-editar.svg" /></button>
+            <p class="m-est-card__name">Estação 2</p>
+            <p class="m-est-card__plant">Hortelã</p>
+            <p class="m-est-card__tag">Calmante</p>
+          </div>
+          <div class="m-est-card__stats">
+            <div class="m-est-card__stat">
+              <p class="m-est-card__stat-label">Rega a cada</p>
+              <p class="m-est-card__stat-value">6h</p>
+            </div>
+            <div class="m-est-card__stat">
+              <p class="m-est-card__stat-label">Luz diária</p>
+              <p class="m-est-card__stat-value">10h</p>
+            </div>
+            <div class="m-est-card__stat">
+              <p class="m-est-card__stat-label">Umidade alvo</p>
+              <p class="m-est-card__stat-value">65%</p>
+            </div>
+            <div class="m-est-card__stat">
+              <p class="m-est-card__stat-label">pH alvo</p>
+              <p class="m-est-card__stat-value">6</p>
+            </div>
+          </div>
+          <button type="button" class="m-est-card__btn">Configurar rotina</button>
+        </div>
+
+        <button type="button" class="m-est-add-card" aria-label="Nova estação">
+          <img alt="" src="assets/icons/app/icon-app-add.svg" />
+        </button>
+
+        <!-- ===== BOTTOM TAB BAR ===== -->
+        <nav class="m-app-tabbar">
+          <a href="app-home.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.8rem; height: 2rem">
+                <img alt="" style="left: 0; top: 0; width: 1.8rem; height: 2rem" src="assets/icons/app/icon-nav-home-inactive-1.svg" />
+                <img alt="" style="left: 0.6rem; top: 1rem; width: 0.6rem; height: 1rem" src="assets/icons/app/icon-nav-home-inactive-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Home</span>
+          </a>
+          <a href="app-estacoes.html" class="m-app-tab m-app-tab--active">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.9rem; height: 2.3rem">
+                <img alt="" style="left: 0; top: 0; width: 2.9rem; height: 2.3rem" src="assets/icons/app/icon-nav-estacoes-active.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Estações</span>
+          </a>
+          <a href="app-camera.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 1.8rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-camera-1.svg" />
+                <img alt="" style="left: 0.7rem; top: 0.6rem; width: 0.8rem; height: 0.8rem" src="assets/icons/app/icon-nav-camera-2.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Câmera</span>
+          </a>
+          <a href="app-relatorios.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 1.4rem; height: 1.8rem">
+                <img alt="" style="left: 0.6rem; top: 0.6rem; width: 0.2rem; height: 1.2rem" src="assets/icons/app/icon-nav-relatorios-1.svg" />
+                <img alt="" style="left: 1.2rem; top: 0; width: 0.2rem; height: 1.8rem" src="assets/icons/app/icon-nav-relatorios-2.svg" />
+                <img alt="" style="left: 0; top: 1.2rem; width: 0.2rem; height: 0.6rem" src="assets/icons/app/icon-nav-relatorios-3.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Relatórios</span>
+          </a>
+          <a href="app-configuracoes.html" class="m-app-tab">
+            <span class="m-app-tab__icon">
+              <span class="m-app-tab__icon-inner" style="width: 2.2rem; height: 2.2rem">
+                <img alt="" style="left: 0; top: 0; width: 2.2rem; height: 2.2rem" src="assets/icons/app/icon-nav-config-2.svg" />
+                <img alt="" style="left: 0.8rem; top: 0.8rem; width: 0.6rem; height: 0.6rem" src="assets/icons/app/icon-nav-config-1.svg" />
+              </span>
+            </span>
+            <span class="m-app-tab__label">Config</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <script src="js/app-estacoes.js"></script>
+  </body>
+</html>

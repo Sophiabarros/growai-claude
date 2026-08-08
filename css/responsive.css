@@ -53,6 +53,10 @@
   }
 
   /* ---------- hero ---------- */
+  .m-hero {
+    position: relative;
+    height: 36.6rem;
+  }
   .m-hero__bg {
     position: absolute;
     left: -0.2rem;
@@ -275,6 +279,7 @@
   /* ---------- why ---------- */
   .m-why {
     position: relative;
+    height: 131.5rem;
   }
   .m-why__title {
     position: absolute;
@@ -365,6 +370,7 @@
   /* ---------- how it works ---------- */
   .m-how {
     position: relative;
+    display: flow-root;
     margin-top: 6rem;
   }
   .m-how__title {
@@ -422,7 +428,7 @@
   }
   .m-how__topics {
     position: relative;
-    margin-top: 30rem;
+    margin-top: 42rem;
     display: flex;
     flex-direction: column;
     gap: 2.7rem;
@@ -499,7 +505,7 @@
   .m-feature-card {
     position: relative;
     width: 14.1rem;
-    height: 21.7rem;
+    min-height: 21.7rem;
     background: var(--dm-surface);
     filter: blur(1px);
     border: 1px solid var(--dm-border-alt);
@@ -543,10 +549,8 @@
     letter-spacing: 0.3px;
   }
   .m-feature-card__image {
-    position: absolute;
-    left: 0.9rem;
-    bottom: 0.9rem;
-    width: 12.3rem;
+    margin-top: 0.6rem;
+    width: 100%;
     height: 5.3rem;
     border-radius: 1rem;
   }
@@ -732,14 +736,18 @@
   .m-sistema[data-theme="light"] .m-theme-toggle .icon-dark,
   .m-investimento[data-theme="light"] .m-theme-toggle .icon-dark,
   .m-bibliografia[data-theme="light"] .m-theme-toggle .icon-dark,
-  .m-game[data-theme="light"] .m-theme-toggle .icon-dark {
+  .m-game[data-theme="light"] .m-theme-toggle .icon-dark,
+  .m-signup[data-theme="light"] .m-theme-toggle .icon-dark,
+  .m-login[data-theme="light"] .m-theme-toggle .icon-dark {
     display: none;
   }
   .mobile-canvas[data-theme="light"] .m-theme-toggle .icon-light,
   .m-sistema[data-theme="light"] .m-theme-toggle .icon-light,
   .m-investimento[data-theme="light"] .m-theme-toggle .icon-light,
   .m-bibliografia[data-theme="light"] .m-theme-toggle .icon-light,
-  .m-game[data-theme="light"] .m-theme-toggle .icon-light {
+  .m-game[data-theme="light"] .m-theme-toggle .icon-light,
+  .m-signup[data-theme="light"] .m-theme-toggle .icon-light,
+  .m-login[data-theme="light"] .m-theme-toggle .icon-light {
     display: block;
   }
 }
