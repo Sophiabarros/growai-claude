@@ -1,9 +1,12 @@
 (function () {
   "use strict";
 
-  // Aponta para a API do GrowAI (ver pasta backend/). Troque para a URL de
-  // produção quando o backend estiver hospedado.
-  var API_BASE = "http://localhost:3000/api";
+  // Aponta para a API do GrowAI (ver pasta backend/). Usa o mesmo host da
+  // página (em vez de "localhost" fixo) para funcionar também quando o site
+  // é acessado de outro dispositivo na rede local (ex.: celular abrindo
+  // http://<ip-do-pc>:5500/...). Troque para a URL de produção quando o
+  // backend estiver hospedado.
+  var API_BASE = "http://" + window.location.hostname + ":3000/api";
 
   var TOKEN_KEY = "growai_token";
   var USER_KEY = "growai_user";

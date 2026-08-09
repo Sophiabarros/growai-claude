@@ -9,12 +9,28 @@
     wrapperSelectors: [".sobre-wrapper", ".m-sobre-wrapper"],
   });
 
-  // Aponta para a API do GrowAI (ver pasta backend/), mesmo backend usado
-  // por js/api.js. Troque para a URL de produção quando estiver hospedado.
-  var API_BASE = "http://localhost:3000/api";
+  // Em localhost/rede local (dev), usa o backend/ Express na porta 3000
+  // (mesmo host da página, não "localhost" fixo, pra funcionar também
+  // quando testado de outro dispositivo na rede, ex.: celular abrindo
+  // http://<ip-do-pc>:5500/sobre.html). No site publicado (Vercel), usa a
+  // serverless function em /api/contact.js, que roda no mesmo domínio e
+  // não depende do backend/ (que não está deployado lá).
+  function isLocalHost(hostname) {
+    return (
+      hostname === "localhost" ||
+      hostname === "127.0.0.1" ||
+      /^192\.168\.\d{1,3}\.\d{1,3}$/.test(hostname) ||
+      /^10\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(hostname) ||
+      /^172\.(1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3}$/.test(hostname)
+    );
+  }
+  var CONTACT_ENDPOINT = isLocalHost(window.location.hostname)
+    ? "http://" + window.location.hostname + ":3000/api/contact"
+    : "/api/contact";
 
   // Wires the "Contate-nos" form (desktop and mobile) to POST /api/contact,
-  // which sends the message through Resend (backend/controllers/contactController.js).
+  // which sends the message through Resend (backend/controllers/contactController.js
+  // locally, or api/contact.js on the deployed Vercel site).
   function wireContactForm(formId) {
     var form = document.getElementById(formId);
     if (!form) return;
@@ -28,7 +44,7 @@
       submitBtn.textContent = "Enviando...";
 
       try {
-        var res = await fetch(API_BASE + "/contact", {
+        var res = await fetch(CONTACT_ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

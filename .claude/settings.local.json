@@ -355,7 +355,16 @@
       "Bash(powershell -c \"Stop-Process -Id 7336 -Force\")",
       "Bash(powershell -c \"Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue\")",
       "Bash(git rm *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(powershell -c \"Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess\" 2>&1)",
+      "Bash(powershell -c \"Get-NetTCPConnection -LocalPort 5500 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess\" 2>&1)",
+      "Bash(powershell -c \"Stop-Process -Id 14416 -Force\" 2>&1)",
+      "Bash(powershell -c \"Get-NetIPAddress -AddressFamily IPv4 | Where-Object { \\\\$_.IPAddress -notlike '169.*' -and \\\\$_.IPAddress -ne '127.0.0.1' } | Select-Object InterfaceAlias, IPAddress | Format-Table -AutoSize\" 2>&1)",
+      "Bash(powershell -c \"Get-NetFirewallRule -Direction Inbound -Enabled True | Where-Object { \\\\$_.DisplayName -match 'Node|node' } | Select-Object DisplayName, Action, Profile | Format-Table -AutoSize\" 2>&1)",
+      "Bash(vercel --version)",
+      "Bash(vercel whoami *)"
     ]
   }
 }
