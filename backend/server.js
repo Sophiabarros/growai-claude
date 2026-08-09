@@ -9,6 +9,7 @@ const stationsRoutes = require("./routes/stations");
 const reportsRoutes = require("./routes/reports");
 const suggestionsRoutes = require("./routes/suggestions");
 const settingsRoutes = require("./routes/settings");
+const contactRoutes = require("./routes/contact");
 const { requireAuth } = require("./middleware/auth");
 
 // Evita que uma falha assíncrona não capturada (ex.: pool do Postgres
@@ -25,6 +26,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.get("/api/health", (req, res) => res.json({ status: "ok" }));
 
+app.use("/api/contact", contactRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/stations", requireAuth, stationsRoutes);
 app.use("/api/reports", requireAuth, reportsRoutes);

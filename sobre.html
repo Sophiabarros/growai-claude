@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre nós | TrackLink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/sobre.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="page-loader__spinner"></div>
+    </div>
+    <div class="sobre-wrapper">
+      <div class="sobre" id="sobrePage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="sobrePage"></script>
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+          <a href="index.html" class="header__brand">
+            <p class="header__brand-text">TRACKLINK</p>
+            <div class="header__logo">
+              <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+              <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+              <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+              <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+              <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+            </div>
+          </a>
+          <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+          <nav class="header__nav" id="headerNav">
+            <a href="sistema.html" class="header__nav-link header__nav-link--sistema">Sistema</a>
+            <a href="investimento.html" class="header__nav-link header__nav-link--investimento">Investimento</a>
+            <a href="sobre.html" class="header__nav-link header__nav-link--sobre header__nav-link--active">Sobre nós</a>
+            <a href="bibliografia.html" class="header__nav-link header__nav-link--bibliografia">Bibliografia</a>
+            <a href="game.html" class="header__nav-link header__nav-link--game">Game</a>
+          </nav>
+        </header>
+
+        <!-- ===== HERO / TEAM ===== -->
+        <div class="sobre-hero__bg">
+          <img class="icon-dark" alt="" src="assets/icons/icon-sobre-subtract-dark.svg" />
+          <img class="icon-light" alt="" src="assets/icons/icon-sobre-subtract-light.svg" />
+        </div>
+        <p class="sobre-hero__title">Sobre nós</p>
+        <p class="sobre-hero__subtitle">Conheça quem faz a TrackLink acontecer</p>
+
+        <div class="sobre-team">
+          <div class="sobre-team__member">
+            <div class="sobre-team__avatar"><img alt="Letícia" src="assets/images/sobre/avatar-leticia.png" /></div>
+            <p class="sobre-team__name">Letícia</p>
+            <p class="sobre-team__handle">@lelet_alencar</p>
+          </div>
+          <div class="sobre-team__member">
+            <div class="sobre-team__avatar"><img alt="Sophia B." src="assets/images/sobre/avatar-sophia.png" /></div>
+            <p class="sobre-team__name">Sophia B.</p>
+            <p class="sobre-team__handle">@sophiabarroz</p>
+          </div>
+          <div class="sobre-team__member">
+            <div class="sobre-team__avatar"><img alt="Isabelli" src="assets/images/sobre/avatar-isabelli.png" /></div>
+            <p class="sobre-team__name">Isabelli</p>
+            <p class="sobre-team__handle">@yakiibee</p>
+          </div>
+          <div class="sobre-team__member">
+            <div class="sobre-team__avatar"><img alt="Camily" src="assets/images/sobre/avatar-camily.png" /></div>
+            <p class="sobre-team__name">Camily</p>
+            <p class="sobre-team__handle">@llyziewfr</p>
+          </div>
+        </div>
+
+        <!-- ===== INTRO TEXT ===== -->
+        <p class="sobre-intro__title">
+          Um pouco <span class="sobre-intro__title-accent">sobre nós</span> e a jornada que nos trouxe até aqui.
+        </p>
+        <div class="sobre-intro__body">
+          <p class="sobre-intro__col">
+            O GrowAI nasceu da nossa ideia de aplicar tecnologia ao cultivo de plantas medicinais de forma
+            inteligente e eficiente. Nosso projeto une automação, monitoramento e análise de dados para melhorar o
+            controle das condições que influenciam diretamente na qualidade das plantas.
+          </p>
+          <p class="sobre-intro__col">
+            Somos uma equipe do curso técnico em informática, unidas pelo interesse em inovação e pelo desafio de
+            criar uma solução funcional para a indústria. Cada etapa do desenvolvimento reflete nosso aprendizado,
+            colaboração e o objetivo de transformar conhecimento em uma aplicação real.
+          </p>
+        </div>
+
+        <!-- ===== CONTATE-NOS ===== -->
+        <p class="sobre-contact__title">Contate-nos</p>
+        <p class="sobre-contact__desc">
+          Estamos prontos para ouvir você! Dúvidas, sugestões ou conhecer nosso trabalho, nossa equipe ajudará. Use
+          os canais ou o formulário responderemos o quanto antes.
+        </p>
+
+        <div class="sobre-contact__body">
+          <form class="sobre-form" id="sobreContactForm">
+            <p class="sobre-form__title">Preencha aqui</p>
+            <div class="sobre-form__group sobre-form__group--nome">
+              <label class="sobre-form__label" for="sobreNome">Nome</label>
+              <input class="sobre-form__input" type="text" id="sobreNome" name="nome" placeholder="Nome" required />
+            </div>
+            <div class="sobre-form__group sobre-form__group--email">
+              <label class="sobre-form__label" for="sobreEmail">Email</label>
+              <input class="sobre-form__input" type="email" id="sobreEmail" name="email" placeholder="Email" required />
+            </div>
+            <div class="sobre-form__group sobre-form__group--mensagem">
+              <label class="sobre-form__label" for="sobreMensagem">Mensagem</label>
+              <textarea class="sobre-form__textarea" id="sobreMensagem" name="mensagem" placeholder="Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="sobre-form__submit">Enviar &gt;</button>
+          </form>
+
+          <div class="sobre-cards">
+            <div class="sobre-card">
+              <span class="sobre-card__icon">
+                <img class="icon-dark" alt="" src="assets/icons/icon-sobre-phone-dark.svg" />
+                <img class="icon-light" alt="" src="assets/icons/icon-sobre-phone-light.svg" />
+              </span>
+              <div>
+                <p class="sobre-card__title">11 91234-5678</p>
+                <p class="sobre-card__desc">Entre em contato via WhatsApp para dúvidas ou orçamentos.</p>
+              </div>
+            </div>
+            <div class="sobre-card">
+              <span class="sobre-card__icon">
+                <img class="icon-dark" alt="" src="assets/icons/icon-sobre-email-dark.svg" />
+                <img class="icon-light" alt="" src="assets/icons/icon-sobre-email-light.svg" />
+              </span>
+              <div>
+                <a class="sobre-card__title" href="mailto:Tracklink.system@gmail.com">Tracklink.system@gmail.com</a>
+                <p class="sobre-card__desc">Envie um e-mail para propostas, parcerias ou mais informações.</p>
+              </div>
+            </div>
+            <div class="sobre-card">
+              <span class="sobre-card__icon">
+                <img class="icon-dark" alt="" src="assets/icons/icon-sobre-instagram-dark.svg" />
+                <img class="icon-light" alt="" src="assets/icons/icon-sobre-instagram-light.svg" />
+              </span>
+              <div>
+                <p class="sobre-card__title">@Tracklink.system</p>
+                <p class="sobre-card__desc">Siga nosso perfil para acompanhar nossos projetos e novidades.</p>
+              </div>
+            </div>
+            <div class="sobre-card">
+              <span class="sobre-card__icon">
+                <img class="icon-dark" alt="" src="assets/icons/icon-sobre-location-dark.svg" />
+                <img class="icon-light" alt="" src="assets/icons/icon-sobre-location-light.svg" />
+              </span>
+              <div>
+                <p class="sobre-card__title">Unasp - SP</p>
+                <p class="sobre-card__desc">Atendemos em São Paulo e região. Agende uma visita.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="utility-bar">
+          <button type="button" aria-label="Alternar tema claro/escuro" class="theme-toggle" id="themeToggle">
+            <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+          </button>
+          <button type="button" aria-label="Voltar ao topo" class="scroll-top" id="scrollTop">
+            <img class="icon-dark" alt="" src="assets/icons/icon-scroll-top.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-scroll-top-light.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE (SOBRE NÓS - MOBILE, own artboard) ===== -->
+    <div class="m-sobre-wrapper">
+      <div class="m-sobre" id="mSobrePage" data-theme="dark">
+        <script src="js/theme-no-flash.js" data-page="mSobrePage"></script>
+        <div class="m-sobre-hero__bg">
+          <img class="icon-dark" alt="" src="assets/icons/icon-sobre-m-header-bg-dark.svg" />
+          <img class="icon-light" alt="" src="assets/icons/icon-sobre-m-header-bg-light.svg" />
+        </div>
+
+        <header class="m-header">
+          <a href="index.html" class="m-header__logo">
+            <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
+            <div class="v2"><img class="fill" alt="" src="assets/icons/logo-vector-2.svg" /></div>
+            <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
+            <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
+            <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
+          </a>
+          <button type="button" class="m-header__menu-toggle" id="mMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <img alt="" src="assets/icons/icon-hamburger-dark.svg" />
+          </button>
+          <nav class="m-header__nav" id="mHeaderNav">
+            <a href="sistema.html">Sistema</a>
+            <a href="investimento.html">Investimento</a>
+            <a href="sobre.html" class="is-active">Sobre nós</a>
+            <a href="bibliografia.html">Bibliografia</a>
+            <a href="game.html">Game</a>
+          </nav>
+        </header>
+
+        <p class="m-sobre-hero__title">Sobre nós</p>
+        <p class="m-sobre-hero__subtitle">Conheça quem faz a TrackLink acontecer</p>
+
+        <div class="m-sobre-team">
+          <div class="m-sobre-team__avatar"><img alt="Letícia" src="assets/images/sobre/avatar-leticia.png" /></div>
+          <div class="m-sobre-team__avatar"><img alt="Sophia B." src="assets/images/sobre/avatar-sophia.png" /></div>
+          <div class="m-sobre-team__avatar"><img alt="Isabelli" src="assets/images/sobre/avatar-isabelli.png" /></div>
+          <div class="m-sobre-team__avatar"><img alt="Camily" src="assets/images/sobre/avatar-camily.png" /></div>
+        </div>
+
+        <div class="m-sobre-intro">
+          <p class="m-sobre-intro__title">
+            Um pouco <span class="m-sobre-intro__title-accent">sobre nós</span> e a jornada que nos trouxe até aqui.
+          </p>
+          <div class="m-sobre-intro__body">
+            <p class="m-sobre-intro__col">
+              O GrowAI nasceu da nossa ideia de aplicar tecnologia ao cultivo de plantas medicinais de forma
+              inteligente e eficiente. Nosso projeto une automação, monitoramento e análise de dados para melhorar
+              o controle das condições que influenciam diretamente na qualidade das plantas.
+            </p>
+            <p class="m-sobre-intro__col">
+              Somos uma equipe do curso técnico em informática, unidas pelo interesse em inovação e pelo desafio de
+              criar uma solução funcional para a indústria. Cada etapa do desenvolvimento reflete nosso aprendizado,
+              colaboração e o objetivo de transformar conhecimento em uma aplicação real.
+            </p>
+          </div>
+        </div>
+
+        <p class="m-sobre-contact__title">Contate-nos</p>
+        <p class="m-sobre-contact__desc">
+          Estamos prontos para ouvir você! Dúvidas, sugestões ou conhecer nosso trabalho, nossa equipe ajudará. Use
+          os canais ou o formulário responderemos o quanto antes.
+        </p>
+
+        <div class="m-sobre-form-section">
+          <div class="m-sobre-form-section__bg">
+            <img class="icon-dark" alt="" src="assets/icons/icon-sobre-m-form-bg-dark.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-sobre-m-form-bg-light.svg" />
+          </div>
+
+          <form class="m-sobre-form" id="mSobreContactForm">
+            <p class="m-sobre-form__title">Preencha aqui</p>
+            <div class="m-sobre-form__group">
+              <label class="m-sobre-form__label" for="mSobreNome">Nome</label>
+              <input class="m-sobre-form__input" type="text" id="mSobreNome" name="nome" placeholder="Nome" required />
+            </div>
+            <div class="m-sobre-form__group">
+              <label class="m-sobre-form__label" for="mSobreEmail">Email</label>
+              <input class="m-sobre-form__input" type="email" id="mSobreEmail" name="email" placeholder="Email" required />
+            </div>
+            <div class="m-sobre-form__group">
+              <label class="m-sobre-form__label" for="mSobreMensagem">Mensagem</label>
+              <textarea class="m-sobre-form__textarea" id="mSobreMensagem" name="mensagem" placeholder="Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="m-sobre-form__submit">Enviar &gt;</button>
+          </form>
+
+          <div class="m-sobre-contact-grid">
+            <div class="m-sobre-contact-item">
+              <span class="m-sobre-contact-item__icon">
+                <img class="icon-dark" alt="" src="assets/icons/icon-sobre-phone-dark.svg" />
+                <img class="icon-light" alt="" src="assets/icons/icon-sobre-phone-light.svg" />
+              </span>
+              <span class="m-sobre-contact-item__text">11 91234-5678</span>
+            </div>
+            <div class="m-sobre-contact-item">
+              <span class="m-sobre-contact-item__icon">
+                <img class="icon-dark" alt="" src="assets/icons/icon-sobre-instagram-dark.svg" />
+                <img class="icon-light" alt="" src="assets/icons/icon-sobre-instagram-light.svg" />
+              </span>
+              <span class="m-sobre-contact-item__text">@Tracklink.system</span>
+            </div>
+            <div class="m-sobre-contact-item">
+              <span class="m-sobre-contact-item__icon">
+                <img class="icon-dark" alt="" src="assets/icons/icon-sobre-location-dark.svg" />
+                <img class="icon-light" alt="" src="assets/icons/icon-sobre-location-light.svg" />
+              </span>
+              <span class="m-sobre-contact-item__text">Unasp - SP</span>
+            </div>
+            <div class="m-sobre-contact-item">
+              <span class="m-sobre-contact-item__icon">
+                <img class="icon-dark" alt="" src="assets/icons/icon-sobre-email-dark.svg" />
+                <img class="icon-light" alt="" src="assets/icons/icon-sobre-email-light.svg" />
+              </span>
+              <a class="m-sobre-contact-item__text" href="mailto:Tracklink.system@gmail.com">Tracklink.system@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="m-utility-bar">
+            <button type="button" aria-label="Alternar tema claro/escuro" class="m-theme-toggle" id="mThemeToggle">
+              <img class="icon-dark" alt="" src="assets/icons/icon-theme-toggle.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-theme-toggle-light.svg" />
+            </button>
+            <button type="button" aria-label="Voltar ao topo" class="m-scroll-top" id="mScrollTop">
+              <img class="icon-dark" alt="" src="assets/icons/icon-scroll-top.svg" />
+              <img class="icon-light" alt="" src="assets/icons/icon-scroll-top-light.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/sobre.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/page-loader.js"></script>
+  </body>
+</html>

@@ -335,7 +335,27 @@
       "PowerShell(Start-Process \"C:\\\\Users\\\\Sophia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Sophia-Documents-Escola-tcc\\\\b8c16fc6-24a0-4ff7-96f6-2a4ba27ebdab\\\\scratchpad\\\\responsive-test-harness.html\")",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Sophia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Sophia-Documents-Escola-tcc\\\\b8c16fc6-24a0-4ff7-96f6-2a4ba27ebdab\\\\scratchpad\\\\tabbar-gap-test.html\")",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Sophia\\\\Documents\\\\Escola\\\\tcc\\\\sistema.html\")",
-      "PowerShell(Start-Process \"C:\\\\Users\\\\Sophia\\\\Documents\\\\Escola\\\\tcc\\\\index.html\")"
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Sophia\\\\Documents\\\\Escola\\\\tcc\\\\index.html\")",
+      "Bash(grep -io 'sobre[^\"\\\\\\\\]*' \"C:\\\\Users\\\\Sophia\\\\.claude\\\\projects\\\\C--Users-Sophia-Documents-Escola-tcc\\\\9fe7d25c-d352-418a-a193-0d21c85ebca3\\\\tool-results\\\\mcp-plugin_figma_figma-get_metadata-1786301264293.txt\")",
+      "Bash(mkdir -p \"/c/Users/Sophia/AppData/Local/Temp/claude/C--Users-Sophia-Documents-Escola-tcc/9fe7d25c-d352-418a-a193-0d21c85ebca3/scratchpad/figma-assets\")",
+      "Read(//c/Users/Sophia/AppData/Local/Temp/claude/C--Users-Sophia-Documents-Escola-tcc/9fe7d25c-d352-418a-a193-0d21c85ebca3/scratchpad/**)",
+      "Bash(mv avatar-leticia.png tmp-d89.png)",
+      "Bash(mv avatar-sophia.png tmp-ef6.png)",
+      "Bash(mv avatar-isabelli.png tmp-20a.png)",
+      "Bash(mv avatar-camily.png tmp-7c4.png)",
+      "Bash(mv tmp-20a.png avatar-leticia.png)",
+      "Bash(python3 *)",
+      "Bash(pkill -f \"http.server 8811\")",
+      "Bash(perl -e 'print \"perl ok\\\\n\"')",
+      "Bash(kill %1)",
+      "Bash(awk -F= '/^RESEND_API_KEY=/{print length\\($2\\)}' .env)",
+      "Bash(awk -F= '{print $1, length\\($0\\)}' .env)",
+      "Bash(powershell -c \"\\(Get-Item .env\\).LastWriteTime\")",
+      "Bash(powershell -c \"Get-NetTCPConnection -LocalPort 3000 -State Listen | Select-Object -ExpandProperty OwningProcess\" 2>/dev/null)",
+      "Bash(powershell -c \"Stop-Process -Id 7336 -Force\")",
+      "Bash(powershell -c \"Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue\")",
+      "Bash(git rm *)",
+      "Bash(git add *)"
     ]
   }
 }

@@ -745,6 +745,7 @@
   .m-sistema[data-theme="light"] .m-theme-toggle .icon-dark,
   .m-investimento[data-theme="light"] .m-theme-toggle .icon-dark,
   .m-bibliografia[data-theme="light"] .m-theme-toggle .icon-dark,
+  .m-sobre[data-theme="light"] .m-theme-toggle .icon-dark,
   .m-game[data-theme="light"] .m-theme-toggle .icon-dark,
   .m-signup[data-theme="light"] .m-theme-toggle .icon-dark,
   .m-login[data-theme="light"] .m-theme-toggle .icon-dark {
@@ -754,9 +755,33 @@
   .m-sistema[data-theme="light"] .m-theme-toggle .icon-light,
   .m-investimento[data-theme="light"] .m-theme-toggle .icon-light,
   .m-bibliografia[data-theme="light"] .m-theme-toggle .icon-light,
+  .m-sobre[data-theme="light"] .m-theme-toggle .icon-light,
   .m-game[data-theme="light"] .m-theme-toggle .icon-light,
   .m-signup[data-theme="light"] .m-theme-toggle .icon-light,
   .m-login[data-theme="light"] .m-theme-toggle .icon-light {
+    display: block;
+  }
+  .m-scroll-top .icon-light {
+    display: none;
+  }
+  .mobile-canvas[data-theme="light"] .m-scroll-top .icon-dark,
+  .m-sistema[data-theme="light"] .m-scroll-top .icon-dark,
+  .m-investimento[data-theme="light"] .m-scroll-top .icon-dark,
+  .m-bibliografia[data-theme="light"] .m-scroll-top .icon-dark,
+  .m-sobre[data-theme="light"] .m-scroll-top .icon-dark,
+  .m-game[data-theme="light"] .m-scroll-top .icon-dark,
+  .m-signup[data-theme="light"] .m-scroll-top .icon-dark,
+  .m-login[data-theme="light"] .m-scroll-top .icon-dark {
+    display: none;
+  }
+  .mobile-canvas[data-theme="light"] .m-scroll-top .icon-light,
+  .m-sistema[data-theme="light"] .m-scroll-top .icon-light,
+  .m-investimento[data-theme="light"] .m-scroll-top .icon-light,
+  .m-bibliografia[data-theme="light"] .m-scroll-top .icon-light,
+  .m-sobre[data-theme="light"] .m-scroll-top .icon-light,
+  .m-game[data-theme="light"] .m-scroll-top .icon-light,
+  .m-signup[data-theme="light"] .m-scroll-top .icon-light,
+  .m-login[data-theme="light"] .m-scroll-top .icon-light {
     display: block;
   }
 }

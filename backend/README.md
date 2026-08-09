@@ -31,7 +31,10 @@ backend/
    cp .env.example .env
    ```
    Edite `.env` com a `DATABASE_URL` do seu Postgres (local, Docker ou um serviço
-   gratuito como Neon/Supabase/Railway) e um `JWT_SECRET` próprio.
+   gratuito como Neon/Supabase/Railway) e um `JWT_SECRET` próprio. Para o formulário
+   de contato funcionar, preencha também `RESEND_API_KEY` com uma chave gerada em
+   https://resend.com/api-keys (o remetente usado é o sandbox `onboarding@resend.dev`,
+   que só entrega para o e-mail da própria conta Resend).
 
 3. **Criar as tabelas**
    ```
@@ -56,6 +59,7 @@ backend/
 | Método | Rota | Auth | Descrição |
 |---|---|---|---|
 | GET | `/api/health` | não | healthcheck |
+| POST | `/api/contact` | não | envia e-mail do formulário "Contate-nos" via Resend |
 | POST | `/api/auth/register` | não | cria usuário |
 | POST | `/api/auth/login` | não | retorna `{ user, token }` |
 | GET | `/api/auth/me` | sim | usuário logado |

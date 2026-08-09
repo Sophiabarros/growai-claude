@@ -1,0 +1,593 @@
+/* SOBRE NÓS page (desktop) - "SOBRE NÓS - DARKMODE" (242:558) frame */
+
+.sobre-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--dm-bg);
+  transition: background-color 0.2s ease;
+}
+.sobre {
+  position: relative;
+  width: 144rem;
+  min-height: 247.8rem;
+  flex-shrink: 0;
+  background: var(--dm-bg);
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  transform-origin: top center;
+}
+
+/* ============ HERO / TEAM ============ */
+.sobre-hero__bg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 144rem;
+  height: 66.4688rem;
+  z-index: 0;
+}
+.sobre-hero__bg img {
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.sobre-hero__bg .icon-light {
+  display: none;
+}
+.sobre[data-theme="light"] .sobre-hero__bg .icon-dark {
+  display: none;
+}
+.sobre[data-theme="light"] .sobre-hero__bg .icon-light {
+  display: block;
+}
+
+.sobre-hero__title {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 22.4rem;
+  transform: translateX(-50%);
+  width: max-content;
+  text-align: center;
+  color: var(--dm-accent-green);
+  font: 700 9.6rem/normal var(--font-body);
+}
+.sobre-hero__subtitle {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 34.4rem;
+  transform: translateX(-50%);
+  width: 89.3rem;
+  text-align: center;
+  color: var(--dm-text);
+  font: 400 2.4rem/normal var(--font-body);
+}
+
+.sobre-team {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 53.6rem;
+  transform: translateX(-50%);
+  width: 79.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.sobre-team__member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15.8rem;
+}
+.sobre-team__avatar {
+  width: 15.8rem;
+  height: 15.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sobre-team__avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sobre-team__name {
+  margin-top: 2.1rem;
+  color: var(--dm-text);
+  font: 600 3.2rem/normal var(--font-body);
+  white-space: nowrap;
+}
+.sobre-team__handle {
+  margin-top: 0.4rem;
+  color: #54956c;
+  font: 400 2rem/normal var(--font-body);
+  white-space: nowrap;
+}
+
+/* ============ INTRO TEXT ============ */
+.sobre-intro__title {
+  position: absolute;
+  left: 11.4rem;
+  top: 92.8rem;
+  width: 66.1rem;
+  color: var(--dm-text);
+  font: 600 3.2rem/normal var(--font-body);
+}
+.sobre-intro__title-accent {
+  color: var(--dm-accent-green);
+}
+.sobre-intro__body {
+  position: absolute;
+  left: 11.4rem;
+  top: 105.1rem;
+  width: 119rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.sobre-intro__col {
+  width: 55.2rem;
+  color: var(--dm-text);
+  font: 400 2rem/normal var(--font-body);
+  text-align: justify;
+}
+
+/* ============ CONTATE-NOS ============ */
+.sobre-contact__title {
+  position: absolute;
+  left: 50%;
+  top: 124.8rem;
+  transform: translateX(-50%);
+  color: var(--dm-accent-green);
+  font: 700 4.8rem/normal var(--font-body);
+  white-space: nowrap;
+}
+.sobre-contact__desc {
+  position: absolute;
+  left: 50%;
+  top: 134.4rem;
+  transform: translateX(-50%);
+  width: 90.6rem;
+  text-align: center;
+  color: var(--dm-text);
+  font: 400 2rem/normal var(--font-body);
+}
+
+.sobre-contact__body {
+  position: absolute;
+  left: 6.6rem;
+  top: 145.9rem;
+  width: 132.6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.1rem;
+}
+
+/* ---- form card ---- */
+.sobre-form {
+  position: relative;
+  width: 85.1rem;
+  height: 81.7rem;
+  flex-shrink: 0;
+  background: var(--dm-card-bg);
+  border-radius: 2rem;
+}
+.sobre-form__title {
+  position: absolute;
+  left: 6.3rem;
+  top: 2.7rem;
+  color: var(--dm-text);
+  font: 700 4.8rem/normal var(--font-body);
+}
+.sobre-form__group {
+  position: absolute;
+  left: 6.3rem;
+  width: 72.5rem;
+}
+.sobre-form__group--nome {
+  top: 11.6rem;
+}
+.sobre-form__group--email {
+  top: 23.4rem;
+}
+.sobre-form__group--mensagem {
+  top: 35.2rem;
+}
+.sobre-form__label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--dm-text);
+  font: 700 2.4rem/normal var(--font-body);
+}
+.sobre-form__input,
+.sobre-form__textarea {
+  display: block;
+  width: 72.5rem;
+  border: 0;
+  border-radius: 2rem;
+  background: #386348;
+  padding: 0 2.4rem;
+  font: 700 2.4rem/5.6rem var(--font-body);
+  color: var(--dm-cta-text);
+}
+.sobre-form__input {
+  height: 5.6rem;
+}
+.sobre-form__textarea {
+  height: 27.4rem;
+  line-height: normal;
+  padding-top: 2.4rem;
+  resize: none;
+  font-family: var(--font-body);
+}
+.sobre-form__input::placeholder,
+.sobre-form__textarea::placeholder {
+  color: var(--dm-cta-text);
+  opacity: 1;
+}
+.sobre-form__submit {
+  position: absolute;
+  left: 6.3rem;
+  top: 70.8rem;
+  width: 37.7rem;
+  height: 7.2rem;
+  border: 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  background: var(--color-violet-light);
+  color: #1c3f30;
+  font: 700 2.4rem/normal var(--font-body);
+}
+
+/* ---- contact info cards ---- */
+.sobre-cards {
+  position: relative;
+  width: 45.4rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.sobre-card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  height: 17.4rem;
+  background: var(--dm-surface);
+  border-radius: 2rem;
+  padding: 0 2.2rem;
+}
+.sobre-card__icon {
+  width: 9.8rem;
+  height: 9.8rem;
+  flex-shrink: 0;
+}
+.sobre-card__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sobre-card__icon .icon-light {
+  display: none;
+}
+.sobre[data-theme="light"] .sobre-card__icon .icon-dark {
+  display: none;
+}
+.sobre[data-theme="light"] .sobre-card__icon .icon-light {
+  display: block;
+}
+.sobre-card__title {
+  color: var(--dm-text);
+  font: 700 2rem/normal var(--font-body);
+}
+.sobre-card__desc {
+  margin-top: 0.4rem;
+  color: var(--dm-text);
+  font: 400 1.8rem/normal var(--font-body);
+  text-align: justify;
+}
+.sobre-card__title[href] {
+  text-decoration: none;
+  color: var(--dm-text);
+}
+
+/* ============ UTILITY BAR override (shared with footer.css) ============ */
+.sobre .utility-bar {
+  top: 235.9rem;
+}
+
+/*
+  MOBILE LAYOUT — "SOBRE NÓS - MOBILE" (271:617), 375px design width,
+  same convention as css/bibliografia.css.
+*/
+.m-sobre-wrapper {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .m-sobre-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .sobre-wrapper {
+    display: none;
+  }
+  .m-sobre-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: var(--dm-bg);
+  }
+  .m-sobre {
+    position: relative;
+    width: 37.5rem;
+    max-width: 100%;
+    min-height: 121rem;
+    margin: 0 auto;
+    background: var(--dm-bg);
+    overflow: hidden;
+  }
+
+  /* ---- header curve + title ---- */
+  .m-sobre-hero__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 37.5rem;
+    height: 19.3rem;
+    z-index: 0;
+  }
+  .m-sobre-hero__bg img {
+    position: absolute;
+    display: block;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .m-sobre-hero__bg .icon-light {
+    display: none;
+  }
+  .m-sobre[data-theme="light"] .m-sobre-hero__bg .icon-dark {
+    display: none;
+  }
+  .m-sobre[data-theme="light"] .m-sobre-hero__bg .icon-light {
+    display: block;
+  }
+  .m-sobre-hero__title {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 7.5rem;
+    transform: translateX(-50%);
+    width: max-content;
+    text-align: center;
+    color: #5da578;
+    font: 700 2.4rem/normal var(--font-body);
+  }
+  .m-sobre-hero__subtitle {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 11.4rem;
+    transform: translateX(-50%);
+    width: 28.6rem;
+    text-align: center;
+    color: var(--dm-text);
+    font: 700 1.2rem/normal var(--font-body);
+  }
+
+  .m-sobre-team {
+    position: absolute;
+    z-index: 1;
+    left: 5.8rem;
+    top: 15.7rem;
+    width: 25.9rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .m-sobre-team__avatar {
+    width: 5.17rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .m-sobre-team__avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ---- header instance sits above the curve ---- */
+  .m-sobre .m-header {
+    z-index: 2;
+  }
+
+  /* ---- intro text ---- */
+  .m-sobre-intro {
+    position: relative;
+    margin-top: 25.3rem;
+    padding: 0 2.9rem;
+    text-align: center;
+  }
+  .m-sobre-intro__title {
+    color: var(--dm-text);
+    font: 600 1.5rem/normal var(--font-body);
+  }
+  .m-sobre-intro__title-accent {
+    color: var(--dm-accent-green);
+  }
+  .m-sobre-intro__body {
+    margin-top: 6.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .m-sobre-intro__col {
+    color: var(--dm-text);
+    font: 400 1.2rem/normal var(--font-body);
+    text-align: justify;
+  }
+
+  /* ---- contate-nos ---- */
+  .m-sobre-contact__title {
+    position: relative;
+    margin-top: 5.6rem;
+    text-align: center;
+    color: var(--dm-accent-green);
+    font: 700 2rem/normal var(--font-body);
+  }
+  .m-sobre-contact__desc {
+    position: relative;
+    margin-top: 1.2rem;
+    padding: 0 3.1rem;
+    text-align: justify;
+    color: var(--dm-text);
+    font: 400 1.2rem/normal var(--font-body);
+  }
+
+  /* ---- form section bg curve ---- */
+  .m-sobre-form-section {
+    position: relative;
+    margin-top: 4.5rem;
+  }
+  .m-sobre-form-section__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 37.5rem;
+    height: 52.7292rem;
+    z-index: 0;
+  }
+  .m-sobre-form-section__bg img {
+    position: absolute;
+    display: block;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .m-sobre-form-section__bg .icon-light {
+    display: none;
+  }
+  .m-sobre[data-theme="light"] .m-sobre-form-section__bg .icon-dark {
+    display: none;
+  }
+  .m-sobre[data-theme="light"] .m-sobre-form-section__bg .icon-light {
+    display: block;
+  }
+
+  .m-sobre-form {
+    position: relative;
+    z-index: 1;
+    padding-top: 5.7rem;
+  }
+  .m-sobre-form__title {
+    padding: 0 2.8rem;
+    color: var(--dm-text);
+    font: 700 2rem/normal var(--font-body);
+  }
+  .m-sobre-form__group {
+    margin: 1.8rem 2.7rem 0;
+  }
+  .m-sobre-form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dm-text);
+    font: 700 1.3rem/normal var(--font-body);
+  }
+  .m-sobre-form__input,
+  .m-sobre-form__textarea {
+    display: block;
+    width: 31.7rem;
+    border: 0;
+    border-radius: 1rem;
+    background: #386348;
+    padding: 0 1.2rem;
+    font: 700 1rem/3.3rem var(--font-body);
+    color: var(--dm-cta-text);
+  }
+  .m-sobre-form__input {
+    height: 3.3rem;
+  }
+  .m-sobre-form__textarea {
+    height: 9.8rem;
+    line-height: normal;
+    padding-top: 1rem;
+    resize: none;
+    font-family: var(--font-body);
+    width: 32.1rem;
+  }
+  .m-sobre-form__input::placeholder,
+  .m-sobre-form__textarea::placeholder {
+    color: var(--dm-cta-text);
+    opacity: 1;
+  }
+  .m-sobre-form__submit {
+    display: block;
+    margin: 2rem 2.7rem 0;
+    width: 15rem;
+    height: 3.8rem;
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    background: var(--color-violet-light);
+    color: #1c3f30;
+    font: 700 1.3rem/normal var(--font-body);
+  }
+
+  /* ---- contact icon grid ---- */
+  .m-sobre-contact-grid {
+    position: relative;
+    z-index: 1;
+    margin: 3.5rem 2.7rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.4rem;
+    column-gap: 1rem;
+  }
+  .m-sobre-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .m-sobre-contact-item__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+  }
+  .m-sobre-contact-item__icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .m-sobre-contact-item__icon .icon-light {
+    display: none;
+  }
+  .m-sobre[data-theme="light"] .m-sobre-contact-item__icon .icon-dark {
+    display: none;
+  }
+  .m-sobre[data-theme="light"] .m-sobre-contact-item__icon .icon-light {
+    display: block;
+  }
+  .m-sobre-contact-item__text {
+    color: var(--dm-cta-text);
+    font: 700 1.2rem/normal var(--font-body);
+  }
+  .m-sobre-contact-item__text[href] {
+    text-decoration: underline;
+  }
+
+  .m-sobre .m-utility-bar {
+    position: relative;
+    z-index: 1;
+    margin-top: 2.6rem;
+  }
+}
