@@ -364,7 +364,10 @@
       "Bash(powershell -c \"Get-NetIPAddress -AddressFamily IPv4 | Where-Object { \\\\$_.IPAddress -notlike '169.*' -and \\\\$_.IPAddress -ne '127.0.0.1' } | Select-Object InterfaceAlias, IPAddress | Format-Table -AutoSize\" 2>&1)",
       "Bash(powershell -c \"Get-NetFirewallRule -Direction Inbound -Enabled True | Where-Object { \\\\$_.DisplayName -match 'Node|node' } | Select-Object DisplayName, Action, Profile | Format-Table -AutoSize\" 2>&1)",
       "Bash(vercel --version)",
-      "Bash(vercel whoami *)"
+      "Bash(vercel whoami *)",
+      "Bash(nslookup growai-cyan.vercel.app)",
+      "Bash(getent hosts *)",
+      "Bash(railway --version)"
     ]
   }
 }

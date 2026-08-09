@@ -5,8 +5,10 @@
   // local usa o backend/ Express na porta 3000 (mesmo host da página, não
   // "localhost" fixo, pra funcionar também de outro dispositivo na rede,
   // ex.: celular abrindo http://<ip-do-pc>:5500/...). Fora disso (site
-  // publicado em HTTPS) usa uma rota relativa: um "http://" fixo aqui
-  // seria bloqueado pelo navegador como mixed content numa página HTTPS.
+  // publicado na Vercel) usa o backend hospedado no Railway, que roda num
+  // domínio HTTPS separado do front-end.
+  var PRODUCTION_API_BASE = "https://growai-claude-production.up.railway.app/api";
+
   function isLocalHost(hostname) {
     return (
       hostname === "localhost" ||
@@ -18,7 +20,7 @@
   }
   var API_BASE = isLocalHost(window.location.hostname)
     ? "http://" + window.location.hostname + ":3000/api"
-    : "/api";
+    : PRODUCTION_API_BASE;
 
   var TOKEN_KEY = "growai_token";
   var USER_KEY = "growai_user";
