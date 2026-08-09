@@ -1,12 +1,24 @@
 (function () {
   "use strict";
 
-  // Aponta para a API do GrowAI (ver pasta backend/). Usa o mesmo host da
-  // página (em vez de "localhost" fixo) para funcionar também quando o site
-  // é acessado de outro dispositivo na rede local (ex.: celular abrindo
-  // http://<ip-do-pc>:5500/...). Troque para a URL de produção quando o
-  // backend estiver hospedado.
-  var API_BASE = "http://" + window.location.hostname + ":3000/api";
+  // Aponta para a API do GrowAI (ver pasta backend/). Em localhost/rede
+  // local usa o backend/ Express na porta 3000 (mesmo host da página, não
+  // "localhost" fixo, pra funcionar também de outro dispositivo na rede,
+  // ex.: celular abrindo http://<ip-do-pc>:5500/...). Fora disso (site
+  // publicado em HTTPS) usa uma rota relativa: um "http://" fixo aqui
+  // seria bloqueado pelo navegador como mixed content numa página HTTPS.
+  function isLocalHost(hostname) {
+    return (
+      hostname === "localhost" ||
+      hostname === "127.0.0.1" ||
+      /^192\.168\.\d{1,3}\.\d{1,3}$/.test(hostname) ||
+      /^10\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(hostname) ||
+      /^172\.(1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3}$/.test(hostname)
+    );
+  }
+  var API_BASE = isLocalHost(window.location.hostname)
+    ? "http://" + window.location.hostname + ":3000/api"
+    : "/api";
 
   var TOKEN_KEY = "growai_token";
   var USER_KEY = "growai_user";
