@@ -11,6 +11,23 @@
   top: 0;
   width: 144rem;
   height: 11.8rem;
+}
+/* Full-bleed bar: the Figma header rectangle spans the entire 1440 frame
+   edge to edge, so its background needs to reach the real viewport edges
+   above the 1440px canvas width too, not just the fixed 144rem box (which
+   would otherwise stay pinned in the center, background="var(--app-bg)"
+   showing on the sides, on wider screens). Content stays on .app-header's
+   own 144rem box so the existing left:Xrem child positions are untouched;
+   ::before paints first, so real content still renders above it. */
+.app-header::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100vw;
+  min-width: 144rem;
+  height: 100%;
+  transform: translateX(-50%);
   background: var(--app-card-bg);
 }
 .app-header .header__brand {

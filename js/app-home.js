@@ -88,6 +88,41 @@
     mEl.innerHTML = cardBodyHtml(station, reading, photo, false);
   }
 
+  // The mobile sensors/alerts/tab bar `top` values assume exactly 2 station
+  // cards; with 0 or 1 station (status message instead, or a single card)
+  // that leaves a big gap and the tab bar sits in the wrong place. This
+  // measures the actual bottom of whichever is visible and reflows
+  // everything below it, preserving the gaps from the Figma spec.
+  function positionMobileTrailing() {
+    var mSensors = document.querySelector(".m-app-sensors");
+    var mAlertsTitle = document.querySelector(".m-app-alerts__title");
+    var mAlerts = document.querySelector(".m-app-alerts");
+    var tabbar = document.querySelector(".m-app-tabbar");
+    var mPage = document.getElementById("mAppHomePage");
+    if (!mSensors || !mAlertsTitle || !mAlerts || !tabbar || !mPage) return;
+
+    var bottomPx = 0;
+    [
+      document.getElementById("mAppHomeStatus"),
+      document.getElementById("mAppStationCard1"),
+      document.getElementById("mAppStationCard2"),
+    ].forEach(function (el) {
+      if (el && !el.hidden) bottomPx = Math.max(bottomPx, el.offsetTop + el.offsetHeight);
+    });
+    if (bottomPx === 0) return;
+
+    var sensorsTopRem = bottomPx / 10 + 2.3;
+    var alertsTitleTopRem = sensorsTopRem + 11.6 + 3.1;
+    var alertsTopRem = alertsTitleTopRem + 4.1;
+    var tabbarTopRem = alertsTopRem + 9.6 + 4.6;
+
+    mSensors.style.top = sensorsTopRem + "rem";
+    mAlertsTitle.style.top = alertsTitleTopRem + "rem";
+    mAlerts.style.top = alertsTopRem + "rem";
+    tabbar.style.top = tabbarTopRem + "rem";
+    mPage.style.minHeight = tabbarTopRem + 9.4 + "rem";
+  }
+
   function renderSensors(reading) {
     var light = reading ? Math.round(reading.light_h) + "h" : "—";
     var ph = reading ? "pH " + reading.ph : "—";
@@ -122,6 +157,8 @@
     } catch (err) {
       setStatus(appStatus, err.message, true);
       setStatus(mStatus, err.message, true);
+      positionMobileTrailing();
+      applyScale();
       return;
     }
 
@@ -129,6 +166,8 @@
       setStatus(appStatus, "Você ainda não tem estações. Crie uma na tela Estações.", false);
       setStatus(mStatus, "Você ainda não tem estações. Crie uma na tela Estações.", false);
       renderSensors(null);
+      positionMobileTrailing();
+      applyScale();
       return;
     }
     setStatus(appStatus, "", false);
@@ -152,10 +191,13 @@
 
     renderCard(card1, mCard1, stations[0], details[0][0], details[0][1]);
     renderCard(card2, mCard2, stations[1], details[1] ? details[1][0] : null, details[1] ? details[1][1] : null);
+
+    positionMobileTrailing();
+    applyScale();
   }
 
   // ---- canvas scaling ----
-  initResponsiveCanvas({
+  var applyScale = initResponsiveCanvas({
     desktopPageId: "appHomePage",
     desktopWrapperSelector: ".app-home-wrapper",
     mobilePageId: "mAppHomePage",

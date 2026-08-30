@@ -1,12 +1,18 @@
 /* rem base: 1rem = 10px */
 html {
   font-size: 62.5%;
+  /* rede de segurança: fundos full-bleed usam width: 100vw, que inclui a
+     largura da barra de rolagem — sem isso, a barra vertical faz aparecer
+     uma barra horizontal ("barra do lado do blob"). clip corta na largura
+     do viewport sem virar container de rolagem (não afeta o scroll vertical). */
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   font-family: var(--font-body);
   background: var(--dm-bg);
+  overflow-x: clip;   /* junto com html: mata de vez a barra horizontal do 100vw */
 }
 
 /* ============ PAGE SHELL ============ */

@@ -67,7 +67,7 @@
     profileForm.reset();
     profileForm.name.value = user.name;
     document.getElementById("profileEmailDisplay").value = user.email;
-    profileAvatarPreview.src = GrowAI.avatarUrl(user) || "assets/images/app/img-app-avatar.png";
+    profileAvatarPreview.src = GrowAI.avatarUrl(user) || "assets/images/app/img-app-avatar.svg";
     profileModal.hidden = false;
   }
 

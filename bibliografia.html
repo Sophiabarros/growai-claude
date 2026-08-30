@@ -10,14 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/bibliografia.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/reset.css?v=9" />
+    <link rel="stylesheet" href="css/variables.css?v=9" />
+    <link rel="stylesheet" href="css/global.css?v=9" />
+    <link rel="stylesheet" href="css/header.css?v=9" />
+    <link rel="stylesheet" href="css/footer.css?v=9" />
+    <link rel="stylesheet" href="css/bibliografia.css?v=9" />
+    <link rel="stylesheet" href="css/animations.css?v=9" />
+    <link rel="stylesheet" href="css/responsive.css?v=9" />
   </head>
   <body>
     <div class="page-loader" id="pageLoader" aria-hidden="true">
@@ -25,7 +25,7 @@
     </div>
     <div class="bibliografia-wrapper">
       <div class="bibliografia" id="bibliografiaPage" data-theme="dark">
-        <script src="js/theme-no-flash.js" data-page="bibliografiaPage"></script>
+        <script src="js/theme-no-flash.js?v=9" data-page="bibliografiaPage"></script>
         <!-- ===== HEADER ===== -->
         <header class="header">
           <a href="index.html" class="header__brand">
@@ -83,13 +83,16 @@
               <img class="icon-light" alt="" src="assets/icons/icon-bib-arrow-left-light.svg" />
             </button>
             <div class="bib-carousel__card bib-carousel__card--left">
-              <img alt="" src="assets/images/bibliografia/img-carousel-left.png" />
+              <img class="bib-carousel__img is-shown" alt="" src="assets/images/bibliografia/img-carousel-left.png" />
+              <img class="bib-carousel__img" alt="" src="" />
             </div>
             <div class="bib-carousel__card bib-carousel__card--right">
-              <img alt="" src="assets/images/bibliografia/img-carousel-right.png" />
+              <img class="bib-carousel__img is-shown" alt="" src="assets/images/bibliografia/img-carousel-right.png" />
+              <img class="bib-carousel__img" alt="" src="" />
             </div>
             <div class="bib-carousel__card bib-carousel__card--center">
-              <img alt="" src="assets/images/bibliografia/img-carousel-center.png" />
+              <img class="bib-carousel__img is-shown" alt="" src="assets/images/bibliografia/img-carousel-center.png" />
+              <img class="bib-carousel__img" alt="" src="" />
             </div>
             <button type="button" class="bib-carousel__arrow bib-carousel__arrow--right" aria-label="Próximo artigo">
               <img class="icon-dark" alt="" src="assets/icons/icon-bib-arrow-right-dark.svg" />
@@ -97,8 +100,9 @@
             </button>
           </div>
           <div class="bib-carousel__dots">
-            <img class="icon-dark" alt="" src="assets/icons/icon-bib-marcador-dark.svg" />
-            <img class="icon-light" alt="" src="assets/icons/icon-bib-marcador-light.svg" />
+            <button type="button" class="bib-carousel__dot" aria-label="Artigo 1"></button>
+            <button type="button" class="bib-carousel__dot is-active" aria-label="Artigo 2" aria-current="true"></button>
+            <button type="button" class="bib-carousel__dot" aria-label="Artigo 3"></button>
           </div>
 
           <p class="bib-articles__desc">
@@ -127,7 +131,7 @@
     <!-- ===== MOBILE (BIBLIOGRAFIA - MOBILE, own artboard) ===== -->
     <div class="m-bibliografia-wrapper">
       <div class="m-bibliografia" id="mBibliografiaPage" data-theme="dark">
-        <script src="js/theme-no-flash.js" data-page="mBibliografiaPage"></script>
+        <script src="js/theme-no-flash.js?v=9" data-page="mBibliografiaPage"></script>
         <header class="m-header">
           <a href="index.html" class="m-header__logo">
             <div class="v1"><img class="fill" alt="" src="assets/icons/logo-vector-1.svg" /></div>
@@ -174,18 +178,22 @@
         <div class="m-bib-articles__body">
           <div class="m-bib-carousel">
             <div class="m-bib-carousel__card m-bib-carousel__card--left">
-              <img alt="" src="assets/images/bibliografia/img-carousel-left.png" />
+              <img class="m-bib-carousel__img is-shown" alt="" src="assets/images/bibliografia/img-carousel-left.png" />
+              <img class="m-bib-carousel__img" alt="" src="" />
             </div>
             <div class="m-bib-carousel__card m-bib-carousel__card--right">
-              <img alt="" src="assets/images/bibliografia/img-carousel-right.png" />
+              <img class="m-bib-carousel__img is-shown" alt="" src="assets/images/bibliografia/img-carousel-right.png" />
+              <img class="m-bib-carousel__img" alt="" src="" />
             </div>
             <div class="m-bib-carousel__card m-bib-carousel__card--center">
-              <img alt="" src="assets/images/bibliografia/img-carousel-center.png" />
+              <img class="m-bib-carousel__img is-shown" alt="" src="assets/images/bibliografia/img-carousel-center.png" />
+              <img class="m-bib-carousel__img" alt="" src="" />
             </div>
           </div>
           <div class="m-bib-carousel__dots">
-            <img class="icon-dark" alt="" src="assets/icons/icon-bib-m-marcador-dark.svg" />
-            <img class="icon-light" alt="" src="assets/icons/icon-bib-m-marcador-light.svg" />
+            <button type="button" class="m-bib-carousel__dot" aria-label="Artigo 1"></button>
+            <button type="button" class="m-bib-carousel__dot is-active" aria-label="Artigo 2" aria-current="true"></button>
+            <button type="button" class="m-bib-carousel__dot" aria-label="Artigo 3"></button>
           </div>
 
           <p class="m-bib-articles__desc">
@@ -211,10 +219,11 @@
       </div>
     </div>
 
-    <script src="js/theme.js"></script>
-    <script src="js/bibliografia.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/page-loader.js"></script>
+    <script src="js/theme.js?v=9"></script>
+    <script src="js/bibliografia.js?v=9"></script>
+    <script src="js/bib-carousel.js?v=9"></script>
+    <script src="js/menu.js?v=9"></script>
+    <script src="js/navigation.js?v=9"></script>
+    <script src="js/page-loader.js?v=9"></script>
   </body>
 </html>

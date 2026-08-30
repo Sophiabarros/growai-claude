@@ -11,10 +11,10 @@
     toggleIds: ["themeToggle", "mThemeToggle"],
   });
 
-  // Scales the fixed 1440px desktop canvas down to fit tablet-width
-  // viewports, same approach as js/components.js on the home page. Below
-  // the mobile breakpoint, css/game.css's .m-game stacked layout takes
-  // over and this scaling turns off.
+  // Escala o canvas fixo de 1440px pra acompanhar a largura da janela: a
+  // foto e a página crescem quando a tela é maior que 1440 e encolhem
+  // quando é menor. Abaixo do breakpoint mobile, o layout .m-game do
+  // css/game.css assume e a escala desliga.
   var DESIGN_WIDTH = 1440;
   var MOBILE_BREAKPOINT = 768;
 
@@ -24,7 +24,7 @@
   function applyScale() {
     var width = window.innerWidth;
 
-    if (width >= DESIGN_WIDTH || width < MOBILE_BREAKPOINT) {
+    if (width < MOBILE_BREAKPOINT) {
       page.style.transform = "";
       wrapper.style.height = "";
       return;

@@ -3,7 +3,7 @@
 
 .app-home-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;   /* era hidden — permite o full-bleed do .app-header */
   display: flex;
   justify-content: center;
   background: var(--app-bg);
@@ -14,7 +14,7 @@
   height: 102.4rem;
   flex-shrink: 0;
   background: var(--app-bg);
-  overflow: hidden;
+  overflow: visible;   /* era hidden — o corte lateral passa a ser do wrapper */
   transform-origin: top center;
 }
 
@@ -69,6 +69,7 @@
   padding: 2.6rem 0 0 3rem;
 }
 .app-sensor-card__icon {
+  display: block;
   width: 3.2rem;
   height: 3.2rem;
 }
@@ -76,6 +77,9 @@
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;   /* NOVO — os ícones (pH, umidade, termômetro) não são
+                             quadrados; sem isso ficam espichados pra caber
+                             no slot quadrado */
 }
 .app-sensor-card__label {
   margin-top: 1.6rem;
@@ -377,6 +381,7 @@
   .m-app-sensors__item img {
     width: 1.5rem;
     height: 1.5rem;
+    object-fit: contain;   /* NOVO — mesmo motivo do desktop */
   }
 
   .m-app-alerts__title {

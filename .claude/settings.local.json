@@ -367,7 +367,22 @@
       "Bash(vercel whoami *)",
       "Bash(nslookup growai-cyan.vercel.app)",
       "Bash(getent hosts *)",
-      "Bash(railway --version)"
+      "Bash(railway --version)",
+      "Bash(awk 'NR>=1 && NR<=501' investimento.html)",
+      "Bash(powershell -c \"echo test\")",
+      "Bash(sed -n '42,501p' investimento.html)",
+      "Bash(sed -n '502,961p' investimento.html)",
+      "Bash(cp investimento.html /tmp/investimento_before_fix.html)",
+      "Bash(cp /tmp/investimento_fixed.html investimento.html)",
+      "Bash(netstat -ano)",
+      "Bash(echo \"EXIT CODE: $?\")",
+      "Bash(echo \"exit: $?\")",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(Stop-Process *)",
+      "Bash(python -m http.server 5500)",
+      "Bash(grep -n -B6 \"width: 100%;\\\\s*$\" app-camera.css app-configuracoes.css app-estacoes.css app-relatorios.css app-home.css app-shell.css)",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import cairosvg\")"
     ]
   }
 }

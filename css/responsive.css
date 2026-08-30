@@ -24,6 +24,7 @@
   .home-wrapper--mobile {
     display: flex;
     width: 100%;
+    overflow-x: clip;
     justify-content: center;
     background: var(--dm-bg);
   }
@@ -32,7 +33,8 @@
     position: relative;
     width: 37.5rem;
     max-width: 100%;
-    min-height: 535rem;
+    /* height follows the stacked sections; no fixed floor (was 535rem,
+       which left a huge empty gap at the end of the page) */
     margin: 0 auto;
     background: var(--dm-bg);
     overflow: hidden;
@@ -85,6 +87,20 @@
     display: block;
     width: 100%;
     height: 100%;
+  }
+  /* light/dark swap for the hero photo + the big "GROWAI" title graphic
+     (same pattern as .m-differentials__bg) */
+  .m-hero__bg .icon-light,
+  .m-hero__title-graphic .icon-light {
+    display: none;
+  }
+  .mobile-canvas[data-theme="light"] .m-hero__bg .icon-dark,
+  .mobile-canvas[data-theme="light"] .m-hero__title-graphic .icon-dark {
+    display: none;
+  }
+  .mobile-canvas[data-theme="light"] .m-hero__bg .icon-light,
+  .mobile-canvas[data-theme="light"] .m-hero__title-graphic .icon-light {
+    display: block;
   }
 
   .m-header {
@@ -279,17 +295,21 @@
   /* ---------- why ---------- */
   .m-why {
     position: relative;
-    height: 131.5rem;
+    height: auto; /* override the fixed 163.5rem still set in home.css */
+    /* title + subtitle sit absolutely in this top padding; the cards flow
+       below it so the section height follows the real card content
+       instead of a fixed value that left dead space inside each card. */
+    padding-top: 15.5rem;
   }
   .m-why__title {
     position: absolute;
     left: 50%;
-    top: 38.7rem;
+    top: 5rem;
     transform: translateX(-50%);
-    width: 34.7rem;
+    width: 22rem;
     text-align: center;
     color: var(--dm-text);
-    font: 700 1.6rem/5.5rem var(--font-body);
+    font: 700 1.6rem/2.4rem var(--font-body);
     letter-spacing: 0.8px;
   }
   .m-why__title-accent {
@@ -298,7 +318,7 @@
   .m-why__subtitle {
     position: absolute;
     left: 50%;
-    top: 43.5rem;
+    top: 11rem;
     transform: translateX(-50%);
     width: 31rem;
     text-align: center;
@@ -307,28 +327,38 @@
     letter-spacing: 0.09px;
   }
   .m-why__cards {
-    position: absolute;
-    left: 50%;
-    top: 49.5rem;
-    transform: translateX(-50%);
+    position: relative;
+    top: 0; /* override the absolute top: 49.5rem still set in home.css */
+    left: auto;
+    transform: none;
+    margin: 0 auto;
     width: 33.2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
   }
   .m-why-card {
     position: relative;
     width: 33.2rem;
-    height: 19rem;
+    min-height: 0; /* overrides the stale 27rem in home.css that left dead space */
+    height: auto;
     background: var(--dm-surface);
-    filter: blur(1px);
     border: 1px solid var(--dm-border-alt);
     border-radius: 2rem;
-    padding: 1.2rem;
+    padding: 2.3rem 1.8rem 1.1rem;
+  }
+  .m-why-card__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+  }
+  .m-why-card__text {
+    flex: 1;
   }
   .m-why-card__icon {
-    width: 4.4rem;
-    height: 4.1rem;
+    width: 6rem;
+    height: 5.6rem;
+    flex-shrink: 0;
     border-radius: 1rem;
     background: var(--color-teal);
     border: 1px solid var(--dm-surface-alt);
@@ -341,24 +371,24 @@
     border-color: var(--color-green-dark-active);
   }
   .m-why-card__icon img {
-    width: 65%;
-    height: 65%;
+    width: 83%;
+    height: 86%;
   }
   .m-why-card__title {
-    margin-top: 0.6rem;
+    margin-top: 0;
     color: var(--dm-text);
     font: 700 1.4rem/normal var(--font-body);
     letter-spacing: 0.7px;
   }
   .m-why-card__desc {
-    margin-top: 0.4rem;
+    margin-top: 0;
     color: var(--dm-text);
     font: 400 1rem/normal var(--font-body);
     letter-spacing: 0.5px;
   }
   .m-why-card__image {
-    margin-top: 0.6rem;
-    width: 31.3rem;
+    margin-top: 1.3rem;
+    width: 100%;
     height: 6.9rem;
     border-radius: 1.5rem;
     background: var(--color-teal);
@@ -371,7 +401,7 @@
   .m-how {
     position: relative;
     display: flow-root;
-    margin-top: 6rem;
+    margin-top: 5rem;
   }
   .m-how__title {
     position: absolute;
@@ -388,16 +418,16 @@
   }
   .m-how__carousel {
     position: absolute;
-    left: 2rem;
-    top: 3rem;
-    width: 33.2rem;
-    height: 24rem;
+    left: 0.7rem;
+    top: 5.2rem;
+    width: 35.9rem;
+    height: 19.6rem;
     background: var(--color-teal);
     border-radius: 2rem;
   }
   .m-how__carousel-btn {
     position: absolute;
-    top: 8.3rem;
+    top: 9.6rem;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -406,11 +436,11 @@
     transform: scale(0.35);
   }
   .m-how__carousel-btn--prev { left: 0.5rem; }
-  .m-how__carousel-btn--next { left: 27.5rem; }
+  .m-how__carousel-btn--next { left: 30.2rem; }
   .m-how__step {
     position: absolute;
     left: 50%;
-    top: 28.9rem;
+    top: 27rem;
     transform: translateX(-50%);
     width: 33.2rem;
     text-align: center;
@@ -421,7 +451,7 @@
     letter-spacing: 0.8px;
   }
   .m-how__step-desc {
-    margin-top: 0.9rem;
+    margin-top: 1.3rem;
     color: var(--dm-text);
     font: 400 1rem/normal var(--font-body);
     letter-spacing: 0.5px;
@@ -431,19 +461,23 @@
     margin-top: 42rem;
     display: flex;
     flex-direction: column;
-    gap: 2.7rem;
+    gap: 3rem;
   }
   .m-how-topic {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    text-align: center;
+    gap: 2rem;
     padding: 0 3rem;
   }
   .m-how-topic__box {
-    width: 5rem;
-    height: 5rem;
+    width: 15.8rem;
+    height: 14.1rem;
     background: var(--color-green-dark);
+    background-size: cover;
+    background-position: center;
     border-radius: 2rem;
     flex-shrink: 0;
   }
@@ -464,13 +498,9 @@
     position: relative;
     margin-top: 5rem;
   }
+  /* decorative wavy blob removed on request */
   .m-differentials__bg {
-    position: absolute;
-    left: 0.1rem;
-    top: -3rem;
-    width: 37.3rem;
-    height: 97.5rem;
-    z-index: -1;
+    display: none;
   }
   .m-differentials__bg img {
     display: block;
@@ -505,21 +535,31 @@
   }
   .m-feature-grid {
     position: relative;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     display: grid;
     grid-template-columns: repeat(2, 14.1rem);
     justify-content: center;
-    gap: 2.4rem 2.4rem;
+    column-gap: 2rem;
+    row-gap: 2.4rem;
   }
   .m-feature-card {
     position: relative;
     width: 14.1rem;
+    /* fixed to the real Figma card height (217px); the image block below
+       is flex:1 so it fills whatever space the text above leaves, exactly
+       like the design (shorter text = taller image block) */
     min-height: 21.7rem;
+    height: auto;
     background: var(--dm-surface);
-    filter: blur(1px);
     border: 1px solid var(--dm-border-alt);
     border-radius: 1.5rem;
     padding: 0.9rem;
+    /* column layout so the colour block can be pinned to the bottom edge
+       (margin-top:auto below) — otherwise it floats at a different height
+       in each card depending on how many lines of text sit above it, which
+       makes the two columns look misaligned. */
+    display: flex;
+    flex-direction: column;
   }
   .m-feature-card__icon {
     width: 3.7rem;
@@ -540,7 +580,7 @@
     height: 70%;
   }
   .m-feature-card__title {
-    margin-top: 0.6rem;
+    margin-top: 1.6rem;
     color: var(--dm-text);
     font: 700 1rem/normal var(--font-body);
     letter-spacing: 0.5px;
@@ -558,9 +598,10 @@
     letter-spacing: 0.3px;
   }
   .m-feature-card__image {
-    margin-top: 0.6rem;
+    margin-top: auto; /* pinned to the card bottom */
+    height: 4.4rem;   /* every block the same size across all 6 cards */
+    flex-shrink: 0;
     width: 100%;
-    height: 5.3rem;
     border-radius: 1rem;
   }
   .m-feature-card--tinted .m-feature-card__image { background: var(--color-green-dark); }
@@ -569,7 +610,7 @@
   /* ---------- plants + cta ---------- */
   .m-plants {
     position: relative;
-    margin-top: 6rem;
+    margin-top: 5rem;
   }
   .m-plants__title {
     text-align: center;
@@ -591,16 +632,16 @@
   }
   .m-plant-cards {
     position: relative;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.7rem;
+    gap: 3.1rem;
   }
   .m-plant-card {
     position: relative;
     width: 33.6rem;
-    height: 23.9rem;
+    height: auto; /* was 23.9rem fixed — left 30-44px dead space per card */
     background: var(--dm-surface);
     border: 1px solid var(--dm-border);
     border-radius: 1.5rem;
@@ -681,7 +722,7 @@
 
   .m-cta-banner {
     position: relative;
-    margin: 6rem auto 0;
+    margin: 5rem auto 0;
     width: 33.8rem;
     height: 17rem;
     border-radius: 2rem;
@@ -717,7 +758,7 @@
 
   .m-utility-bar {
     position: relative;
-    margin-top: 3rem;
+    margin-top: 5rem;
     padding: 0 2.5rem 2.5rem;
     display: flex;
     align-items: center;

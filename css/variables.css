@@ -55,6 +55,7 @@
   --dm-price: #88d3cf;
   --dm-subtitle: #aff4f1;
   --dm-heading-soft: #ebf8e1;
+  --dm-plant-panel: #1a2c29;
 
   /* APP screens (455:354 / 456:465) - always dark, no light variant in Figma */
   --app-bg: #0a0f0d;
@@ -122,6 +123,7 @@
   --dm-price: var(--color-green-normal-hover);
   --dm-subtitle: var(--color-grey-dark);
   --dm-heading-soft: var(--dm-text);
+  --dm-plant-panel: #eef1ec;
 
   --su-title: #2a4a36;
   --su-label: #669e9b;

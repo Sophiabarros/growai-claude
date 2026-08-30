@@ -6,7 +6,7 @@
 
 .app-relatorios-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;   /* era hidden — permite o full-bleed do .app-header */
   display: flex;
   justify-content: center;
   background: var(--app-bg);
@@ -17,7 +17,7 @@
   height: 117.5rem;
   flex-shrink: 0;
   background: var(--app-bg);
-  overflow: hidden;
+  overflow: visible;   /* era hidden — o corte lateral passa a ser do wrapper */
   transform-origin: top center;
 }
 
@@ -180,7 +180,7 @@
   font: 400 1.6rem/normal var(--font-body);
   white-space: nowrap;
 }
-.rel-suggestion__stat img { width: 2.2rem; height: 1.4rem; }
+.rel-suggestion__stat img { width: 2.2rem; height: 1.4rem; object-fit: contain; } /* NOVO — o slot é compartilhado por um ícone quadrado (check) e um retangular (seta de crescimento) */
 .rel-suggestion__stat--growth { top: 9.7rem; }
 .rel-suggestion__stat--health { top: 13.19rem; }
 .rel-suggestion--2 .rel-suggestion__stat { left: 2.3rem; }
@@ -412,6 +412,7 @@
   .m-rel-suggestion__stat img {
     width: 2rem;
     height: 1.3rem;
+    object-fit: contain;   /* NOVO — mesmo motivo do desktop */
   }
   .m-rel-suggestion__btn {
     display: block;

@@ -8,6 +8,8 @@
 
 .game-wrapper {
   width: 100%;
+  min-height: 100vh; /* preenche a viewport: sem "vazio" verde abaixo do canvas
+                        quando a janela é mais alta que a arte ou o zoom < 100% */
   overflow-x: hidden;
   display: flex;
   justify-content: center;
@@ -141,6 +143,7 @@
   .m-game-wrapper {
     display: flex;
     width: 100%;
+    min-height: 100vh;
     justify-content: center;
     background: #000;
   }

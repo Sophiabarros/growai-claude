@@ -10,22 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/reset.css?v=34" />
+    <link rel="stylesheet" href="css/variables.css?v=34" />
+    <link rel="stylesheet" href="css/global.css?v=34" />
+    <link rel="stylesheet" href="css/header.css?v=34" />
+    <link rel="stylesheet" href="css/footer.css?v=34" />
+    <link rel="stylesheet" href="css/home.css?v=34" />
+    <link rel="stylesheet" href="css/animations.css?v=34" />
+    <link rel="stylesheet" href="css/responsive.css?v=34" />
   </head>
   <body>
-    <div class="page-loader" id="pageLoader" aria-hidden="true">
-      <div class="page-loader__spinner"></div>
+    <div class="page-loader" id="pageLoader" aria-hidden="true"> <!-- aria-hidden esconde a tela de carregamento enquanto for true-->
+      <div class="page-loader__spinner">  <!-- tela de carregamento (spinner)--> </div>
     </div>
     <div class="home-wrapper">
-      <div class="home" id="home" data-theme="dark">
-        <script src="js/theme-no-flash.js" data-page="home"></script>
+      <div class="home" id="home" data-theme="dark"> <!--Tema escuro padrão-->
+        <script src="js/theme-no-flash.js" data-page="home"></script> <!--Garante que a página carregue no modo certo sem ter uma troca entre modos brusca-->
         <!-- ===== HEADER ===== -->
         <header class="header">
           <a href="index.html" class="header__brand">
@@ -36,9 +36,9 @@
               <div class="v3"><img class="fill" alt="" src="assets/icons/logo-vector-3.svg" /></div>
               <div class="v4"><img class="fill" alt="" src="assets/icons/logo-vector-4.svg" /></div>
               <div class="v5"><img class="fill" alt="" src="assets/icons/logo-vector-5.svg" /></div>
-            </div>
+            </div> <!--Elementos da logo separados-->
           </a>
-          <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+          <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button> <!--Botão que abre o menu hambúrguer-->
           <nav class="header__nav" id="headerNav">
             <a href="sistema.html" class="header__nav-link header__nav-link--sistema">Sistema</a>
             <a href="investimento.html" class="header__nav-link header__nav-link--investimento">Investimento</a>
@@ -48,7 +48,7 @@
           </nav>
         </header>
 
-        <!-- ===== HERO ===== -->
+        <!-- ===== HERO ===== --> <!--A parte difícil com o título fundido na-->
         <section class="hero">
           <div class="hero__bg">
             <img alt="" src="assets/images/hero-background.png" />
@@ -205,9 +205,12 @@
             <div class="how__intro">
               <h2 class="how__title">Como <span class="how__title-accent">funciona</span></h2>
               <div class="how__carousel">
-                <button type="button" aria-label="Anterior" class="how__carousel-btn how__carousel-btn--prev">&lt;</button>
-                <button type="button" aria-label="Próximo" class="how__carousel-btn how__carousel-btn--next">&gt;</button>
-              </div>
+              <img src="assets/images/carrosselpng/carousel1.jpg" class="imagem ativa" alt="primeira imagem do carrossel">
+              <img src="assets/images/carrosselpng/carousel2.jpg" class="imagem" alt="segunda imagem do carrossel">
+              <img src="assets/images/carrosselpng/carousel3.png" class="imagem" alt="terceira imagem do carrossel">
+              <button type="button" aria-label="Anterior" class="how__carousel-btn how__carousel-btn--prev">&lt;</button>
+              <button type="button" aria-label="Próximo" class="how__carousel-btn how__carousel-btn--next">&gt;</button>
+            </div>
               <div class="how__step">
                 <p class="how__step-title">Configuração inicial</p>
                 <p class="how__step-desc">
@@ -266,7 +269,6 @@
               <div class="differentials__row">
                 <div class="feature-card">
                   <div class="feature-card__icon"><img alt="" src="assets/icons/icon-wifi.svg" /></div>
-                  <div class="feature-card__image"></div>
                   <p class="feature-card__title">IoT &amp; Conectividade</p>
                   <p class="feature-card__desc">Sensores inteligentes conectados 24/7 monitorando cada aspecto do cultivo</p>
                   <ul class="feature-card__tags">
@@ -274,10 +276,10 @@
                     <li>Integração Cloud</li>
                     <li>API Aberta</li>
                   </ul>
+                  <div class="feature-card__image"></div>
                 </div>
                 <div class="feature-card feature-card--tinted">
                   <div class="feature-card__icon"><img alt="" src="assets/icons/icon-notification.svg" /></div>
-                  <div class="feature-card__image"></div>
                   <p class="feature-card__title">App de Controle</p>
                   <p class="feature-card__desc">Gerencie tudo pelo smartphone: ajustes, notificações e histórico completo</p>
                   <ul class="feature-card__tags">
@@ -285,10 +287,10 @@
                     <li>Dashboard em Tempo Real</li>
                     <li>Alertas Personalizados</li>
                   </ul>
+                  <div class="feature-card__image"></div>
                 </div>
                 <div class="feature-card">
                   <div class="feature-card__icon"><img alt="" src="assets/icons/icon-graph.svg" /></div>
-                  <div class="feature-card__image"></div>
                   <p class="feature-card__title">Análise Avançada</p>
                   <p class="feature-card__desc">Machine Learning prevê e otimiza concentração de princípios ativos</p>
                   <ul class="feature-card__tags">
@@ -296,12 +298,12 @@
                     <li>Otimização Automática</li>
                     <li>Relatórios Detalhados</li>
                   </ul>
+                  <div class="feature-card__image"></div>
                 </div>
               </div>
               <div class="differentials__row">
                 <div class="feature-card feature-card--tinted">
                   <div class="feature-card__icon"><img alt="" src="assets/icons/icon-ai-technology.svg" /></div>
-                  <div class="feature-card__image"></div>
                   <p class="feature-card__title">Eficiência Energética</p>
                   <p class="feature-card__desc">LED full spectrum programável com baixíssimo consumo de energia</p>
                   <ul class="feature-card__tags">
@@ -309,10 +311,10 @@
                     <li>Espectro Ajustável</li>
                     <li>Timer Inteligente</li>
                   </ul>
+                  <div class="feature-card__image"></div>
                 </div>
                 <div class="feature-card">
                   <div class="feature-card__icon"><img alt="" src="assets/icons/icon-ai-cloud.svg" /></div>
-                  <div class="feature-card__image"></div>
                   <p class="feature-card__title">Armazenamento em Nuvem</p>
                   <p class="feature-card__desc">Todos os dados salvos com segurança para análise histórica e comparativa</p>
                   <ul class="feature-card__tags">
@@ -320,10 +322,10 @@
                     <li>Acesso Multiplataforma</li>
                     <li>Exportação de Dados</li>
                   </ul>
+                  <div class="feature-card__image"></div>
                 </div>
                 <div class="feature-card feature-card--tinted">
                   <div class="feature-card__icon"><img alt="" src="assets/icons/icon-shield.svg" /></div>
-                  <div class="feature-card__image"></div>
                   <p class="feature-card__title">Segurança &amp; Certificações</p>
                   <p class="feature-card__desc">Construído com materiais atóxicos e certificado para uso alimentício/medicinal</p>
                   <ul class="feature-card__tags">
@@ -331,6 +333,7 @@
                     <li>ISO Certified</li>
                     <li>Garantia Estendida</li>
                   </ul>
+                  <div class="feature-card__image"></div>
                 </div>
               </div>
             </div>
@@ -440,8 +443,14 @@
         </header>
 
         <section class="m-hero">
-          <div class="m-hero__bg"><img alt="" src="assets/images/img-mobile-hero-dark.png" /></div>
-          <div class="m-hero__title-graphic"><img alt="" src="assets/icons/icon-mobile-title-dark.svg" /></div>
+          <div class="m-hero__bg">
+            <img class="icon-dark" alt="" src="assets/images/img-mobile-hero-dark.png" />
+            <img class="icon-light" alt="" src="assets/images/img-mobile-hero-light.png" />
+          </div>
+          <div class="m-hero__title-graphic">
+            <img class="icon-dark" alt="" src="assets/icons/icon-mobile-title-dark.svg" />
+            <img class="icon-light" alt="" src="assets/icons/icon-mobile-title-light.svg" />
+          </div>
 
           <p class="m-hero__text">
             Horta horizontal semi-hidropônica com
@@ -498,27 +507,43 @@
           <p class="m-why__subtitle">Inovação que une ciência, sustentabilidade e resultados extraordinários</p>
           <div class="m-why__cards">
             <div class="m-why-card">
-              <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-ai-brain.svg" /></div>
-              <p class="m-why-card__title">Controle Inteligente:</p>
-              <p class="m-why-card__desc">Sistema de IA monitora e ajusta automaticamente nutrientes, pH, luz e temperatura para otimizar princípios ativos.</p>
+              <div class="m-why-card__top">
+                <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-ai-brain.svg" /></div>
+                <div class="m-why-card__text">
+                  <p class="m-why-card__title">Controle Inteligente:</p>
+                  <p class="m-why-card__desc">Sistema de IA monitora e ajusta automaticamente nutrientes, pH, luz e temperatura para otimizar princípios ativos.</p>
+                </div>
+              </div>
               <div class="m-why-card__image"></div>
             </div>
             <div class="m-why-card m-why-card--accent">
-              <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-pharmacy.svg" /></div>
-              <p class="m-why-card__title">Máxima Concentração:</p>
-              <p class="m-why-card__desc">Até 300% mais principios ativos comparado ao cultivo tradicional atráves de estresse controlado.</p>
+              <div class="m-why-card__top">
+                <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-pharmacy.svg" /></div>
+                <div class="m-why-card__text">
+                  <p class="m-why-card__title">Máxima Concentração:</p>
+                  <p class="m-why-card__desc">Até 300% mais principios ativos comparado ao cultivo tradicional atráves de estresse controlado.</p>
+                </div>
+              </div>
               <div class="m-why-card__image"></div>
             </div>
             <div class="m-why-card">
-              <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-image-saturation.svg" /></div>
-              <p class="m-why-card__title">Sistema Hidropônico:</p>
-              <p class="m-why-card__desc">Economia de 90% de água com recirculação inteligente e zero desperdício de nutrientes.</p>
+              <div class="m-why-card__top">
+                <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-image-saturation.svg" /></div>
+                <div class="m-why-card__text">
+                  <p class="m-why-card__title">Sistema Hidropônico:</p>
+                  <p class="m-why-card__desc">Economia de 90% de água com recirculação inteligente e zero desperdício de nutrientes.</p>
+                </div>
+              </div>
               <div class="m-why-card__image"></div>
             </div>
             <div class="m-why-card m-why-card--accent">
-              <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-sprout.svg" /></div>
-              <p class="m-why-card__title">Cultivo Vertical:</p>
-              <p class="m-why-card__desc">Design compacto que otimiza espaço, permitindo cultivo de múltiplas espécies simultaneamente.</p>
+              <div class="m-why-card__top">
+                <div class="m-why-card__icon"><img alt="" src="assets/icons/icon-sprout.svg" /></div>
+                <div class="m-why-card__text">
+                  <p class="m-why-card__title">Cultivo Vertical:</p>
+                  <p class="m-why-card__desc">Design compacto que otimiza espaço, permitindo cultivo de múltiplas espécies simultaneamente.</p>
+                </div>
+              </div>
               <div class="m-why-card__image"></div>
             </div>
           </div>
@@ -527,6 +552,9 @@
         <section class="m-how">
           <h2 class="m-how__title">Como <span class="m-how__title-accent">funciona</span></h2>
           <div class="m-how__carousel">
+            <img src="assets/images/carrosselpng/carousel1.jpg" class="imagem ativa" alt="primeira imagem do carrossel">
+            <img src="assets/images/carrosselpng/carousel2.jpg" class="imagem" alt="segunda imagem do carrossel">
+            <img src="assets/images/carrosselpng/carousel3.png" class="imagem" alt="terceira imagem do carrossel">
             <button type="button" aria-label="Anterior" class="m-how__carousel-btn m-how__carousel-btn--prev">&lt;</button>
             <button type="button" aria-label="Próximo" class="m-how__carousel-btn m-how__carousel-btn--next">&gt;</button>
           </div>
@@ -699,10 +727,11 @@
       </div>
     </div>
 
-    <script src="js/theme.js"></script>
-    <script src="js/page-loader.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/components.js"></script>
+    <script src="js/theme.js?v=34"></script>
+    <script src="js/page-loader.js?v=34"></script>
+    <script src="js/menu.js?v=34"></script>
+    <script src="js/navigation.js?v=34"></script>
+    <script src="js/components.js?v=34"></script>
+    <script src="js/how-carousel.js?v=34"></script>
   </body>
 </html>

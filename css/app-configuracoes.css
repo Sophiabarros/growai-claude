@@ -6,7 +6,7 @@
 
 .app-configuracoes-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;   /* era hidden — permite o full-bleed do .app-header */
   display: flex;
   justify-content: center;
   background: var(--app-bg);
@@ -17,7 +17,7 @@
   height: 124.5rem;
   flex-shrink: 0;
   background: var(--app-bg);
-  overflow: hidden;
+  overflow: visible;   /* era hidden — o corte lateral passa a ser do wrapper */
   transform-origin: top center;
 }
 

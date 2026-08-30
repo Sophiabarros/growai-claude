@@ -5,7 +5,7 @@
 
 .app-estacoes-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;   /* era hidden — permite o full-bleed do .app-header */
   display: flex;
   justify-content: center;
   background: var(--app-bg);
@@ -16,7 +16,7 @@
   min-height: 102.4rem;
   flex-shrink: 0;
   background: var(--app-bg);
-  overflow: hidden;
+  overflow: visible;   /* era hidden — o corte lateral passa a ser do wrapper */
   transform-origin: top center;
 }
 
@@ -94,6 +94,7 @@
 .est-card__icon img {
   width: 4.4rem;
   height: 4.4rem;
+  object-fit: contain;   /* NOVO — o ícone da planta não é quadrado */
 }
 .est-card__edit {
   position: absolute;
@@ -332,6 +333,7 @@
   .m-est-card__icon img {
     width: 2.9rem;
     height: 2.9rem;
+    object-fit: contain;   /* NOVO — mesmo motivo do desktop */
   }
   .m-est-card__edit {
     position: absolute;

@@ -2,7 +2,7 @@
 
 .bibliografia-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;   /* deixa o fundo full-bleed (100vw) vazar sem barra de rolagem */
   display: flex;
   justify-content: center;
   background: var(--dm-bg);
@@ -14,7 +14,7 @@
   min-height: 193.4rem;
   flex-shrink: 0;
   background: var(--dm-bg);
-  overflow: hidden;
+  overflow: visible;   /* o corte lateral é do wrapper (overflow-x: clip) */
   transition: background-color 0.2s ease;
   transform-origin: top center;
 }
@@ -87,7 +87,8 @@
   left: 50%;
   top: 78.464rem;
   transform: translateX(-50%);
-  width: 144rem;
+  width: 100vw;
+  min-width: 144rem;
   height: 114.9365rem;
 }
 .bib-articles__bg img {
@@ -142,24 +143,36 @@
   position: relative;
   height: 47.6rem;
 }
+/* Os 3 slots são FIXOS (não se movem nem mudam de tamanho). O que troca é
+   só a imagem dentro de cada slot, num crossfade suave (opacity). Sem cards
+   deslizando um por cima do outro = sem "fantasma"/imagem dupla. */
 .bib-carousel__card {
   position: absolute;
   left: 50%;
   border-radius: 1.4rem;
   overflow: hidden;
 }
-.bib-carousel__card img {
+.bib-carousel__img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 0.6s ease, transform 0.7s ease;
+}
+.bib-carousel__img.is-shown {
+  opacity: 1;
+  transform: scale(1);
 }
 .bib-carousel__card--left {
   top: 6.1rem;
   transform: translateX(calc(-50% - 24.35rem));
   width: 51.7rem;
   height: 35.5rem;
-  opacity: 0.75;
+  z-index: 1;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .bib-carousel__card--right {
@@ -167,7 +180,7 @@
   transform: translateX(calc(-50% + 24.45rem));
   width: 51.7rem;
   height: 35.5rem;
-  opacity: 0.75;
+  z-index: 1;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .bib-carousel__card--center {
@@ -175,7 +188,11 @@
   transform: translateX(-50%);
   width: 66.1rem;
   height: 47.6rem;
+  z-index: 2;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.35);
+}
+.bib-carousel__card--center .bib-carousel__img {
+  cursor: pointer;
 }
 .bib-carousel__arrow {
   position: absolute;
@@ -214,6 +231,9 @@
   margin: 5.4rem auto 0;
   width: 6.6rem;
   height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .bib-carousel__dots img {
   display: block;
@@ -228,6 +248,19 @@
 }
 .bibliografia[data-theme="light"] .bib-carousel__dots .icon-light {
   display: block;
+}
+.bib-carousel__dot {
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--color-violet-light);
+  transition: background-color 0.2s ease;
+}
+.bib-carousel__dot.is-active {
+  background: var(--color-teal);
 }
 
 .bib-articles__desc {
@@ -266,6 +299,7 @@
   .m-bibliografia-wrapper {
     display: flex;
     width: 100%;
+    overflow-x: clip;
     justify-content: center;
     background: var(--dm-bg);
   }
@@ -273,10 +307,10 @@
     position: relative;
     width: 37.5rem;
     max-width: 100%;
-    min-height: 123.4rem;
+    min-height: 125rem;
     margin: 0 auto;
     background: var(--dm-bg);
-    overflow: hidden;
+    overflow: visible;
   }
 
   .m-bib-intro__image {
@@ -336,10 +370,12 @@
 
   .m-bib-articles__bg {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 57.156rem;
-    width: 37.5rem;
-    height: 66.2444rem;
+    transform: translateX(-50%);
+    width: 100vw;
+    min-width: 37.5rem;
+    height: 67.844rem;
   }
   .m-bib-articles__bg img {
     position: absolute;
@@ -393,24 +429,34 @@
     position: relative;
     height: 25.5rem;
   }
+  /* slots fixos + crossfade da imagem (igual desktop) */
   .m-bib-carousel__card {
     position: absolute;
     left: 50%;
     border-radius: 1.4rem;
     overflow: hidden;
   }
-  .m-bib-carousel__card img {
+  .m-bib-carousel__img {
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transform: scale(1.06);
+    transition: opacity 0.6s ease, transform 0.7s ease;
+  }
+  .m-bib-carousel__img.is-shown {
+    opacity: 1;
+    transform: scale(1);
   }
   .m-bib-carousel__card--left {
     top: 1.817rem;
     transform: translateX(calc(-50% - 11.719rem));
     width: 13.262rem;
     height: 23.0722rem;
-    opacity: 0.75;
+    z-index: 1;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   .m-bib-carousel__card--right {
@@ -418,7 +464,7 @@
     transform: translateX(calc(-50% + 10.55rem));
     width: 12.7rem;
     height: 23.1rem;
-    opacity: 0.75;
+    z-index: 1;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   .m-bib-carousel__card--center {
@@ -426,7 +472,11 @@
     transform: translateX(calc(-50% - 0.727rem));
     width: 16.2596rem;
     height: 24.889rem;
+    z-index: 2;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.35);
+  }
+  .m-bib-carousel__card--center .m-bib-carousel__img {
+    cursor: pointer;
   }
 
   .m-bib-carousel__dots {
@@ -434,6 +484,9 @@
     margin: 2.4rem auto 0;
     width: 4rem;
     height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .m-bib-carousel__dots img {
     display: block;
@@ -449,6 +502,19 @@
   .m-bibliografia[data-theme="light"] .m-bib-carousel__dots .icon-light {
     display: block;
   }
+  .m-bib-carousel__dot {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--color-violet-light);
+    transition: background-color 0.2s ease;
+  }
+  .m-bib-carousel__dot.is-active {
+    background: var(--color-teal);
+  }
 
   .m-bib-articles__desc {
     position: relative;
@@ -463,7 +529,7 @@
   .m-bibliografia .m-utility-bar {
     position: absolute;
     left: 0;
-    top: 118rem;
+    top: 121.5rem;
     width: 37.5rem;
     margin-top: 0;
     padding: 0 2.5rem;
