@@ -2,7 +2,7 @@
 
 .investimento-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;   /* era hidden — hidden forçava overflow-y: auto e criava a barra interna */
   display: flex;
   justify-content: center;
   background: var(--dm-bg);
@@ -11,10 +11,10 @@
 .investimento {
   position: relative;
   width: 144rem;
-  min-height: 402.7rem;
+  min-height: 406.1rem;   /* era 402.7rem — cobre a seção de total (342.7 + 63.4) */
   flex-shrink: 0;
   background: var(--dm-bg);
-  overflow: hidden;
+  overflow: visible;      /* o corte lateral agora é feito pelo wrapper com clip */
   transition: background-color 0.2s ease;
   transform-origin: top center;
 }
@@ -79,8 +79,8 @@
   position: absolute;
   top: 1.5rem;
   right: 2rem;
-  width: 7.5236rem;
-  height: 7.5236rem;
+  width: 6.6rem;      /* era 7.5236rem */
+  height: 6.6rem;     /* era 7.5236rem */
   border-radius: 2rem;
   background: var(--color-violet-light);
   border: 0;
@@ -88,10 +88,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 .invest-card__link img {
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 2.4rem;      /* era 2.7rem */
+  height: 2.4rem;     /* era 2.7rem */
 }
 .invest-card__link .icon-light {
   display: none;
@@ -125,9 +126,11 @@
 /* ============ VALOR TOTAL DO PROJETO ============ */
 .invest-total {
   position: absolute;
-  left: 0;
+  left: 50%;                    /* era left: 0 */
   top: 342.7rem;
-  width: 144rem;
+  width: 100vw;                 /* era 144rem */
+  min-width: 144rem;            /* garante o comportamento atual em telas menores */
+  transform: translateX(-50%);  /* recentraliza o full-bleed */
   height: 63.4rem;
   overflow: hidden;
 }
@@ -135,7 +138,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 174.6rem;
+  width: 121.25%;   /* era 174.6rem — mantém a proporção original da onda (174.6/144) */
   height: 63.4rem;
 }
 .invest-total__bg img {
@@ -207,20 +210,21 @@
   .investimento-wrapper {
     display: none;
   }
-  .m-investimento-wrapper {
+     .m-investimento-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
     background: var(--dm-bg);
+    overflow-x: clip;   /* era hidden — mesmo motivo do desktop */
   }
   .m-investimento {
     position: relative;
     width: 37.5rem;
     max-width: 100%;
-    min-height: 237.8rem;
+    min-height: 0;      /* era 237.8rem — a altura passa a acompanhar o conteúdo */
     margin: 0 auto;
     background: var(--dm-bg);
-    overflow: hidden;
+    overflow: visible;
   }
 
   .m-invest-title {
@@ -284,23 +288,31 @@
     height: 100%;
     object-fit: cover;
   }
-  .m-invest-card__body {
-    position: relative;
+    .m-invest-card__body {
+    position: static;   /* era relative — o botão passa a se ancorar no .m-invest-card */
     flex: 1;
     padding: 0.9rem 1rem;
   }
-  .m-invest-card__link {
+    .m-invest-card__link {
     position: absolute;
-    top: 0.8rem;
-    right: 0.8rem;
+    top: 0.6rem;
+    left: 0.6rem;     /* era right: 0.8rem */
+    right: auto;
+    z-index: 2;       /* mantém o botão acima da imagem */
     width: 2.6rem;
     height: 2.6rem;
     border-radius: 2rem;
     background: var(--color-violet-light);
     border: 0;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  /* NOVA regra — cards invertidos têm a imagem à direita */
+  .m-invest-card--right .m-invest-card__link {
+    left: auto;
+    right: 0.6rem;
   }
   .m-invest-card__link img {
     width: 1rem;
@@ -315,8 +327,8 @@
   .m-investimento[data-theme="light"] .m-invest-card__link .icon-light {
     display: block;
   }
-  .m-invest-card__title {
-    padding-right: 2.6rem;
+   .m-invest-card__title {
+    padding-right: 0;   /* era 2.6rem — o botão saiu de cima do texto */
     color: var(--dm-accent-green);
     font: 700 1.4rem/normal var(--font-body);
     letter-spacing: 0.14px;
@@ -333,14 +345,18 @@
     color: var(--dm-price);
   }
 
-  .m-invest-total {
+     .m-invest-total {
     position: relative;
     margin-top: 3.9rem;
-    height: 18.8rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+    min-height: 18.8rem;   /* era height fixa — agora cresce para caber a barra */
     background: var(--dm-card-bg);
     text-align: center;
-    padding-top: 6.9rem;
+    padding: 6.9rem 0 7.5rem;   /* o padding-bottom reserva espaço para os ícones */
   }
+  /* REGRA RESTAURADA — era ela que estava faltando */
   .m-invest-total__title {
     color: var(--dm-text);
     font: 700 2rem/normal var(--font-body);
@@ -359,12 +375,15 @@
     color: var(--dm-price);
   }
 
-  .m-investimento .m-utility-bar {
+    .m-investimento .m-utility-bar {
     position: absolute;
     left: 0;
-    top: 232.95rem;
-    width: 37.5rem;
+    right: 0;
+    bottom: 1.6rem;   /* era top: 232.95rem — agora cola no fim da página */
+    top: auto;
+    width: auto;
     margin-top: 0;
     padding: 0 2.5rem;
+    z-index: 1;
   }
 }

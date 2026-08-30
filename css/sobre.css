@@ -2,7 +2,7 @@
 
 .sobre-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;   /* era hidden — evita a barra de rolagem interna */
   display: flex;
   justify-content: center;
   background: var(--dm-bg);
@@ -14,7 +14,7 @@
   min-height: 247.8rem;
   flex-shrink: 0;
   background: var(--dm-bg);
-  overflow: hidden;
+  overflow: visible;   /* era hidden — libera o full-bleed da curva do topo */
   transition: background-color 0.2s ease;
   transform-origin: top center;
 }
@@ -25,7 +25,8 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  width: 144rem;
+  width: 100vw;        /* era 144rem */
+  min-width: 144rem;   /* preserva o comportamento atual em telas menores */
   height: 66.4688rem;
   z-index: 0;
 }
@@ -320,28 +321,31 @@
   .sobre-wrapper {
     display: none;
   }
-  .m-sobre-wrapper {
+    .m-sobre-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
     background: var(--dm-bg);
+    overflow-x: clip;   /* NOVO */
   }
   .m-sobre {
     position: relative;
     width: 37.5rem;
     max-width: 100%;
-    min-height: 121rem;
+    min-height: 0;      /* era 121rem — a altura passa a acompanhar o conteúdo */
     margin: 0 auto;
     background: var(--dm-bg);
-    overflow: hidden;
+    overflow: visible;  /* era hidden */
   }
 
   /* ---- header curve + title ---- */
-  .m-sobre-hero__bg {
+   .m-sobre-hero__bg {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
-    width: 37.5rem;
+    transform: translateX(-50%);
+    width: 100vw;         /* era 37.5rem */
+    min-width: 37.5rem;
     height: 19.3rem;
     z-index: 0;
   }
@@ -455,16 +459,19 @@
   }
 
   /* ---- form section bg curve ---- */
-  .m-sobre-form-section {
+    .m-sobre-form-section {
     position: relative;
     margin-top: 4.5rem;
+    padding-bottom: 2.6rem;   /* NOVO — respiro depois da barra de ícones */
   }
   .m-sobre-form-section__bg {
     position: absolute;
-    left: 0;
+    left: 50%;                    /* era left: 0 */
     top: 0;
-    width: 37.5rem;
-    height: 52.7292rem;
+    transform: translateX(-50%);  /* NOVO — centraliza o full-bleed */
+    width: 100vw;                 /* era 37.5rem */
+    min-width: 37.5rem;
+    height: 100%;                 /* era 52.7292rem — acompanha a seção até o fim */
     z-index: 0;
   }
   .m-sobre-form-section__bg img {
